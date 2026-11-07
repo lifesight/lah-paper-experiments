@@ -1,0 +1,29 @@
+{
+  "record_url": "https://zenodo.org/records/24036084",
+  "doi": "10.5281/zenodo.24036084",
+  "doi_url": "https://doi.org/10.5281/zenodo.24036084",
+  "concept_doi": "10.5281/zenodo.24036083",
+  "title": "LAH - Evidence-Aware Agent Harness",
+  "publication_date": "2026-11-07",
+  "resource_type_as_published": {
+    "title": "Computational notebook",
+    "type": "software",
+    "subtype": "computationalnotebook"
+  },
+  "license_as_published": {
+    "id": "cc-by-4.0"
+  },
+  "files": [
+    {
+      "id": "60e6ef84-7766-46d5-af84-9922c17cc070",
+      "key": "LAH_Public_Repository_Source.zip",
+      "size": 11441231,
+      "checksum": "md5:c1661c99642e57353847205d70a5b387",
+      "links": {
+        "self": "https://zenodo.org/api/records/24036084/files/LAH_Public_Repository_Source.zip/content"
+      }
+    }
+  ],
+  "published_archive_is_current_update": false,
+  "scope": "Published scientific/reproducibility release; current DOI-linked paper/docs are a subsequent local update, not a remote replacement."
+}

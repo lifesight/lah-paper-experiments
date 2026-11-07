@@ -1,0 +1,280 @@
+{
+  "boxes": [
+    {
+      "id": "question",
+      "text": "Marketing\nmeasurement\nquestion",
+      "xywh": [
+        0.015,
+        0.735,
+        0.145,
+        0.16
+      ]
+    },
+    {
+      "id": "context",
+      "text": "Caller / workspace\ncontext and\nscoped tool reads",
+      "xywh": [
+        0.205,
+        0.735,
+        0.23,
+        0.16
+      ]
+    },
+    {
+      "id": "evidence",
+      "text": "Structured\ntool-return\nevidence",
+      "xywh": [
+        0.48,
+        0.735,
+        0.19,
+        0.16
+      ]
+    },
+    {
+      "id": "answer",
+      "text": "Draft + integrity plugin\n+ release checks\n\u2192 delivered answer",
+      "xywh": [
+        0.72,
+        0.735,
+        0.265,
+        0.16
+      ]
+    },
+    {
+      "id": "ledger",
+      "text": "NumberLedger\nMatching + derivation\nExemptions + retention",
+      "xywh": [
+        0.46,
+        0.435,
+        0.25,
+        0.18
+      ]
+    },
+    {
+      "id": "action",
+      "text": "Scenario / spend-moving\naction request",
+      "xywh": [
+        0.015,
+        0.24,
+        0.25,
+        0.12
+      ]
+    },
+    {
+      "id": "approval",
+      "text": "Declared policy floor +\nhuman approval claim",
+      "xywh": [
+        0.32,
+        0.24,
+        0.25,
+        0.12
+      ]
+    },
+    {
+      "id": "permission",
+      "text": "Permission recheck \u2192 platform action\n(e.g., promoted plan)",
+      "xywh": [
+        0.625,
+        0.24,
+        0.36,
+        0.12
+      ]
+    },
+    {
+      "id": "eventlog",
+      "text": "Workspace/session EventLog and derived history\nRecording and replay interfaces (inspection evidence)",
+      "xywh": [
+        0.015,
+        0.065,
+        0.97,
+        0.1
+      ]
+    }
+  ],
+  "arrows": [
+    {
+      "from": "question",
+      "to": "context",
+      "points": [
+        [
+          0.16,
+          0.815
+        ],
+        [
+          0.205,
+          0.815
+        ]
+      ],
+      "style": "-"
+    },
+    {
+      "from": "context",
+      "to": "evidence",
+      "points": [
+        [
+          0.435,
+          0.815
+        ],
+        [
+          0.48,
+          0.815
+        ]
+      ],
+      "style": "-"
+    },
+    {
+      "from": "evidence",
+      "to": "answer",
+      "points": [
+        [
+          0.67,
+          0.815
+        ],
+        [
+          0.72,
+          0.815
+        ]
+      ],
+      "style": "-"
+    },
+    {
+      "from": "evidence",
+      "to": "ledger",
+      "points": [
+        [
+          0.575,
+          0.735
+        ],
+        [
+          0.575,
+          0.615
+        ]
+      ],
+      "style": "-"
+    },
+    {
+      "from": "ledger",
+      "to": "answer",
+      "points": [
+        [
+          0.71,
+          0.525
+        ],
+        [
+          0.85,
+          0.735
+        ]
+      ],
+      "style": "-"
+    },
+    {
+      "from": "action",
+      "to": "approval",
+      "points": [
+        [
+          0.265,
+          0.3
+        ],
+        [
+          0.32,
+          0.3
+        ]
+      ],
+      "style": "-"
+    },
+    {
+      "from": "approval",
+      "to": "permission",
+      "points": [
+        [
+          0.57,
+          0.3
+        ],
+        [
+          0.625,
+          0.3
+        ]
+      ],
+      "style": "-"
+    },
+    {
+      "from": "action",
+      "to": "eventlog",
+      "points": [
+        [
+          0.14,
+          0.24
+        ],
+        [
+          0.14,
+          0.165
+        ]
+      ],
+      "style": "--"
+    },
+    {
+      "from": "approval",
+      "to": "eventlog",
+      "points": [
+        [
+          0.445,
+          0.24
+        ],
+        [
+          0.445,
+          0.165
+        ]
+      ],
+      "style": "--"
+    },
+    {
+      "from": "permission",
+      "to": "eventlog",
+      "points": [
+        [
+          0.805,
+          0.24
+        ],
+        [
+          0.805,
+          0.165
+        ]
+      ],
+      "style": "--"
+    }
+  ],
+  "notes": [
+    {
+      "id": "measured",
+      "text": "MEASURED HERE",
+      "xy": [
+        0.585,
+        0.395
+      ],
+      "ha": "center"
+    },
+    {
+      "id": "boundary",
+      "text": "Inspected architecture \u2260\nmeasured system reliability",
+      "xy": [
+        0.015,
+        0.59
+      ],
+      "ha": "left"
+    },
+    {
+      "id": "logging",
+      "text": "Recording interfaces shown; all-path logging and distributed guarantees were not evaluated.",
+      "xy": [
+        0.015,
+        0.01
+      ],
+      "ha": "left"
+    }
+  ],
+  "source": {
+    "path": "original-renderer/render_architecture.py",
+    "sha256": "79a7a589f19cca4ca2fe23938e4109e910244d6602b9f61f311a42008634e40a"
+  },
+  "scope": "Formatting only; exact original semantic labels and all ten directed relations retained."
+}

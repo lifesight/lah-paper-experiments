@@ -1,0 +1,200 @@
+{
+  "meaning": "Historical files only; not evidence of accepted completed studies",
+  "files": [
+    {
+      "old_path": "README.md",
+      "archive_path": "archive/2026-11-05_unconfirmed/README.md",
+      "sha256": "4ad492a152c05583d558da02714d481d60a21204db74e268d3e2294ea9415dfc"
+    },
+    {
+      "old_path": "assemble.py",
+      "archive_path": "archive/2026-11-05_unconfirmed/assemble.py",
+      "sha256": "5086fe1346ee97f91b3d7ef780f0e8e334e7033ee657b131c3bf163879e795bf"
+    },
+    {
+      "old_path": "build_paper.py",
+      "archive_path": "archive/2026-11-05_unconfirmed/build_paper.py",
+      "sha256": "b3d42625bd2426b59d216d912d642c0ec186d1f1f0e5d76a7b0f6df8c45d0a41"
+    },
+    {
+      "old_path": "cap_probe.py",
+      "archive_path": "archive/2026-11-05_unconfirmed/cap_probe.py",
+      "sha256": "6e69d14aa72f3d700d2a00bb89a668aa7f2a6b51c1e009568444136b215db91e"
+    },
+    {
+      "old_path": "cap_probe_large_run.log",
+      "archive_path": "archive/2026-11-05_unconfirmed/cap_probe_large_run.log",
+      "sha256": "c7538effe544db303353eb3e718b9ec244a9116838c287e839c6b74d801b756b"
+    },
+    {
+      "old_path": "cap_probe_results.json",
+      "archive_path": "archive/2026-11-05_unconfirmed/cap_probe_results.json",
+      "sha256": "fa1434ce26198d6f51b36a2ce6da373568cd9bea1d0e3a7bc0a3d8f37e78d6c7"
+    },
+    {
+      "old_path": "cap_probe_results.md",
+      "archive_path": "archive/2026-11-05_unconfirmed/cap_probe_results.md",
+      "sha256": "7b06c23be30191bee0e63510b58d423ca5588d06d0025233b471fc9fbd8b1761"
+    },
+    {
+      "old_path": "cap_probe_results_large.json",
+      "archive_path": "archive/2026-11-05_unconfirmed/cap_probe_results_large.json",
+      "sha256": "a6e74ee8f3da5fa01ba65af20ea987fa84dd94e3903c8efa67acf4ccdcf6e800"
+    },
+    {
+      "old_path": "cap_probe_results_large.md",
+      "archive_path": "archive/2026-11-05_unconfirmed/cap_probe_results_large.md",
+      "sha256": "86ec27a1455db1b8c262284f642b6a41e60c1abc0c4701216718778edd45a6ad"
+    },
+    {
+      "old_path": "cap_probe_run.log",
+      "archive_path": "archive/2026-11-05_unconfirmed/cap_probe_run.log",
+      "sha256": "02980b18a1509c4d6ab712e1ce505086e114f93b4047e4d8ae54a4deac3caaa6"
+    },
+    {
+      "old_path": "cap_study_named.py",
+      "archive_path": "archive/2026-11-05_unconfirmed/cap_study_named.py",
+      "sha256": "adabf6bb4233ce086102df9614776c7a40c0b1fede322c45328a57db81c41a4f"
+    },
+    {
+      "old_path": "cap_study_named_results.json",
+      "archive_path": "archive/2026-11-05_unconfirmed/cap_study_named_results.json",
+      "sha256": "f7923e0b7a4b0355b266195972c96f493b96a9a133cda0e55c89707c42512ddd"
+    },
+    {
+      "old_path": "cap_study_named_results.md",
+      "archive_path": "archive/2026-11-05_unconfirmed/cap_study_named_results.md",
+      "sha256": "b01651fb8e34c09c1608eade497e83a1f1a3cbee05d0298b24cdf50791255b3c"
+    },
+    {
+      "old_path": "cap_study_named_run.log",
+      "archive_path": "archive/2026-11-05_unconfirmed/cap_study_named_run.log",
+      "sha256": "fa702bf3ed9f19ab8ebd0e760d28dd8345babbf1ea7b2f9b6a304945aecb2463"
+    },
+    {
+      "old_path": "cap_study_real.py",
+      "archive_path": "archive/2026-11-05_unconfirmed/cap_study_real.py",
+      "sha256": "7db81e2edd3901362d407c8bdde471aca2b267a1a052e3b16d9fc020dda38a3d"
+    },
+    {
+      "old_path": "cap_study_real_quotable.py",
+      "archive_path": "archive/2026-11-05_unconfirmed/cap_study_real_quotable.py",
+      "sha256": "246198cf61e8d888b5dd0146c3731a65bb21de8036ce0b5358a56bcc48fc92c4"
+    },
+    {
+      "old_path": "cap_study_real_quotable_run.log",
+      "archive_path": "archive/2026-11-05_unconfirmed/cap_study_real_quotable_run.log",
+      "sha256": "a6d385198c6a937a2548770a5070bf2de4f10eed393bbb0cd684018ab69b42ce"
+    },
+    {
+      "old_path": "cap_study_real_results.json",
+      "archive_path": "archive/2026-11-05_unconfirmed/cap_study_real_results.json",
+      "sha256": "2af6aa1ebbe75e8e7afd4d8e4baae0d129ee13c192c8bf5b609f6df6f7fa000c"
+    },
+    {
+      "old_path": "cap_study_real_results.md",
+      "archive_path": "archive/2026-11-05_unconfirmed/cap_study_real_results.md",
+      "sha256": "a754aec039a5fee4d99325fbf4a0abb8a6d8538d39651582536377e981671785"
+    },
+    {
+      "old_path": "cap_study_real_run.log",
+      "archive_path": "archive/2026-11-05_unconfirmed/cap_study_real_run.log",
+      "sha256": "2de9815392948e30f4c757e3ede555aab259cab4dc33aa430bb04dda85dad156"
+    },
+    {
+      "old_path": "coincidence_model.md",
+      "archive_path": "archive/2026-11-05_unconfirmed/coincidence_model.md",
+      "sha256": "f32ba6588e97dee76dacb56a19b0dc379d8431a514a1c8101983338c505305f2"
+    },
+    {
+      "old_path": "coincidence_model.py",
+      "archive_path": "archive/2026-11-05_unconfirmed/coincidence_model.py",
+      "sha256": "661abf02adc21d7d67bbd3b8941916aa5747a7f1dffaad2d2e064fb18144ca70"
+    },
+    {
+      "old_path": "companion_notes/academic_bibliography.md",
+      "archive_path": "archive/2026-11-05_unconfirmed/companion_notes/academic_bibliography.md",
+      "sha256": "a90a24065616774f373adb3326bb1383c6d436050a2a612baad5e3d5cdf5feaf"
+    },
+    {
+      "old_path": "companion_notes/benchmarks_and_evaluation.md",
+      "archive_path": "archive/2026-11-05_unconfirmed/companion_notes/benchmarks_and_evaluation.md",
+      "sha256": "6e3b53fe403e697a352c8855529ec501f0a1eb61f539ec193a2fe611897b6ca7"
+    },
+    {
+      "old_path": "companion_notes/governance_and_measurement_science.md",
+      "archive_path": "archive/2026-11-05_unconfirmed/companion_notes/governance_and_measurement_science.md",
+      "sha256": "267a916aef6b3ace42fe8c8a08b98f3d47570edfd56ab77cd8c3388e61a31a2b"
+    },
+    {
+      "old_path": "companion_notes/industry_practices_2026.md",
+      "archive_path": "archive/2026-11-05_unconfirmed/companion_notes/industry_practices_2026.md",
+      "sha256": "a312b0ed21ec38e7994539de770bd8a3ebb1e291c4243bb93961c219c309e10f"
+    },
+    {
+      "old_path": "figure_e1_false_accept.svg",
+      "archive_path": "archive/2026-11-05_unconfirmed/figure_e1_false_accept.svg",
+      "sha256": "5fa6fbd8cd72f5a05e384f9d7116483a1cbe0880625ca6995144cd9136a5c03c"
+    },
+    {
+      "old_path": "figure_real_cap.svg",
+      "archive_path": "archive/2026-11-05_unconfirmed/figure_real_cap.svg",
+      "sha256": "ea6281cc46d20834991f83e7c279f35b0c4c1c5a982070adfdd73850e8715e3a"
+    },
+    {
+      "old_path": "fixture_census.md",
+      "archive_path": "archive/2026-11-05_unconfirmed/fixture_census.md",
+      "sha256": "b3206f937df3f18b508987c6b5d18c6fdcce940c857f6243c87e51ae032d94c2"
+    },
+    {
+      "old_path": "fixture_census.py",
+      "archive_path": "archive/2026-11-05_unconfirmed/fixture_census.py",
+      "sha256": "d39cb3e44fe429d5188c713af4a604abb37a9b3d271d7a53db28c0fa0f6df2c6"
+    },
+    {
+      "old_path": "l1_named_derivation.patch",
+      "archive_path": "archive/2026-11-05_unconfirmed/l1_named_derivation.patch",
+      "sha256": "d2ee4f1fba57ffb5221ebe4d0cdf117335352db4f2d004c4c7f73c889a3b9f3e"
+    },
+    {
+      "old_path": "make_figures.py",
+      "archive_path": "archive/2026-11-05_unconfirmed/make_figures.py",
+      "sha256": "99e666a689541e316362a472ae368ae04a7ee3f298701d9970b39699f3643476"
+    },
+    {
+      "old_path": "make_figures_real.py",
+      "archive_path": "archive/2026-11-05_unconfirmed/make_figures_real.py",
+      "sha256": "10353a6cf7465b47444abe844110fc71defb77e5e1667613cc35ba50a1d3f65d"
+    },
+    {
+      "old_path": "provenance_study.py",
+      "archive_path": "archive/2026-11-05_unconfirmed/provenance_study.py",
+      "sha256": "4ec2a2e92ebdc2f23b78f965cfe74f86b63d8c9de97c0b2baaf67c70494e5d62"
+    },
+    {
+      "old_path": "provenance_study_results.json",
+      "archive_path": "archive/2026-11-05_unconfirmed/provenance_study_results.json",
+      "sha256": "d98f84d4ace218af653c689f1deae565307a3b9b0596b0cec9aa7f5a4c055870"
+    },
+    {
+      "old_path": "provenance_study_results.md",
+      "archive_path": "archive/2026-11-05_unconfirmed/provenance_study_results.md",
+      "sha256": "f311793da168c948a53d70b01a75a5dd9730c785cee36ed48fc8bf8e0a3388c3"
+    },
+    {
+      "old_path": "provenance_study_run.log",
+      "archive_path": "archive/2026-11-05_unconfirmed/provenance_study_run.log",
+      "sha256": "add08e83234be9352fb10251eb89b3fe4b09e0412847e277cdcfbc0f61a6476c"
+    },
+    {
+      "old_path": "trace_named_rejections.py",
+      "archive_path": "archive/2026-11-05_unconfirmed/trace_named_rejections.py",
+      "sha256": "4b6bfb281091ed13099821c771cc6ab34b00fd41863ff49773e94074bf710154"
+    },
+    {
+      "old_path": "LICENSE",
+      "archive_path": "archive/2026-11-05_unconfirmed/LICENSE",
+      "sha256": "cb968b027839cb22b689c74b4fdc53956604e156447c25a11b04c7b59b6d8af9"
+    }
+  ]
+}

@@ -1,0 +1,1322 @@
+[
+  {
+    "cell": "cell_000",
+    "seed": 1001,
+    "sources": 8,
+    "per_family": 100,
+    "build_ns": 1936000,
+    "availability_check_ns": 2195167,
+    "calls": {
+      "current.explained": 1200,
+      "current.find_ungrounded": 1200,
+      "direct_retained": 1200,
+      "direct_full_inventory": 1200,
+      "availability.explained": 64
+    },
+    "all_raw_facts": 64,
+    "raw_facts_retained": 64,
+    "facts_quotable": 64,
+    "latency": {
+      "current.explained": {
+        "calls": 1200,
+        "total_ns": 81594155,
+        "median_ns": 50875.0,
+        "max_ns": 201208
+      },
+      "current.find_ungrounded": {
+        "calls": 1200,
+        "total_ns": 80327168,
+        "median_ns": 49854.5,
+        "max_ns": 351375
+      },
+      "direct_full_inventory": {
+        "calls": 1200,
+        "total_ns": 32048881,
+        "median_ns": 32458.0,
+        "max_ns": 67583
+      },
+      "direct_retained": {
+        "calls": 1200,
+        "total_ns": 32892407,
+        "median_ns": 33166.0,
+        "max_ns": 62958
+      }
+    }
+  },
+  {
+    "cell": "cell_001",
+    "seed": 1001,
+    "sources": 80,
+    "per_family": 100,
+    "build_ns": 17955459,
+    "availability_check_ns": 199187035,
+    "calls": {
+      "current.explained": 1200,
+      "current.find_ungrounded": 1200,
+      "direct_retained": 1200,
+      "direct_full_inventory": 1200,
+      "availability.explained": 640
+    },
+    "all_raw_facts": 640,
+    "raw_facts_retained": 640,
+    "facts_quotable": 640,
+    "latency": {
+      "current.explained": {
+        "calls": 1200,
+        "total_ns": 419077698,
+        "median_ns": 315437.5,
+        "max_ns": 1390958
+      },
+      "current.find_ungrounded": {
+        "calls": 1200,
+        "total_ns": 414178881,
+        "median_ns": 311521.0,
+        "max_ns": 1371417
+      },
+      "direct_full_inventory": {
+        "calls": 1200,
+        "total_ns": 310187766,
+        "median_ns": 316542.0,
+        "max_ns": 456625
+      },
+      "direct_retained": {
+        "calls": 1200,
+        "total_ns": 310649943,
+        "median_ns": 314750.0,
+        "max_ns": 673583
+      }
+    }
+  },
+  {
+    "cell": "cell_002",
+    "seed": 1001,
+    "sources": 800,
+    "per_family": 100,
+    "build_ns": 216516625,
+    "availability_check_ns": 8225292661,
+    "calls": {
+      "current.explained": 1200,
+      "current.find_ungrounded": 1200,
+      "direct_retained": 1200,
+      "direct_full_inventory": 1200,
+      "availability.explained": 6400
+    },
+    "all_raw_facts": 6400,
+    "raw_facts_retained": 2400,
+    "facts_quotable": 2439,
+    "latency": {
+      "current.explained": {
+        "calls": 1200,
+        "total_ns": 1533516491,
+        "median_ns": 291708.5,
+        "max_ns": 13685042
+      },
+      "current.find_ungrounded": {
+        "calls": 1200,
+        "total_ns": 1484322876,
+        "median_ns": 234937.5,
+        "max_ns": 14485875
+      },
+      "direct_full_inventory": {
+        "calls": 1200,
+        "total_ns": 3087788862,
+        "median_ns": 3206791.5,
+        "max_ns": 4389583
+      },
+      "direct_retained": {
+        "calls": 1200,
+        "total_ns": 1363079851,
+        "median_ns": 1226937.5,
+        "max_ns": 1662917
+      }
+    }
+  },
+  {
+    "cell": "cell_003",
+    "seed": 1002,
+    "sources": 8,
+    "per_family": 100,
+    "build_ns": 1857583,
+    "availability_check_ns": 2257954,
+    "calls": {
+      "current.explained": 1200,
+      "current.find_ungrounded": 1200,
+      "direct_retained": 1200,
+      "direct_full_inventory": 1200,
+      "availability.explained": 64
+    },
+    "all_raw_facts": 64,
+    "raw_facts_retained": 64,
+    "facts_quotable": 64,
+    "latency": {
+      "current.explained": {
+        "calls": 1200,
+        "total_ns": 83714907,
+        "median_ns": 51750.0,
+        "max_ns": 212708
+      },
+      "current.find_ungrounded": {
+        "calls": 1200,
+        "total_ns": 82064950,
+        "median_ns": 50750.0,
+        "max_ns": 204334
+      },
+      "direct_full_inventory": {
+        "calls": 1200,
+        "total_ns": 33503734,
+        "median_ns": 34375.0,
+        "max_ns": 310875
+      },
+      "direct_retained": {
+        "calls": 1200,
+        "total_ns": 34288054,
+        "median_ns": 35083.0,
+        "max_ns": 64083
+      }
+    }
+  },
+  {
+    "cell": "cell_004",
+    "seed": 1002,
+    "sources": 80,
+    "per_family": 100,
+    "build_ns": 18666916,
+    "availability_check_ns": 198075949,
+    "calls": {
+      "current.explained": 1200,
+      "current.find_ungrounded": 1200,
+      "direct_retained": 1200,
+      "direct_full_inventory": 1200,
+      "availability.explained": 640
+    },
+    "all_raw_facts": 640,
+    "raw_facts_retained": 640,
+    "facts_quotable": 640,
+    "latency": {
+      "current.explained": {
+        "calls": 1200,
+        "total_ns": 427176371,
+        "median_ns": 319833.0,
+        "max_ns": 1476333
+      },
+      "current.find_ungrounded": {
+        "calls": 1200,
+        "total_ns": 420783524,
+        "median_ns": 317729.0,
+        "max_ns": 1368208
+      },
+      "direct_full_inventory": {
+        "calls": 1200,
+        "total_ns": 317196550,
+        "median_ns": 324875.0,
+        "max_ns": 473958
+      },
+      "direct_retained": {
+        "calls": 1200,
+        "total_ns": 320914806,
+        "median_ns": 325334.0,
+        "max_ns": 2655375
+      }
+    }
+  },
+  {
+    "cell": "cell_005",
+    "seed": 1002,
+    "sources": 800,
+    "per_family": 100,
+    "build_ns": 225520875,
+    "availability_check_ns": 8289161424,
+    "calls": {
+      "current.explained": 1200,
+      "current.find_ungrounded": 1200,
+      "direct_retained": 1200,
+      "direct_full_inventory": 1200,
+      "availability.explained": 6400
+    },
+    "all_raw_facts": 6400,
+    "raw_facts_retained": 2400,
+    "facts_quotable": 2429,
+    "latency": {
+      "current.explained": {
+        "calls": 1200,
+        "total_ns": 1607157203,
+        "median_ns": 318937.5,
+        "max_ns": 16850500
+      },
+      "current.find_ungrounded": {
+        "calls": 1200,
+        "total_ns": 1530105837,
+        "median_ns": 241958.5,
+        "max_ns": 15111375
+      },
+      "direct_full_inventory": {
+        "calls": 1200,
+        "total_ns": 3181987844,
+        "median_ns": 3240396.0,
+        "max_ns": 4760792
+      },
+      "direct_retained": {
+        "calls": 1200,
+        "total_ns": 1399584806,
+        "median_ns": 1232333.0,
+        "max_ns": 3467625
+      }
+    }
+  },
+  {
+    "cell": "cell_006",
+    "seed": 1003,
+    "sources": 8,
+    "per_family": 100,
+    "build_ns": 1906667,
+    "availability_check_ns": 2130336,
+    "calls": {
+      "current.explained": 1200,
+      "current.find_ungrounded": 1200,
+      "direct_retained": 1200,
+      "direct_full_inventory": 1200,
+      "availability.explained": 64
+    },
+    "all_raw_facts": 64,
+    "raw_facts_retained": 64,
+    "facts_quotable": 64,
+    "latency": {
+      "current.explained": {
+        "calls": 1200,
+        "total_ns": 81005216,
+        "median_ns": 49667.0,
+        "max_ns": 210709
+      },
+      "current.find_ungrounded": {
+        "calls": 1200,
+        "total_ns": 79842588,
+        "median_ns": 48750.0,
+        "max_ns": 188041
+      },
+      "direct_full_inventory": {
+        "calls": 1200,
+        "total_ns": 32094583,
+        "median_ns": 34167.0,
+        "max_ns": 48792
+      },
+      "direct_retained": {
+        "calls": 1200,
+        "total_ns": 33324896,
+        "median_ns": 34750.0,
+        "max_ns": 261250
+      }
+    }
+  },
+  {
+    "cell": "cell_007",
+    "seed": 1003,
+    "sources": 80,
+    "per_family": 100,
+    "build_ns": 18569041,
+    "availability_check_ns": 198552415,
+    "calls": {
+      "current.explained": 1200,
+      "current.find_ungrounded": 1200,
+      "direct_retained": 1200,
+      "direct_full_inventory": 1200,
+      "availability.explained": 640
+    },
+    "all_raw_facts": 640,
+    "raw_facts_retained": 640,
+    "facts_quotable": 640,
+    "latency": {
+      "current.explained": {
+        "calls": 1200,
+        "total_ns": 443539608,
+        "median_ns": 320875.0,
+        "max_ns": 2982916
+      },
+      "current.find_ungrounded": {
+        "calls": 1200,
+        "total_ns": 435379853,
+        "median_ns": 318250.0,
+        "max_ns": 3057500
+      },
+      "direct_full_inventory": {
+        "calls": 1200,
+        "total_ns": 320465875,
+        "median_ns": 324188.0,
+        "max_ns": 849834
+      },
+      "direct_retained": {
+        "calls": 1200,
+        "total_ns": 320917587,
+        "median_ns": 324416.5,
+        "max_ns": 948625
+      }
+    }
+  },
+  {
+    "cell": "cell_008",
+    "seed": 1003,
+    "sources": 800,
+    "per_family": 100,
+    "build_ns": 241318000,
+    "availability_check_ns": 8710155141,
+    "calls": {
+      "current.explained": 1200,
+      "current.find_ungrounded": 1200,
+      "direct_retained": 1200,
+      "direct_full_inventory": 1200,
+      "availability.explained": 6400
+    },
+    "all_raw_facts": 6400,
+    "raw_facts_retained": 2400,
+    "facts_quotable": 2440,
+    "latency": {
+      "current.explained": {
+        "calls": 1200,
+        "total_ns": 1639668718,
+        "median_ns": 336791.5,
+        "max_ns": 15853833
+      },
+      "current.find_ungrounded": {
+        "calls": 1200,
+        "total_ns": 1559064774,
+        "median_ns": 239395.5,
+        "max_ns": 15568666
+      },
+      "direct_full_inventory": {
+        "calls": 1200,
+        "total_ns": 3164995550,
+        "median_ns": 3255021.0,
+        "max_ns": 6399333
+      },
+      "direct_retained": {
+        "calls": 1200,
+        "total_ns": 1402865907,
+        "median_ns": 1241583.0,
+        "max_ns": 2274042
+      }
+    }
+  },
+  {
+    "cell": "cell_009",
+    "seed": 1004,
+    "sources": 8,
+    "per_family": 100,
+    "build_ns": 1968458,
+    "availability_check_ns": 2284247,
+    "calls": {
+      "current.explained": 1200,
+      "current.find_ungrounded": 1200,
+      "direct_retained": 1200,
+      "direct_full_inventory": 1200,
+      "availability.explained": 64
+    },
+    "all_raw_facts": 64,
+    "raw_facts_retained": 64,
+    "facts_quotable": 64,
+    "latency": {
+      "current.explained": {
+        "calls": 1200,
+        "total_ns": 84451421,
+        "median_ns": 50958.5,
+        "max_ns": 226708
+      },
+      "current.find_ungrounded": {
+        "calls": 1200,
+        "total_ns": 82757841,
+        "median_ns": 50042.0,
+        "max_ns": 200958
+      },
+      "direct_full_inventory": {
+        "calls": 1200,
+        "total_ns": 33346748,
+        "median_ns": 34645.5,
+        "max_ns": 70084
+      },
+      "direct_retained": {
+        "calls": 1200,
+        "total_ns": 34864945,
+        "median_ns": 35291.0,
+        "max_ns": 300417
+      }
+    }
+  },
+  {
+    "cell": "cell_010",
+    "seed": 1004,
+    "sources": 80,
+    "per_family": 100,
+    "build_ns": 18742125,
+    "availability_check_ns": 200081825,
+    "calls": {
+      "current.explained": 1200,
+      "current.find_ungrounded": 1200,
+      "direct_retained": 1200,
+      "direct_full_inventory": 1200,
+      "availability.explained": 640
+    },
+    "all_raw_facts": 640,
+    "raw_facts_retained": 640,
+    "facts_quotable": 640,
+    "latency": {
+      "current.explained": {
+        "calls": 1200,
+        "total_ns": 425600513,
+        "median_ns": 320583.0,
+        "max_ns": 1565417
+      },
+      "current.find_ungrounded": {
+        "calls": 1200,
+        "total_ns": 421532320,
+        "median_ns": 318791.5,
+        "max_ns": 1581416
+      },
+      "direct_full_inventory": {
+        "calls": 1200,
+        "total_ns": 315712348,
+        "median_ns": 323354.0,
+        "max_ns": 471708
+      },
+      "direct_retained": {
+        "calls": 1200,
+        "total_ns": 316981144,
+        "median_ns": 323500.0,
+        "max_ns": 537708
+      }
+    }
+  },
+  {
+    "cell": "cell_011",
+    "seed": 1004,
+    "sources": 800,
+    "per_family": 100,
+    "build_ns": 229831666,
+    "availability_check_ns": 8581057278,
+    "calls": {
+      "current.explained": 1200,
+      "current.find_ungrounded": 1200,
+      "direct_retained": 1200,
+      "direct_full_inventory": 1200,
+      "availability.explained": 6400
+    },
+    "all_raw_facts": 6400,
+    "raw_facts_retained": 2400,
+    "facts_quotable": 2429,
+    "latency": {
+      "current.explained": {
+        "calls": 1200,
+        "total_ns": 1675597123,
+        "median_ns": 354145.5,
+        "max_ns": 13801709
+      },
+      "current.find_ungrounded": {
+        "calls": 1200,
+        "total_ns": 1598753452,
+        "median_ns": 241583.0,
+        "max_ns": 13272708
+      },
+      "direct_full_inventory": {
+        "calls": 1200,
+        "total_ns": 3162095215,
+        "median_ns": 3251625.0,
+        "max_ns": 4695250
+      },
+      "direct_retained": {
+        "calls": 1200,
+        "total_ns": 1379522943,
+        "median_ns": 1237333.5,
+        "max_ns": 2143250
+      }
+    }
+  },
+  {
+    "cell": "cell_012",
+    "seed": 1005,
+    "sources": 8,
+    "per_family": 100,
+    "build_ns": 1863083,
+    "availability_check_ns": 2317504,
+    "calls": {
+      "current.explained": 1200,
+      "current.find_ungrounded": 1200,
+      "direct_retained": 1200,
+      "direct_full_inventory": 1200,
+      "availability.explained": 64
+    },
+    "all_raw_facts": 64,
+    "raw_facts_retained": 64,
+    "facts_quotable": 64,
+    "latency": {
+      "current.explained": {
+        "calls": 1200,
+        "total_ns": 82240213,
+        "median_ns": 50354.5,
+        "max_ns": 199917
+      },
+      "current.find_ungrounded": {
+        "calls": 1200,
+        "total_ns": 80965186,
+        "median_ns": 49395.5,
+        "max_ns": 197333
+      },
+      "direct_full_inventory": {
+        "calls": 1200,
+        "total_ns": 32390347,
+        "median_ns": 34333.0,
+        "max_ns": 66542
+      },
+      "direct_retained": {
+        "calls": 1200,
+        "total_ns": 33732779,
+        "median_ns": 35000.0,
+        "max_ns": 309791
+      }
+    }
+  },
+  {
+    "cell": "cell_013",
+    "seed": 1005,
+    "sources": 80,
+    "per_family": 100,
+    "build_ns": 18943833,
+    "availability_check_ns": 200899386,
+    "calls": {
+      "current.explained": 1200,
+      "current.find_ungrounded": 1200,
+      "direct_retained": 1200,
+      "direct_full_inventory": 1200,
+      "availability.explained": 640
+    },
+    "all_raw_facts": 640,
+    "raw_facts_retained": 640,
+    "facts_quotable": 640,
+    "latency": {
+      "current.explained": {
+        "calls": 1200,
+        "total_ns": 431764932,
+        "median_ns": 323833.5,
+        "max_ns": 1458125
+      },
+      "current.find_ungrounded": {
+        "calls": 1200,
+        "total_ns": 426682089,
+        "median_ns": 321479.5,
+        "max_ns": 1457209
+      },
+      "direct_full_inventory": {
+        "calls": 1200,
+        "total_ns": 318210758,
+        "median_ns": 327020.5,
+        "max_ns": 442958
+      },
+      "direct_retained": {
+        "calls": 1200,
+        "total_ns": 322093342,
+        "median_ns": 327187.5,
+        "max_ns": 2827458
+      }
+    }
+  },
+  {
+    "cell": "cell_014",
+    "seed": 1005,
+    "sources": 800,
+    "per_family": 100,
+    "build_ns": 222192916,
+    "availability_check_ns": 8461648290,
+    "calls": {
+      "current.explained": 1200,
+      "current.find_ungrounded": 1200,
+      "direct_retained": 1200,
+      "direct_full_inventory": 1200,
+      "availability.explained": 6400
+    },
+    "all_raw_facts": 6400,
+    "raw_facts_retained": 2400,
+    "facts_quotable": 2424,
+    "latency": {
+      "current.explained": {
+        "calls": 1200,
+        "total_ns": 1601272788,
+        "median_ns": 321396.0,
+        "max_ns": 13572000
+      },
+      "current.find_ungrounded": {
+        "calls": 1200,
+        "total_ns": 1537589893,
+        "median_ns": 239625.0,
+        "max_ns": 13383708
+      },
+      "direct_full_inventory": {
+        "calls": 1200,
+        "total_ns": 3103763671,
+        "median_ns": 3236896.0,
+        "max_ns": 4194166
+      },
+      "direct_retained": {
+        "calls": 1200,
+        "total_ns": 1370534032,
+        "median_ns": 1230604.0,
+        "max_ns": 1792875
+      }
+    }
+  },
+  {
+    "cell": "cell_015",
+    "seed": 1006,
+    "sources": 8,
+    "per_family": 100,
+    "build_ns": 1916917,
+    "availability_check_ns": 2290753,
+    "calls": {
+      "current.explained": 1200,
+      "current.find_ungrounded": 1200,
+      "direct_retained": 1200,
+      "direct_full_inventory": 1200,
+      "availability.explained": 64
+    },
+    "all_raw_facts": 64,
+    "raw_facts_retained": 64,
+    "facts_quotable": 64,
+    "latency": {
+      "current.explained": {
+        "calls": 1200,
+        "total_ns": 82037242,
+        "median_ns": 49958.0,
+        "max_ns": 195042
+      },
+      "current.find_ungrounded": {
+        "calls": 1200,
+        "total_ns": 80704721,
+        "median_ns": 48916.0,
+        "max_ns": 206750
+      },
+      "direct_full_inventory": {
+        "calls": 1200,
+        "total_ns": 32271265,
+        "median_ns": 34208.0,
+        "max_ns": 63333
+      },
+      "direct_retained": {
+        "calls": 1200,
+        "total_ns": 33454326,
+        "median_ns": 34834.0,
+        "max_ns": 237041
+      }
+    }
+  },
+  {
+    "cell": "cell_016",
+    "seed": 1006,
+    "sources": 80,
+    "per_family": 100,
+    "build_ns": 18451833,
+    "availability_check_ns": 197859620,
+    "calls": {
+      "current.explained": 1200,
+      "current.find_ungrounded": 1200,
+      "direct_retained": 1200,
+      "direct_full_inventory": 1200,
+      "availability.explained": 640
+    },
+    "all_raw_facts": 640,
+    "raw_facts_retained": 640,
+    "facts_quotable": 640,
+    "latency": {
+      "current.explained": {
+        "calls": 1200,
+        "total_ns": 431392266,
+        "median_ns": 320916.5,
+        "max_ns": 1464917
+      },
+      "current.find_ungrounded": {
+        "calls": 1200,
+        "total_ns": 423817411,
+        "median_ns": 318666.5,
+        "max_ns": 1389542
+      },
+      "direct_full_inventory": {
+        "calls": 1200,
+        "total_ns": 327465224,
+        "median_ns": 330771.0,
+        "max_ns": 756667
+      },
+      "direct_retained": {
+        "calls": 1200,
+        "total_ns": 328984869,
+        "median_ns": 330916.5,
+        "max_ns": 1806084
+      }
+    }
+  },
+  {
+    "cell": "cell_017",
+    "seed": 1006,
+    "sources": 800,
+    "per_family": 100,
+    "build_ns": 226984417,
+    "availability_check_ns": 8440159443,
+    "calls": {
+      "current.explained": 1200,
+      "current.find_ungrounded": 1200,
+      "direct_retained": 1200,
+      "direct_full_inventory": 1200,
+      "availability.explained": 6400
+    },
+    "all_raw_facts": 6400,
+    "raw_facts_retained": 2400,
+    "facts_quotable": 2439,
+    "latency": {
+      "current.explained": {
+        "calls": 1200,
+        "total_ns": 1602763424,
+        "median_ns": 298250.5,
+        "max_ns": 14376375
+      },
+      "current.find_ungrounded": {
+        "calls": 1200,
+        "total_ns": 1533003888,
+        "median_ns": 235208.5,
+        "max_ns": 13644833
+      },
+      "direct_full_inventory": {
+        "calls": 1200,
+        "total_ns": 3110455680,
+        "median_ns": 3251354.0,
+        "max_ns": 4888291
+      },
+      "direct_retained": {
+        "calls": 1200,
+        "total_ns": 1381979245,
+        "median_ns": 1237917.0,
+        "max_ns": 1731000
+      }
+    }
+  },
+  {
+    "cell": "cell_018",
+    "seed": 1007,
+    "sources": 8,
+    "per_family": 100,
+    "build_ns": 1856625,
+    "availability_check_ns": 2222250,
+    "calls": {
+      "current.explained": 1200,
+      "current.find_ungrounded": 1200,
+      "direct_retained": 1200,
+      "direct_full_inventory": 1200,
+      "availability.explained": 64
+    },
+    "all_raw_facts": 64,
+    "raw_facts_retained": 64,
+    "facts_quotable": 64,
+    "latency": {
+      "current.explained": {
+        "calls": 1200,
+        "total_ns": 81794620,
+        "median_ns": 49666.0,
+        "max_ns": 188208
+      },
+      "current.find_ungrounded": {
+        "calls": 1200,
+        "total_ns": 80539439,
+        "median_ns": 48875.0,
+        "max_ns": 200709
+      },
+      "direct_full_inventory": {
+        "calls": 1200,
+        "total_ns": 32510142,
+        "median_ns": 34291.0,
+        "max_ns": 305166
+      },
+      "direct_retained": {
+        "calls": 1200,
+        "total_ns": 33307760,
+        "median_ns": 34875.0,
+        "max_ns": 231834
+      }
+    }
+  },
+  {
+    "cell": "cell_019",
+    "seed": 1007,
+    "sources": 80,
+    "per_family": 100,
+    "build_ns": 18592334,
+    "availability_check_ns": 199634673,
+    "calls": {
+      "current.explained": 1200,
+      "current.find_ungrounded": 1200,
+      "direct_retained": 1200,
+      "direct_full_inventory": 1200,
+      "availability.explained": 640
+    },
+    "all_raw_facts": 640,
+    "raw_facts_retained": 640,
+    "facts_quotable": 640,
+    "latency": {
+      "current.explained": {
+        "calls": 1200,
+        "total_ns": 424543632,
+        "median_ns": 320208.5,
+        "max_ns": 1418625
+      },
+      "current.find_ungrounded": {
+        "calls": 1200,
+        "total_ns": 420049163,
+        "median_ns": 318062.5,
+        "max_ns": 1435584
+      },
+      "direct_full_inventory": {
+        "calls": 1200,
+        "total_ns": 312885095,
+        "median_ns": 322479.0,
+        "max_ns": 387667
+      },
+      "direct_retained": {
+        "calls": 1200,
+        "total_ns": 314324901,
+        "median_ns": 323125.0,
+        "max_ns": 840792
+      }
+    }
+  },
+  {
+    "cell": "cell_020",
+    "seed": 1007,
+    "sources": 800,
+    "per_family": 100,
+    "build_ns": 221238584,
+    "availability_check_ns": 8386562387,
+    "calls": {
+      "current.explained": 1200,
+      "current.find_ungrounded": 1200,
+      "direct_retained": 1200,
+      "direct_full_inventory": 1200,
+      "availability.explained": 6400
+    },
+    "all_raw_facts": 6400,
+    "raw_facts_retained": 2400,
+    "facts_quotable": 2427,
+    "latency": {
+      "current.explained": {
+        "calls": 1200,
+        "total_ns": 1570304708,
+        "median_ns": 275375.0,
+        "max_ns": 13295500
+      },
+      "current.find_ungrounded": {
+        "calls": 1200,
+        "total_ns": 1530348227,
+        "median_ns": 232520.5,
+        "max_ns": 12700958
+      },
+      "direct_full_inventory": {
+        "calls": 1200,
+        "total_ns": 3109248299,
+        "median_ns": 3226062.0,
+        "max_ns": 4159209
+      },
+      "direct_retained": {
+        "calls": 1200,
+        "total_ns": 1364398921,
+        "median_ns": 1223375.0,
+        "max_ns": 2104292
+      }
+    }
+  },
+  {
+    "cell": "cell_021",
+    "seed": 1008,
+    "sources": 8,
+    "per_family": 100,
+    "build_ns": 1892459,
+    "availability_check_ns": 2299041,
+    "calls": {
+      "current.explained": 1200,
+      "current.find_ungrounded": 1200,
+      "direct_retained": 1200,
+      "direct_full_inventory": 1200,
+      "availability.explained": 64
+    },
+    "all_raw_facts": 64,
+    "raw_facts_retained": 64,
+    "facts_quotable": 64,
+    "latency": {
+      "current.explained": {
+        "calls": 1200,
+        "total_ns": 83945622,
+        "median_ns": 51292.0,
+        "max_ns": 426084
+      },
+      "current.find_ungrounded": {
+        "calls": 1200,
+        "total_ns": 82241595,
+        "median_ns": 50250.0,
+        "max_ns": 214250
+      },
+      "direct_full_inventory": {
+        "calls": 1200,
+        "total_ns": 34024699,
+        "median_ns": 34750.0,
+        "max_ns": 150167
+      },
+      "direct_retained": {
+        "calls": 1200,
+        "total_ns": 35431434,
+        "median_ns": 35459.0,
+        "max_ns": 296000
+      }
+    }
+  },
+  {
+    "cell": "cell_022",
+    "seed": 1008,
+    "sources": 80,
+    "per_family": 100,
+    "build_ns": 19553334,
+    "availability_check_ns": 197969739,
+    "calls": {
+      "current.explained": 1200,
+      "current.find_ungrounded": 1200,
+      "direct_retained": 1200,
+      "direct_full_inventory": 1200,
+      "availability.explained": 640
+    },
+    "all_raw_facts": 640,
+    "raw_facts_retained": 640,
+    "facts_quotable": 640,
+    "latency": {
+      "current.explained": {
+        "calls": 1200,
+        "total_ns": 432720970,
+        "median_ns": 322187.5,
+        "max_ns": 1447792
+      },
+      "current.find_ungrounded": {
+        "calls": 1200,
+        "total_ns": 431435887,
+        "median_ns": 320375.0,
+        "max_ns": 6096375
+      },
+      "direct_full_inventory": {
+        "calls": 1200,
+        "total_ns": 319070874,
+        "median_ns": 326875.0,
+        "max_ns": 644792
+      },
+      "direct_retained": {
+        "calls": 1200,
+        "total_ns": 322303020,
+        "median_ns": 328167.0,
+        "max_ns": 888458
+      }
+    }
+  },
+  {
+    "cell": "cell_023",
+    "seed": 1008,
+    "sources": 800,
+    "per_family": 100,
+    "build_ns": 232958834,
+    "availability_check_ns": 8409278339,
+    "calls": {
+      "current.explained": 1200,
+      "current.find_ungrounded": 1200,
+      "direct_retained": 1200,
+      "direct_full_inventory": 1200,
+      "availability.explained": 6400
+    },
+    "all_raw_facts": 6400,
+    "raw_facts_retained": 2400,
+    "facts_quotable": 2421,
+    "latency": {
+      "current.explained": {
+        "calls": 1200,
+        "total_ns": 1551376384,
+        "median_ns": 276499.5,
+        "max_ns": 13692208
+      },
+      "current.find_ungrounded": {
+        "calls": 1200,
+        "total_ns": 1509384711,
+        "median_ns": 235583.5,
+        "max_ns": 13346958
+      },
+      "direct_full_inventory": {
+        "calls": 1200,
+        "total_ns": 3086703303,
+        "median_ns": 3215771.5,
+        "max_ns": 4214583
+      },
+      "direct_retained": {
+        "calls": 1200,
+        "total_ns": 1357685918,
+        "median_ns": 1220500.0,
+        "max_ns": 1572375
+      }
+    }
+  },
+  {
+    "cell": "cell_024",
+    "seed": 1009,
+    "sources": 8,
+    "per_family": 100,
+    "build_ns": 1913333,
+    "availability_check_ns": 2229583,
+    "calls": {
+      "current.explained": 1200,
+      "current.find_ungrounded": 1200,
+      "direct_retained": 1200,
+      "direct_full_inventory": 1200,
+      "availability.explained": 64
+    },
+    "all_raw_facts": 64,
+    "raw_facts_retained": 64,
+    "facts_quotable": 64,
+    "latency": {
+      "current.explained": {
+        "calls": 1200,
+        "total_ns": 81695675,
+        "median_ns": 49417.0,
+        "max_ns": 208875
+      },
+      "current.find_ungrounded": {
+        "calls": 1200,
+        "total_ns": 80763850,
+        "median_ns": 48542.0,
+        "max_ns": 442375
+      },
+      "direct_full_inventory": {
+        "calls": 1200,
+        "total_ns": 32123358,
+        "median_ns": 34125.0,
+        "max_ns": 59667
+      },
+      "direct_retained": {
+        "calls": 1200,
+        "total_ns": 33058727,
+        "median_ns": 34854.5,
+        "max_ns": 70417
+      }
+    }
+  },
+  {
+    "cell": "cell_025",
+    "seed": 1009,
+    "sources": 80,
+    "per_family": 100,
+    "build_ns": 18213459,
+    "availability_check_ns": 199007707,
+    "calls": {
+      "current.explained": 1200,
+      "current.find_ungrounded": 1200,
+      "direct_retained": 1200,
+      "direct_full_inventory": 1200,
+      "availability.explained": 640
+    },
+    "all_raw_facts": 640,
+    "raw_facts_retained": 640,
+    "facts_quotable": 640,
+    "latency": {
+      "current.explained": {
+        "calls": 1200,
+        "total_ns": 423540812,
+        "median_ns": 320166.5,
+        "max_ns": 1325041
+      },
+      "current.find_ungrounded": {
+        "calls": 1200,
+        "total_ns": 419496507,
+        "median_ns": 318271.0,
+        "max_ns": 1340125
+      },
+      "direct_full_inventory": {
+        "calls": 1200,
+        "total_ns": 316572651,
+        "median_ns": 323604.5,
+        "max_ns": 462458
+      },
+      "direct_retained": {
+        "calls": 1200,
+        "total_ns": 317576781,
+        "median_ns": 323708.0,
+        "max_ns": 805292
+      }
+    }
+  },
+  {
+    "cell": "cell_026",
+    "seed": 1009,
+    "sources": 800,
+    "per_family": 100,
+    "build_ns": 226450750,
+    "availability_check_ns": 8313098110,
+    "calls": {
+      "current.explained": 1200,
+      "current.find_ungrounded": 1200,
+      "direct_retained": 1200,
+      "direct_full_inventory": 1200,
+      "availability.explained": 6400
+    },
+    "all_raw_facts": 6400,
+    "raw_facts_retained": 2392,
+    "facts_quotable": 2422,
+    "latency": {
+      "current.explained": {
+        "calls": 1200,
+        "total_ns": 1532031107,
+        "median_ns": 286417.0,
+        "max_ns": 13468084
+      },
+      "current.find_ungrounded": {
+        "calls": 1200,
+        "total_ns": 1486672282,
+        "median_ns": 235062.0,
+        "max_ns": 14145541
+      },
+      "direct_full_inventory": {
+        "calls": 1200,
+        "total_ns": 3113147214,
+        "median_ns": 3237979.0,
+        "max_ns": 4306291
+      },
+      "direct_retained": {
+        "calls": 1200,
+        "total_ns": 1370998207,
+        "median_ns": 1228125.0,
+        "max_ns": 1733292
+      }
+    }
+  },
+  {
+    "cell": "cell_027",
+    "seed": 1010,
+    "sources": 8,
+    "per_family": 100,
+    "build_ns": 1819792,
+    "availability_check_ns": 2302090,
+    "calls": {
+      "current.explained": 1200,
+      "current.find_ungrounded": 1200,
+      "direct_retained": 1200,
+      "direct_full_inventory": 1200,
+      "availability.explained": 64
+    },
+    "all_raw_facts": 64,
+    "raw_facts_retained": 64,
+    "facts_quotable": 64,
+    "latency": {
+      "current.explained": {
+        "calls": 1200,
+        "total_ns": 83096522,
+        "median_ns": 50125.0,
+        "max_ns": 217208
+      },
+      "current.find_ungrounded": {
+        "calls": 1200,
+        "total_ns": 81873145,
+        "median_ns": 49209.0,
+        "max_ns": 201917
+      },
+      "direct_full_inventory": {
+        "calls": 1200,
+        "total_ns": 32698844,
+        "median_ns": 34208.0,
+        "max_ns": 68083
+      },
+      "direct_retained": {
+        "calls": 1200,
+        "total_ns": 33861953,
+        "median_ns": 34750.0,
+        "max_ns": 313167
+      }
+    }
+  },
+  {
+    "cell": "cell_028",
+    "seed": 1010,
+    "sources": 80,
+    "per_family": 100,
+    "build_ns": 18780666,
+    "availability_check_ns": 204886380,
+    "calls": {
+      "current.explained": 1200,
+      "current.find_ungrounded": 1200,
+      "direct_retained": 1200,
+      "direct_full_inventory": 1200,
+      "availability.explained": 640
+    },
+    "all_raw_facts": 640,
+    "raw_facts_retained": 640,
+    "facts_quotable": 640,
+    "latency": {
+      "current.explained": {
+        "calls": 1200,
+        "total_ns": 428763003,
+        "median_ns": 321687.0,
+        "max_ns": 1405583
+      },
+      "current.find_ungrounded": {
+        "calls": 1200,
+        "total_ns": 423224687,
+        "median_ns": 319500.0,
+        "max_ns": 1437875
+      },
+      "direct_full_inventory": {
+        "calls": 1200,
+        "total_ns": 315760731,
+        "median_ns": 324937.0,
+        "max_ns": 505500
+      },
+      "direct_retained": {
+        "calls": 1200,
+        "total_ns": 318222592,
+        "median_ns": 325625.0,
+        "max_ns": 594458
+      }
+    }
+  },
+  {
+    "cell": "cell_029",
+    "seed": 1010,
+    "sources": 800,
+    "per_family": 100,
+    "build_ns": 231606000,
+    "availability_check_ns": 8281865991,
+    "calls": {
+      "current.explained": 1200,
+      "current.find_ungrounded": 1200,
+      "direct_retained": 1200,
+      "direct_full_inventory": 1200,
+      "availability.explained": 6400
+    },
+    "all_raw_facts": 6400,
+    "raw_facts_retained": 2384,
+    "facts_quotable": 2416,
+    "latency": {
+      "current.explained": {
+        "calls": 1200,
+        "total_ns": 1580050507,
+        "median_ns": 342708.0,
+        "max_ns": 13728208
+      },
+      "current.find_ungrounded": {
+        "calls": 1200,
+        "total_ns": 1496667525,
+        "median_ns": 240271.0,
+        "max_ns": 15089167
+      },
+      "direct_full_inventory": {
+        "calls": 1200,
+        "total_ns": 3139240919,
+        "median_ns": 3250542.0,
+        "max_ns": 5047916
+      },
+      "direct_retained": {
+        "calls": 1200,
+        "total_ns": 1379748505,
+        "median_ns": 1227479.0,
+        "max_ns": 1927666
+      }
+    }
+  }
+]

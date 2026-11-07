@@ -1,0 +1,1449 @@
+{
+  "status": "draft_for_independent_final_claim_review",
+  "date": "2026-11-07",
+  "code_head": "744d96938daabb8be0c83974c78b0348b8fc2ac2",
+  "claims": [
+    {
+      "id": "C01",
+      "claim": "Fixed synthetic component run completed all 30 cells and 36000 scored claim instances with 144000 scored arm calls, no checker exceptions or retries.",
+      "evidence": [
+        "main001_analysis/integrity.json",
+        "main001/completion.json"
+      ],
+      "scope": "component execution completeness only"
+    },
+    {
+      "id": "C02",
+      "claim": "Current target acceptance varies by valid family and source-volume condition; exact direct 382/1000, sum 1000/1000, difference 35/1000, ratio 378/1000, percent 134/1000 at 800 sources.",
+      "evidence": [
+        "main001_analysis/family_cell_tables.json",
+        "main001_analysis/seed_cluster_bootstrap.json"
+      ],
+      "scope": "fixed generated instance distribution; no single accuracy"
+    },
+    {
+      "id": "C03",
+      "claim": "All wrong-entity/date/currency/sign instances passed at 8 and 80 sources; 382/1000 per family passed at 800.",
+      "evidence": [
+        "main001_analysis/family_cell_tables.json",
+        "main001/cell_002/observations.jsonl"
+      ],
+      "scope": "semantic scope boundary and sign-loss diagnostic; not promised semantic validation"
+    },
+    {
+      "id": "C04",
+      "claim": "Finite numeric oracle classifies collisions independently; random/near-value unsupported acceptance is policy-specific.",
+      "evidence": [
+        "main001_analysis/family_cell_tables.json",
+        "builder/runner.py"
+      ],
+      "scope": "not exhaustive production numeric grounding; no universal false-acceptance rate"
+    },
+    {
+      "id": "C05",
+      "claim": "At 800 sources raw facts retained 23976/64000 and direct fact-text quotable 24286/64000; these are different availability measures.",
+      "evidence": [
+        "main001_analysis/cost_availability.json"
+      ],
+      "scope": "synthetic literal-value quotability, not semantic identity retention"
+    },
+    {
+      "id": "C06",
+      "claim": "Pointwise descriptive seed-cluster intervals use ten seeds and 10000 jointly paired resamples; repeated instances are not independent.",
+      "evidence": [
+        "main001_analysis/seed_rates.json",
+        "main001_analysis/seed_cluster_bootstrap.json",
+        "main001_analysis/integrity.json",
+        "builder/analyze_v2.py"
+      ],
+      "scope": "conditional exploratory uncertainty, no simultaneous coverage/power guarantee"
+    },
+    {
+      "id": "C07",
+      "claim": "Recorded reconstructed-return cohort: 7 local groups, 18 tool attempts, 17 successes and 1 error, 17 prefixes, no check/ingestion/prefix exceptions.",
+      "evidence": [
+        "quotability001/COMPLETION.json",
+        "reviewer/FINAL_COMBINED_AUDIT.json"
+      ],
+      "scope": "one-workspace previously inspected development, not fresh E02"
+    },
+    {
+      "id": "C08",
+      "claim": "14675 ingested numeric exposures were 11395 exempt and 3280 supported, 0 unsupported; recorded cohort did not reach direct-value cap stress.",
+      "evidence": [
+        "reviewer/FINAL_COMBINED_AUDIT.json",
+        "quotability001/PREFIX_ATTEMPTS.json"
+      ],
+      "scope": "numeric leaf quotability incl metadata/duplicates, no semantic accuracy; exemptions not verification"
+    },
+    {
+      "id": "C09",
+      "claim": "Future-source support 309/11353 total exposures is a coincidence/derivation diagnostic, not false acceptance.",
+      "evidence": [
+        "reviewer/FINAL_COMBINED_AUDIT.json"
+      ],
+      "scope": "no independent negative oracle or semantic truth"
+    },
+    {
+      "id": "C10",
+      "claim": "These experiments do not complete full LAH, E01-E03, live LLM, model compliance or causal research claims; academic research remains pending.",
+      "evidence": [
+        "builder/FINAL_PROTOCOL.md",
+        "MAIN001_PERMIT.json",
+        "quotability001/COMPLETION.json"
+      ],
+      "scope": "explicit nonclaims"
+    }
+  ],
+  "synthetic_all_family_target_counts": [
+    {
+      "family": "direct_exact",
+      "sources": 8,
+      "counts": {
+        "attempted": 1000,
+        "accepted": 1000,
+        "not_parsed": 0,
+        "exempt_tokens": 0,
+        "full_fact_correct_correct": 1000,
+        "full_fact_correct_correct_accepted": 1000,
+        "numeric_support_correct": 1000,
+        "numeric_support_correct_accepted": 1000,
+        "correct_with_raw_support": 1000,
+        "correct_with_raw_support_accepted": 1000
+      }
+    },
+    {
+      "family": "direct_exact",
+      "sources": 80,
+      "counts": {
+        "attempted": 1000,
+        "accepted": 1000,
+        "not_parsed": 0,
+        "exempt_tokens": 0,
+        "full_fact_correct_correct": 1000,
+        "full_fact_correct_correct_accepted": 1000,
+        "numeric_support_correct": 1000,
+        "numeric_support_correct_accepted": 1000,
+        "correct_with_raw_support": 1000,
+        "correct_with_raw_support_accepted": 1000
+      }
+    },
+    {
+      "family": "direct_exact",
+      "sources": 800,
+      "counts": {
+        "attempted": 1000,
+        "accepted": 382,
+        "not_parsed": 0,
+        "exempt_tokens": 0,
+        "full_fact_correct_correct": 1000,
+        "full_fact_correct_correct_accepted": 382,
+        "numeric_support_correct": 1000,
+        "numeric_support_correct_accepted": 382,
+        "correct_with_raw_support": 378,
+        "correct_with_raw_support_accepted": 378
+      }
+    },
+    {
+      "family": "direct_compact",
+      "sources": 8,
+      "counts": {
+        "attempted": 1000,
+        "accepted": 1000,
+        "not_parsed": 0,
+        "exempt_tokens": 0,
+        "full_fact_correct_correct": 1000,
+        "full_fact_correct_correct_accepted": 1000,
+        "numeric_support_correct": 1000,
+        "numeric_support_correct_accepted": 1000,
+        "correct_with_raw_support": 1000,
+        "correct_with_raw_support_accepted": 1000
+      }
+    },
+    {
+      "family": "direct_compact",
+      "sources": 80,
+      "counts": {
+        "attempted": 1000,
+        "accepted": 1000,
+        "not_parsed": 0,
+        "exempt_tokens": 0,
+        "full_fact_correct_correct": 1000,
+        "full_fact_correct_correct_accepted": 1000,
+        "numeric_support_correct": 1000,
+        "numeric_support_correct_accepted": 1000,
+        "correct_with_raw_support": 1000,
+        "correct_with_raw_support_accepted": 1000
+      }
+    },
+    {
+      "family": "direct_compact",
+      "sources": 800,
+      "counts": {
+        "attempted": 1000,
+        "accepted": 558,
+        "not_parsed": 0,
+        "exempt_tokens": 0,
+        "full_fact_correct_correct": 1000,
+        "full_fact_correct_correct_accepted": 558,
+        "numeric_support_correct": 1000,
+        "numeric_support_correct_accepted": 558,
+        "correct_with_raw_support": 378,
+        "correct_with_raw_support_accepted": 378
+      }
+    },
+    {
+      "family": "sum",
+      "sources": 8,
+      "counts": {
+        "attempted": 1000,
+        "accepted": 1000,
+        "not_parsed": 0,
+        "exempt_tokens": 0,
+        "full_fact_correct_correct": 1000,
+        "full_fact_correct_correct_accepted": 1000,
+        "numeric_support_correct": 1000,
+        "numeric_support_correct_accepted": 1000,
+        "correct_with_raw_support": 1000,
+        "correct_with_raw_support_accepted": 1000
+      }
+    },
+    {
+      "family": "sum",
+      "sources": 80,
+      "counts": {
+        "attempted": 1000,
+        "accepted": 1000,
+        "not_parsed": 0,
+        "exempt_tokens": 0,
+        "full_fact_correct_correct": 1000,
+        "full_fact_correct_correct_accepted": 1000,
+        "numeric_support_correct": 1000,
+        "numeric_support_correct_accepted": 1000,
+        "correct_with_raw_support": 1000,
+        "correct_with_raw_support_accepted": 1000
+      }
+    },
+    {
+      "family": "sum",
+      "sources": 800,
+      "counts": {
+        "attempted": 1000,
+        "accepted": 1000,
+        "not_parsed": 0,
+        "exempt_tokens": 0,
+        "full_fact_correct_correct": 1000,
+        "full_fact_correct_correct_accepted": 1000,
+        "numeric_support_correct": 1000,
+        "numeric_support_correct_accepted": 1000,
+        "correct_with_raw_support": 378,
+        "correct_with_raw_support_accepted": 378
+      }
+    },
+    {
+      "family": "difference",
+      "sources": 8,
+      "counts": {
+        "attempted": 1000,
+        "accepted": 1000,
+        "not_parsed": 0,
+        "exempt_tokens": 0,
+        "full_fact_correct_correct": 1000,
+        "full_fact_correct_correct_accepted": 1000,
+        "numeric_support_correct": 1000,
+        "numeric_support_correct_accepted": 1000,
+        "correct_with_raw_support": 1000,
+        "correct_with_raw_support_accepted": 1000
+      }
+    },
+    {
+      "family": "difference",
+      "sources": 80,
+      "counts": {
+        "attempted": 1000,
+        "accepted": 223,
+        "not_parsed": 0,
+        "exempt_tokens": 0,
+        "full_fact_correct_correct": 1000,
+        "full_fact_correct_correct_accepted": 223,
+        "numeric_support_correct": 1000,
+        "numeric_support_correct_accepted": 223,
+        "correct_with_raw_support": 1000,
+        "correct_with_raw_support_accepted": 223
+      }
+    },
+    {
+      "family": "difference",
+      "sources": 800,
+      "counts": {
+        "attempted": 1000,
+        "accepted": 35,
+        "not_parsed": 0,
+        "exempt_tokens": 1,
+        "full_fact_correct_correct": 1000,
+        "full_fact_correct_correct_accepted": 35,
+        "numeric_support_correct": 1000,
+        "numeric_support_correct_accepted": 35,
+        "correct_with_raw_support": 378,
+        "correct_with_raw_support_accepted": 31
+      }
+    },
+    {
+      "family": "ratio_named",
+      "sources": 8,
+      "counts": {
+        "attempted": 1000,
+        "accepted": 1000,
+        "not_parsed": 0,
+        "exempt_tokens": 0,
+        "full_fact_correct_correct": 1000,
+        "full_fact_correct_correct_accepted": 1000,
+        "numeric_support_correct": 1000,
+        "numeric_support_correct_accepted": 1000,
+        "correct_with_raw_support": 1000,
+        "correct_with_raw_support_accepted": 1000
+      }
+    },
+    {
+      "family": "ratio_named",
+      "sources": 80,
+      "counts": {
+        "attempted": 1000,
+        "accepted": 1000,
+        "not_parsed": 0,
+        "exempt_tokens": 0,
+        "full_fact_correct_correct": 1000,
+        "full_fact_correct_correct_accepted": 1000,
+        "numeric_support_correct": 1000,
+        "numeric_support_correct_accepted": 1000,
+        "correct_with_raw_support": 1000,
+        "correct_with_raw_support_accepted": 1000
+      }
+    },
+    {
+      "family": "ratio_named",
+      "sources": 800,
+      "counts": {
+        "attempted": 1000,
+        "accepted": 378,
+        "not_parsed": 0,
+        "exempt_tokens": 0,
+        "full_fact_correct_correct": 1000,
+        "full_fact_correct_correct_accepted": 378,
+        "numeric_support_correct": 1000,
+        "numeric_support_correct_accepted": 378,
+        "correct_with_raw_support": 378,
+        "correct_with_raw_support_accepted": 378
+      }
+    },
+    {
+      "family": "percent",
+      "sources": 8,
+      "counts": {
+        "attempted": 1000,
+        "accepted": 1000,
+        "not_parsed": 0,
+        "exempt_tokens": 0,
+        "full_fact_correct_correct": 1000,
+        "full_fact_correct_correct_accepted": 1000,
+        "numeric_support_correct": 1000,
+        "numeric_support_correct_accepted": 1000,
+        "correct_with_raw_support": 1000,
+        "correct_with_raw_support_accepted": 1000
+      }
+    },
+    {
+      "family": "percent",
+      "sources": 80,
+      "counts": {
+        "attempted": 1000,
+        "accepted": 301,
+        "not_parsed": 0,
+        "exempt_tokens": 0,
+        "full_fact_correct_correct": 1000,
+        "full_fact_correct_correct_accepted": 301,
+        "numeric_support_correct": 1000,
+        "numeric_support_correct_accepted": 301,
+        "correct_with_raw_support": 1000,
+        "correct_with_raw_support_accepted": 301
+      }
+    },
+    {
+      "family": "percent",
+      "sources": 800,
+      "counts": {
+        "attempted": 1000,
+        "accepted": 134,
+        "not_parsed": 0,
+        "exempt_tokens": 0,
+        "full_fact_correct_correct": 1000,
+        "full_fact_correct_correct_accepted": 134,
+        "numeric_support_correct": 1000,
+        "numeric_support_correct_accepted": 134,
+        "correct_with_raw_support": 378,
+        "correct_with_raw_support_accepted": 69
+      }
+    },
+    {
+      "family": "random_value",
+      "sources": 8,
+      "counts": {
+        "attempted": 1000,
+        "accepted": 0,
+        "not_parsed": 0,
+        "exempt_tokens": 0,
+        "full_fact_correct_incorrect": 1000,
+        "full_fact_correct_incorrect_accepted": 0,
+        "numeric_support_incorrect": 1000,
+        "numeric_support_incorrect_accepted": 0
+      }
+    },
+    {
+      "family": "random_value",
+      "sources": 80,
+      "counts": {
+        "attempted": 1000,
+        "accepted": 1,
+        "not_parsed": 0,
+        "exempt_tokens": 0,
+        "full_fact_correct_incorrect": 1000,
+        "full_fact_correct_incorrect_accepted": 1,
+        "numeric_support_incorrect": 998,
+        "numeric_support_incorrect_accepted": 0,
+        "numeric_support_correct": 2,
+        "numeric_support_correct_accepted": 1
+      }
+    },
+    {
+      "family": "random_value",
+      "sources": 800,
+      "counts": {
+        "attempted": 1000,
+        "accepted": 7,
+        "not_parsed": 0,
+        "exempt_tokens": 0,
+        "full_fact_correct_incorrect": 1000,
+        "full_fact_correct_incorrect_accepted": 7,
+        "numeric_support_incorrect": 965,
+        "numeric_support_incorrect_accepted": 1,
+        "numeric_support_correct": 35,
+        "numeric_support_correct_accepted": 6
+      }
+    },
+    {
+      "family": "near_value",
+      "sources": 8,
+      "counts": {
+        "attempted": 1000,
+        "accepted": 0,
+        "not_parsed": 0,
+        "exempt_tokens": 0,
+        "full_fact_correct_incorrect": 1000,
+        "full_fact_correct_incorrect_accepted": 0,
+        "numeric_support_incorrect": 1000,
+        "numeric_support_incorrect_accepted": 0
+      }
+    },
+    {
+      "family": "near_value",
+      "sources": 80,
+      "counts": {
+        "attempted": 1000,
+        "accepted": 1,
+        "not_parsed": 0,
+        "exempt_tokens": 0,
+        "full_fact_correct_incorrect": 1000,
+        "full_fact_correct_incorrect_accepted": 1,
+        "numeric_support_incorrect": 999,
+        "numeric_support_incorrect_accepted": 1,
+        "numeric_support_correct": 1,
+        "numeric_support_correct_accepted": 0
+      }
+    },
+    {
+      "family": "near_value",
+      "sources": 800,
+      "counts": {
+        "attempted": 1000,
+        "accepted": 10,
+        "not_parsed": 0,
+        "exempt_tokens": 0,
+        "full_fact_correct_incorrect": 1000,
+        "full_fact_correct_incorrect_accepted": 10,
+        "numeric_support_incorrect": 974,
+        "numeric_support_incorrect_accepted": 5,
+        "numeric_support_correct": 26,
+        "numeric_support_correct_accepted": 5
+      }
+    },
+    {
+      "family": "wrong_entity",
+      "sources": 8,
+      "counts": {
+        "attempted": 1000,
+        "accepted": 1000,
+        "not_parsed": 0,
+        "exempt_tokens": 0,
+        "full_fact_correct_incorrect": 1000,
+        "full_fact_correct_incorrect_accepted": 1000,
+        "numeric_support_correct": 1000,
+        "numeric_support_correct_accepted": 1000
+      }
+    },
+    {
+      "family": "wrong_entity",
+      "sources": 80,
+      "counts": {
+        "attempted": 1000,
+        "accepted": 1000,
+        "not_parsed": 0,
+        "exempt_tokens": 0,
+        "full_fact_correct_incorrect": 1000,
+        "full_fact_correct_incorrect_accepted": 1000,
+        "numeric_support_correct": 1000,
+        "numeric_support_correct_accepted": 1000
+      }
+    },
+    {
+      "family": "wrong_entity",
+      "sources": 800,
+      "counts": {
+        "attempted": 1000,
+        "accepted": 382,
+        "not_parsed": 0,
+        "exempt_tokens": 0,
+        "full_fact_correct_incorrect": 1000,
+        "full_fact_correct_incorrect_accepted": 382,
+        "numeric_support_correct": 1000,
+        "numeric_support_correct_accepted": 382
+      }
+    },
+    {
+      "family": "wrong_date",
+      "sources": 8,
+      "counts": {
+        "attempted": 1000,
+        "accepted": 1000,
+        "not_parsed": 0,
+        "exempt_tokens": 0,
+        "full_fact_correct_incorrect": 1000,
+        "full_fact_correct_incorrect_accepted": 1000,
+        "numeric_support_correct": 1000,
+        "numeric_support_correct_accepted": 1000
+      }
+    },
+    {
+      "family": "wrong_date",
+      "sources": 80,
+      "counts": {
+        "attempted": 1000,
+        "accepted": 1000,
+        "not_parsed": 0,
+        "exempt_tokens": 0,
+        "full_fact_correct_incorrect": 1000,
+        "full_fact_correct_incorrect_accepted": 1000,
+        "numeric_support_correct": 1000,
+        "numeric_support_correct_accepted": 1000
+      }
+    },
+    {
+      "family": "wrong_date",
+      "sources": 800,
+      "counts": {
+        "attempted": 1000,
+        "accepted": 382,
+        "not_parsed": 0,
+        "exempt_tokens": 0,
+        "full_fact_correct_incorrect": 1000,
+        "full_fact_correct_incorrect_accepted": 382,
+        "numeric_support_correct": 1000,
+        "numeric_support_correct_accepted": 382
+      }
+    },
+    {
+      "family": "wrong_currency",
+      "sources": 8,
+      "counts": {
+        "attempted": 1000,
+        "accepted": 1000,
+        "not_parsed": 0,
+        "exempt_tokens": 0,
+        "full_fact_correct_incorrect": 1000,
+        "full_fact_correct_incorrect_accepted": 1000,
+        "numeric_support_correct": 1000,
+        "numeric_support_correct_accepted": 1000
+      }
+    },
+    {
+      "family": "wrong_currency",
+      "sources": 80,
+      "counts": {
+        "attempted": 1000,
+        "accepted": 1000,
+        "not_parsed": 0,
+        "exempt_tokens": 0,
+        "full_fact_correct_incorrect": 1000,
+        "full_fact_correct_incorrect_accepted": 1000,
+        "numeric_support_correct": 1000,
+        "numeric_support_correct_accepted": 1000
+      }
+    },
+    {
+      "family": "wrong_currency",
+      "sources": 800,
+      "counts": {
+        "attempted": 1000,
+        "accepted": 382,
+        "not_parsed": 0,
+        "exempt_tokens": 0,
+        "full_fact_correct_incorrect": 1000,
+        "full_fact_correct_incorrect_accepted": 382,
+        "numeric_support_correct": 1000,
+        "numeric_support_correct_accepted": 382
+      }
+    },
+    {
+      "family": "wrong_sign",
+      "sources": 8,
+      "counts": {
+        "attempted": 1000,
+        "accepted": 1000,
+        "not_parsed": 0,
+        "exempt_tokens": 0,
+        "full_fact_correct_incorrect": 1000,
+        "full_fact_correct_incorrect_accepted": 1000,
+        "numeric_support_incorrect": 1000,
+        "numeric_support_incorrect_accepted": 1000
+      }
+    },
+    {
+      "family": "wrong_sign",
+      "sources": 80,
+      "counts": {
+        "attempted": 1000,
+        "accepted": 1000,
+        "not_parsed": 0,
+        "exempt_tokens": 0,
+        "full_fact_correct_incorrect": 1000,
+        "full_fact_correct_incorrect_accepted": 1000,
+        "numeric_support_incorrect": 1000,
+        "numeric_support_incorrect_accepted": 1000
+      }
+    },
+    {
+      "family": "wrong_sign",
+      "sources": 800,
+      "counts": {
+        "attempted": 1000,
+        "accepted": 382,
+        "not_parsed": 0,
+        "exempt_tokens": 0,
+        "full_fact_correct_incorrect": 1000,
+        "full_fact_correct_incorrect_accepted": 382,
+        "numeric_support_incorrect": 982,
+        "numeric_support_incorrect_accepted": 377,
+        "numeric_support_correct": 18,
+        "numeric_support_correct_accepted": 5
+      }
+    }
+  ],
+  "valid_claim_intervals": [
+    {
+      "sources": 8,
+      "family": "direct_exact",
+      "truth_axis": "full_fact_correct",
+      "truth_class": "True",
+      "baseline": "direct_retained",
+      "eligible_seed_ids": [
+        1001,
+        1002,
+        1003,
+        1004,
+        1005,
+        1006,
+        1007,
+        1008,
+        1009,
+        1010
+      ],
+      "eligible_seed_count": 10,
+      "undefined_seed_ids": [],
+      "point_estimates": {
+        "current_rate": 1.0,
+        "baseline_rate": 1.0,
+        "paired_difference": 0.0
+      },
+      "intervals": {
+        "current_rate": [
+          1.0,
+          1.0
+        ],
+        "baseline_rate": [
+          1.0,
+          1.0
+        ],
+        "paired_difference": [
+          0.0,
+          0.0
+        ]
+      },
+      "interval_kind": "descriptive 95% paired seed-cluster percentile; seed macro mean",
+      "bootstrap_seed": 740031,
+      "resamples": 10000
+    },
+    {
+      "sources": 80,
+      "family": "direct_exact",
+      "truth_axis": "full_fact_correct",
+      "truth_class": "True",
+      "baseline": "direct_retained",
+      "eligible_seed_ids": [
+        1001,
+        1002,
+        1003,
+        1004,
+        1005,
+        1006,
+        1007,
+        1008,
+        1009,
+        1010
+      ],
+      "eligible_seed_count": 10,
+      "undefined_seed_ids": [],
+      "point_estimates": {
+        "current_rate": 1.0,
+        "baseline_rate": 1.0,
+        "paired_difference": 0.0
+      },
+      "intervals": {
+        "current_rate": [
+          1.0,
+          1.0
+        ],
+        "baseline_rate": [
+          1.0,
+          1.0
+        ],
+        "paired_difference": [
+          0.0,
+          0.0
+        ]
+      },
+      "interval_kind": "descriptive 95% paired seed-cluster percentile; seed macro mean",
+      "bootstrap_seed": 740031,
+      "resamples": 10000
+    },
+    {
+      "sources": 800,
+      "family": "direct_exact",
+      "truth_axis": "full_fact_correct",
+      "truth_class": "True",
+      "baseline": "direct_retained",
+      "eligible_seed_ids": [
+        1001,
+        1002,
+        1003,
+        1004,
+        1005,
+        1006,
+        1007,
+        1008,
+        1009,
+        1010
+      ],
+      "eligible_seed_count": 10,
+      "undefined_seed_ids": [],
+      "point_estimates": {
+        "current_rate": 0.382,
+        "baseline_rate": 0.38,
+        "paired_difference": 0.0020000000000000018
+      },
+      "intervals": {
+        "current_rate": [
+          0.377,
+          0.388
+        ],
+        "baseline_rate": [
+          0.376,
+          0.384
+        ],
+        "paired_difference": [
+          0.0,
+          0.0050000000000000044
+        ]
+      },
+      "interval_kind": "descriptive 95% paired seed-cluster percentile; seed macro mean",
+      "bootstrap_seed": 740031,
+      "resamples": 10000
+    },
+    {
+      "sources": 8,
+      "family": "direct_compact",
+      "truth_axis": "full_fact_correct",
+      "truth_class": "True",
+      "baseline": "direct_retained",
+      "eligible_seed_ids": [
+        1001,
+        1002,
+        1003,
+        1004,
+        1005,
+        1006,
+        1007,
+        1008,
+        1009,
+        1010
+      ],
+      "eligible_seed_count": 10,
+      "undefined_seed_ids": [],
+      "point_estimates": {
+        "current_rate": 1.0,
+        "baseline_rate": 1.0,
+        "paired_difference": 0.0
+      },
+      "intervals": {
+        "current_rate": [
+          1.0,
+          1.0
+        ],
+        "baseline_rate": [
+          1.0,
+          1.0
+        ],
+        "paired_difference": [
+          0.0,
+          0.0
+        ]
+      },
+      "interval_kind": "descriptive 95% paired seed-cluster percentile; seed macro mean",
+      "bootstrap_seed": 740031,
+      "resamples": 10000
+    },
+    {
+      "sources": 80,
+      "family": "direct_compact",
+      "truth_axis": "full_fact_correct",
+      "truth_class": "True",
+      "baseline": "direct_retained",
+      "eligible_seed_ids": [
+        1001,
+        1002,
+        1003,
+        1004,
+        1005,
+        1006,
+        1007,
+        1008,
+        1009,
+        1010
+      ],
+      "eligible_seed_count": 10,
+      "undefined_seed_ids": [],
+      "point_estimates": {
+        "current_rate": 1.0,
+        "baseline_rate": 1.0,
+        "paired_difference": 0.0
+      },
+      "intervals": {
+        "current_rate": [
+          1.0,
+          1.0
+        ],
+        "baseline_rate": [
+          1.0,
+          1.0
+        ],
+        "paired_difference": [
+          0.0,
+          0.0
+        ]
+      },
+      "interval_kind": "descriptive 95% paired seed-cluster percentile; seed macro mean",
+      "bootstrap_seed": 740031,
+      "resamples": 10000
+    },
+    {
+      "sources": 800,
+      "family": "direct_compact",
+      "truth_axis": "full_fact_correct",
+      "truth_class": "True",
+      "baseline": "direct_retained",
+      "eligible_seed_ids": [
+        1001,
+        1002,
+        1003,
+        1004,
+        1005,
+        1006,
+        1007,
+        1008,
+        1009,
+        1010
+      ],
+      "eligible_seed_count": 10,
+      "undefined_seed_ids": [],
+      "point_estimates": {
+        "current_rate": 0.558,
+        "baseline_rate": 0.487,
+        "paired_difference": 0.071
+      },
+      "intervals": {
+        "current_rate": [
+          0.529,
+          0.581
+        ],
+        "baseline_rate": [
+          0.466,
+          0.507
+        ],
+        "paired_difference": [
+          0.052000000000000005,
+          0.08799999999999998
+        ]
+      },
+      "interval_kind": "descriptive 95% paired seed-cluster percentile; seed macro mean",
+      "bootstrap_seed": 740031,
+      "resamples": 10000
+    },
+    {
+      "sources": 8,
+      "family": "sum",
+      "truth_axis": "full_fact_correct",
+      "truth_class": "True",
+      "baseline": "direct_retained",
+      "eligible_seed_ids": [
+        1001,
+        1002,
+        1003,
+        1004,
+        1005,
+        1006,
+        1007,
+        1008,
+        1009,
+        1010
+      ],
+      "eligible_seed_count": 10,
+      "undefined_seed_ids": [],
+      "point_estimates": {
+        "current_rate": 1.0,
+        "baseline_rate": 0.0,
+        "paired_difference": 1.0
+      },
+      "intervals": {
+        "current_rate": [
+          1.0,
+          1.0
+        ],
+        "baseline_rate": [
+          0.0,
+          0.0
+        ],
+        "paired_difference": [
+          1.0,
+          1.0
+        ]
+      },
+      "interval_kind": "descriptive 95% paired seed-cluster percentile; seed macro mean",
+      "bootstrap_seed": 740031,
+      "resamples": 10000
+    },
+    {
+      "sources": 80,
+      "family": "sum",
+      "truth_axis": "full_fact_correct",
+      "truth_class": "True",
+      "baseline": "direct_retained",
+      "eligible_seed_ids": [
+        1001,
+        1002,
+        1003,
+        1004,
+        1005,
+        1006,
+        1007,
+        1008,
+        1009,
+        1010
+      ],
+      "eligible_seed_count": 10,
+      "undefined_seed_ids": [],
+      "point_estimates": {
+        "current_rate": 1.0,
+        "baseline_rate": 0.0,
+        "paired_difference": 1.0
+      },
+      "intervals": {
+        "current_rate": [
+          1.0,
+          1.0
+        ],
+        "baseline_rate": [
+          0.0,
+          0.0
+        ],
+        "paired_difference": [
+          1.0,
+          1.0
+        ]
+      },
+      "interval_kind": "descriptive 95% paired seed-cluster percentile; seed macro mean",
+      "bootstrap_seed": 740031,
+      "resamples": 10000
+    },
+    {
+      "sources": 800,
+      "family": "sum",
+      "truth_axis": "full_fact_correct",
+      "truth_class": "True",
+      "baseline": "direct_retained",
+      "eligible_seed_ids": [
+        1001,
+        1002,
+        1003,
+        1004,
+        1005,
+        1006,
+        1007,
+        1008,
+        1009,
+        1010
+      ],
+      "eligible_seed_count": 10,
+      "undefined_seed_ids": [],
+      "point_estimates": {
+        "current_rate": 1.0,
+        "baseline_rate": 0.002,
+        "paired_difference": 0.998
+      },
+      "intervals": {
+        "current_rate": [
+          1.0,
+          1.0
+        ],
+        "baseline_rate": [
+          0.0,
+          0.005
+        ],
+        "paired_difference": [
+          0.995,
+          1.0
+        ]
+      },
+      "interval_kind": "descriptive 95% paired seed-cluster percentile; seed macro mean",
+      "bootstrap_seed": 740031,
+      "resamples": 10000
+    },
+    {
+      "sources": 8,
+      "family": "difference",
+      "truth_axis": "full_fact_correct",
+      "truth_class": "True",
+      "baseline": "direct_retained",
+      "eligible_seed_ids": [
+        1001,
+        1002,
+        1003,
+        1004,
+        1005,
+        1006,
+        1007,
+        1008,
+        1009,
+        1010
+      ],
+      "eligible_seed_count": 10,
+      "undefined_seed_ids": [],
+      "point_estimates": {
+        "current_rate": 1.0,
+        "baseline_rate": 0.0,
+        "paired_difference": 1.0
+      },
+      "intervals": {
+        "current_rate": [
+          1.0,
+          1.0
+        ],
+        "baseline_rate": [
+          0.0,
+          0.0
+        ],
+        "paired_difference": [
+          1.0,
+          1.0
+        ]
+      },
+      "interval_kind": "descriptive 95% paired seed-cluster percentile; seed macro mean",
+      "bootstrap_seed": 740031,
+      "resamples": 10000
+    },
+    {
+      "sources": 80,
+      "family": "difference",
+      "truth_axis": "full_fact_correct",
+      "truth_class": "True",
+      "baseline": "direct_retained",
+      "eligible_seed_ids": [
+        1001,
+        1002,
+        1003,
+        1004,
+        1005,
+        1006,
+        1007,
+        1008,
+        1009,
+        1010
+      ],
+      "eligible_seed_count": 10,
+      "undefined_seed_ids": [],
+      "point_estimates": {
+        "current_rate": 0.223,
+        "baseline_rate": 0.0,
+        "paired_difference": 0.223
+      },
+      "intervals": {
+        "current_rate": [
+          0.22,
+          0.226
+        ],
+        "baseline_rate": [
+          0.0,
+          0.0
+        ],
+        "paired_difference": [
+          0.22,
+          0.226
+        ]
+      },
+      "interval_kind": "descriptive 95% paired seed-cluster percentile; seed macro mean",
+      "bootstrap_seed": 740031,
+      "resamples": 10000
+    },
+    {
+      "sources": 800,
+      "family": "difference",
+      "truth_axis": "full_fact_correct",
+      "truth_class": "True",
+      "baseline": "direct_retained",
+      "eligible_seed_ids": [
+        1001,
+        1002,
+        1003,
+        1004,
+        1005,
+        1006,
+        1007,
+        1008,
+        1009,
+        1010
+      ],
+      "eligible_seed_count": 10,
+      "undefined_seed_ids": [],
+      "point_estimates": {
+        "current_rate": 0.035,
+        "baseline_rate": 0.0,
+        "paired_difference": 0.035
+      },
+      "intervals": {
+        "current_rate": [
+          0.031,
+          0.039
+        ],
+        "baseline_rate": [
+          0.0,
+          0.0
+        ],
+        "paired_difference": [
+          0.031,
+          0.039
+        ]
+      },
+      "interval_kind": "descriptive 95% paired seed-cluster percentile; seed macro mean",
+      "bootstrap_seed": 740031,
+      "resamples": 10000
+    },
+    {
+      "sources": 8,
+      "family": "ratio_named",
+      "truth_axis": "full_fact_correct",
+      "truth_class": "True",
+      "baseline": "direct_retained",
+      "eligible_seed_ids": [
+        1001,
+        1002,
+        1003,
+        1004,
+        1005,
+        1006,
+        1007,
+        1008,
+        1009,
+        1010
+      ],
+      "eligible_seed_count": 10,
+      "undefined_seed_ids": [],
+      "point_estimates": {
+        "current_rate": 1.0,
+        "baseline_rate": 0.0,
+        "paired_difference": 1.0
+      },
+      "intervals": {
+        "current_rate": [
+          1.0,
+          1.0
+        ],
+        "baseline_rate": [
+          0.0,
+          0.0
+        ],
+        "paired_difference": [
+          1.0,
+          1.0
+        ]
+      },
+      "interval_kind": "descriptive 95% paired seed-cluster percentile; seed macro mean",
+      "bootstrap_seed": 740031,
+      "resamples": 10000
+    },
+    {
+      "sources": 80,
+      "family": "ratio_named",
+      "truth_axis": "full_fact_correct",
+      "truth_class": "True",
+      "baseline": "direct_retained",
+      "eligible_seed_ids": [
+        1001,
+        1002,
+        1003,
+        1004,
+        1005,
+        1006,
+        1007,
+        1008,
+        1009,
+        1010
+      ],
+      "eligible_seed_count": 10,
+      "undefined_seed_ids": [],
+      "point_estimates": {
+        "current_rate": 1.0,
+        "baseline_rate": 0.0,
+        "paired_difference": 1.0
+      },
+      "intervals": {
+        "current_rate": [
+          1.0,
+          1.0
+        ],
+        "baseline_rate": [
+          0.0,
+          0.0
+        ],
+        "paired_difference": [
+          1.0,
+          1.0
+        ]
+      },
+      "interval_kind": "descriptive 95% paired seed-cluster percentile; seed macro mean",
+      "bootstrap_seed": 740031,
+      "resamples": 10000
+    },
+    {
+      "sources": 800,
+      "family": "ratio_named",
+      "truth_axis": "full_fact_correct",
+      "truth_class": "True",
+      "baseline": "direct_retained",
+      "eligible_seed_ids": [
+        1001,
+        1002,
+        1003,
+        1004,
+        1005,
+        1006,
+        1007,
+        1008,
+        1009,
+        1010
+      ],
+      "eligible_seed_count": 10,
+      "undefined_seed_ids": [],
+      "point_estimates": {
+        "current_rate": 0.378,
+        "baseline_rate": 0.0,
+        "paired_difference": 0.378
+      },
+      "intervals": {
+        "current_rate": [
+          0.375,
+          0.38
+        ],
+        "baseline_rate": [
+          0.0,
+          0.0
+        ],
+        "paired_difference": [
+          0.375,
+          0.38
+        ]
+      },
+      "interval_kind": "descriptive 95% paired seed-cluster percentile; seed macro mean",
+      "bootstrap_seed": 740031,
+      "resamples": 10000
+    },
+    {
+      "sources": 8,
+      "family": "percent",
+      "truth_axis": "full_fact_correct",
+      "truth_class": "True",
+      "baseline": "direct_retained",
+      "eligible_seed_ids": [
+        1001,
+        1002,
+        1003,
+        1004,
+        1005,
+        1006,
+        1007,
+        1008,
+        1009,
+        1010
+      ],
+      "eligible_seed_count": 10,
+      "undefined_seed_ids": [],
+      "point_estimates": {
+        "current_rate": 1.0,
+        "baseline_rate": 0.0,
+        "paired_difference": 1.0
+      },
+      "intervals": {
+        "current_rate": [
+          1.0,
+          1.0
+        ],
+        "baseline_rate": [
+          0.0,
+          0.0
+        ],
+        "paired_difference": [
+          1.0,
+          1.0
+        ]
+      },
+      "interval_kind": "descriptive 95% paired seed-cluster percentile; seed macro mean",
+      "bootstrap_seed": 740031,
+      "resamples": 10000
+    },
+    {
+      "sources": 80,
+      "family": "percent",
+      "truth_axis": "full_fact_correct",
+      "truth_class": "True",
+      "baseline": "direct_retained",
+      "eligible_seed_ids": [
+        1001,
+        1002,
+        1003,
+        1004,
+        1005,
+        1006,
+        1007,
+        1008,
+        1009,
+        1010
+      ],
+      "eligible_seed_count": 10,
+      "undefined_seed_ids": [],
+      "point_estimates": {
+        "current_rate": 0.301,
+        "baseline_rate": 0.0,
+        "paired_difference": 0.301
+      },
+      "intervals": {
+        "current_rate": [
+          0.28300000000000003,
+          0.322
+        ],
+        "baseline_rate": [
+          0.0,
+          0.0
+        ],
+        "paired_difference": [
+          0.28300000000000003,
+          0.322
+        ]
+      },
+      "interval_kind": "descriptive 95% paired seed-cluster percentile; seed macro mean",
+      "bootstrap_seed": 740031,
+      "resamples": 10000
+    },
+    {
+      "sources": 800,
+      "family": "percent",
+      "truth_axis": "full_fact_correct",
+      "truth_class": "True",
+      "baseline": "direct_retained",
+      "eligible_seed_ids": [
+        1001,
+        1002,
+        1003,
+        1004,
+        1005,
+        1006,
+        1007,
+        1008,
+        1009,
+        1010
+      ],
+      "eligible_seed_count": 10,
+      "undefined_seed_ids": [],
+      "point_estimates": {
+        "current_rate": 0.134,
+        "baseline_rate": 0.0,
+        "paired_difference": 0.134
+      },
+      "intervals": {
+        "current_rate": [
+          0.115,
+          0.153
+        ],
+        "baseline_rate": [
+          0.0,
+          0.0
+        ],
+        "paired_difference": [
+          0.115,
+          0.153
+        ]
+      },
+      "interval_kind": "descriptive 95% paired seed-cluster percentile; seed macro mean",
+      "bootstrap_seed": 740031,
+      "resamples": 10000
+    }
+  ],
+  "evidence_hashes": {
+    "MAIN001_PERMIT.json": "a7c3337ac70d017b621f87c02fdf4927e17136d7ae849708bb18db7590b9a702",
+    "RESULTS_2026-11-07.md": "88bc6538bbd48f9fca0f8fa1f90d8b5ec6d6411c489b8a7c120f6fda0fe00dd0",
+    "builder/FINAL_PROTOCOL.json": "a648f4f243b47b6f619fc17e8c053435bc149249fbfae485682ac7c31865f4d8",
+    "builder/FINAL_PROTOCOL.md": "c13188158e465188adc03ff94b5aaca14a6ab3bbe74ad55268a7da0ac41496ed",
+    "builder/analyze_v2.py": "1b269eb23bbd6537abb991ea0d2885aa0bee2a0985fd2ed4ac9ca26e705ecda2",
+    "builder/runner.py": "ab09815eb9f1a3baec9b51e705790d81e98f36e0b05926297a87d0e09542a776",
+    "main001/cell_002/observations.jsonl": "ec75eb060e0a81ceecbc72bf330ab5425b3d592012e0c90ee32eb4bed30db58c",
+    "main001/completion.json": "6fee8a5403499e0397ee5eb9b6686555a51d4444fd043213f021b292f9fccddf",
+    "main001/run_manifest.json": "58de2053ba00a828dd42472c9aab8c88a73a2b51a51cfd60105829d991474bd8",
+    "main001_analysis/cost_availability.json": "901431b1887c01480497dac4e7f900ff6c26924805323696c074084c3cf80cb6",
+    "main001_analysis/family_cell_tables.json": "bdf620f6a1e1e484bc52c0ab6bf1be8e1e7ce1775fd3743ac348f214f010ead7",
+    "main001_analysis/integrity.json": "f665503ea13b2bcc1c7eb63749c40a574d02494c7b300c5c7cce35b274fecbf3",
+    "main001_analysis/seed_cluster_bootstrap.json": "d5db556904184b958b285b376bab6add70e8414d4dcc252c0a7eb6265f973089",
+    "main001_analysis/seed_rates.json": "9837bc54abd17cb6aea3dedd9bd35454de826376386cf07c4cc1608a75321aa3",
+    "quotability001/COMPLETION.json": "6a781cac81df5220475fde0d1b7c0ad439bd9ebde26af9852e6cdb7eb259d508",
+    "quotability001/PREFIX_ATTEMPTS.json": "af9f0370967effe0528256dec8c696333a8684df57f9dc076867bd9badf90fa3",
+    "reviewer/FINAL_COMBINED_AUDIT.json": "0de712de5723ba4aa25fb311442db4dd72b38a8d2a94ff07178137a5582638cc"
+  },
+  "review_scope": "separate-context AI-agent audit; not independent human, external-model or external-laboratory review",
+  "research_status": "separate academic research still pending",
+  "local_data_handling": "aggregated pseudonymous counts only; no customer numeric facts/identifiers copied into report",
+  "report_sha256": "88bc6538bbd48f9fca0f8fa1f90d8b5ec6d6411c489b8a7c120f6fda0fe00dd0"
+}

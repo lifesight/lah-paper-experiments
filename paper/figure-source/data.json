@@ -1,0 +1,489 @@
+{
+  "scope": "current explained target acceptance; component only",
+  "sources": [
+    {
+      "path": "evaluation-source/family_cell_tables.json",
+      "sha256": "bdf620f6a1e1e484bc52c0ab6bf1be8e1e7ce1775fd3743ac348f214f010ead7"
+    },
+    {
+      "path": "evaluation-source/seed_cluster_bootstrap.json",
+      "sha256": "d5db556904184b958b285b376bab6add70e8414d4dcc252c0a7eb6265f973089"
+    },
+    {
+      "path": "evaluation-source/FINAL_COMBINED_AUDIT.json",
+      "sha256": "0de712de5723ba4aa25fb311442db4dd72b38a8d2a94ff07178137a5582638cc"
+    }
+  ],
+  "counts": [
+    {
+      "family": "direct_exact",
+      "oracle_full_fact_label": "correct",
+      "conditions": [
+        {
+          "sources": 8,
+          "accepted": 1000,
+          "attempted": 1000,
+          "exempt_tokens": 0
+        },
+        {
+          "sources": 80,
+          "accepted": 1000,
+          "attempted": 1000,
+          "exempt_tokens": 0
+        },
+        {
+          "sources": 800,
+          "accepted": 382,
+          "attempted": 1000,
+          "exempt_tokens": 0
+        }
+      ]
+    },
+    {
+      "family": "direct_compact",
+      "oracle_full_fact_label": "correct",
+      "conditions": [
+        {
+          "sources": 8,
+          "accepted": 1000,
+          "attempted": 1000,
+          "exempt_tokens": 0
+        },
+        {
+          "sources": 80,
+          "accepted": 1000,
+          "attempted": 1000,
+          "exempt_tokens": 0
+        },
+        {
+          "sources": 800,
+          "accepted": 558,
+          "attempted": 1000,
+          "exempt_tokens": 0
+        }
+      ]
+    },
+    {
+      "family": "sum",
+      "oracle_full_fact_label": "correct",
+      "conditions": [
+        {
+          "sources": 8,
+          "accepted": 1000,
+          "attempted": 1000,
+          "exempt_tokens": 0
+        },
+        {
+          "sources": 80,
+          "accepted": 1000,
+          "attempted": 1000,
+          "exempt_tokens": 0
+        },
+        {
+          "sources": 800,
+          "accepted": 1000,
+          "attempted": 1000,
+          "exempt_tokens": 0
+        }
+      ]
+    },
+    {
+      "family": "difference",
+      "oracle_full_fact_label": "correct",
+      "conditions": [
+        {
+          "sources": 8,
+          "accepted": 1000,
+          "attempted": 1000,
+          "exempt_tokens": 0
+        },
+        {
+          "sources": 80,
+          "accepted": 223,
+          "attempted": 1000,
+          "exempt_tokens": 0
+        },
+        {
+          "sources": 800,
+          "accepted": 35,
+          "attempted": 1000,
+          "exempt_tokens": 1
+        }
+      ]
+    },
+    {
+      "family": "ratio_named",
+      "oracle_full_fact_label": "correct",
+      "conditions": [
+        {
+          "sources": 8,
+          "accepted": 1000,
+          "attempted": 1000,
+          "exempt_tokens": 0
+        },
+        {
+          "sources": 80,
+          "accepted": 1000,
+          "attempted": 1000,
+          "exempt_tokens": 0
+        },
+        {
+          "sources": 800,
+          "accepted": 378,
+          "attempted": 1000,
+          "exempt_tokens": 0
+        }
+      ]
+    },
+    {
+      "family": "percent",
+      "oracle_full_fact_label": "correct",
+      "conditions": [
+        {
+          "sources": 8,
+          "accepted": 1000,
+          "attempted": 1000,
+          "exempt_tokens": 0
+        },
+        {
+          "sources": 80,
+          "accepted": 301,
+          "attempted": 1000,
+          "exempt_tokens": 0
+        },
+        {
+          "sources": 800,
+          "accepted": 134,
+          "attempted": 1000,
+          "exempt_tokens": 0
+        }
+      ]
+    },
+    {
+      "family": "random_value",
+      "oracle_full_fact_label": "incorrect",
+      "conditions": [
+        {
+          "sources": 8,
+          "accepted": 0,
+          "attempted": 1000,
+          "exempt_tokens": 0
+        },
+        {
+          "sources": 80,
+          "accepted": 1,
+          "attempted": 1000,
+          "exempt_tokens": 0
+        },
+        {
+          "sources": 800,
+          "accepted": 7,
+          "attempted": 1000,
+          "exempt_tokens": 0
+        }
+      ]
+    },
+    {
+      "family": "near_value",
+      "oracle_full_fact_label": "incorrect",
+      "conditions": [
+        {
+          "sources": 8,
+          "accepted": 0,
+          "attempted": 1000,
+          "exempt_tokens": 0
+        },
+        {
+          "sources": 80,
+          "accepted": 1,
+          "attempted": 1000,
+          "exempt_tokens": 0
+        },
+        {
+          "sources": 800,
+          "accepted": 10,
+          "attempted": 1000,
+          "exempt_tokens": 0
+        }
+      ]
+    },
+    {
+      "family": "wrong_entity",
+      "oracle_full_fact_label": "incorrect",
+      "conditions": [
+        {
+          "sources": 8,
+          "accepted": 1000,
+          "attempted": 1000,
+          "exempt_tokens": 0
+        },
+        {
+          "sources": 80,
+          "accepted": 1000,
+          "attempted": 1000,
+          "exempt_tokens": 0
+        },
+        {
+          "sources": 800,
+          "accepted": 382,
+          "attempted": 1000,
+          "exempt_tokens": 0
+        }
+      ]
+    },
+    {
+      "family": "wrong_date",
+      "oracle_full_fact_label": "incorrect",
+      "conditions": [
+        {
+          "sources": 8,
+          "accepted": 1000,
+          "attempted": 1000,
+          "exempt_tokens": 0
+        },
+        {
+          "sources": 80,
+          "accepted": 1000,
+          "attempted": 1000,
+          "exempt_tokens": 0
+        },
+        {
+          "sources": 800,
+          "accepted": 382,
+          "attempted": 1000,
+          "exempt_tokens": 0
+        }
+      ]
+    },
+    {
+      "family": "wrong_currency",
+      "oracle_full_fact_label": "incorrect",
+      "conditions": [
+        {
+          "sources": 8,
+          "accepted": 1000,
+          "attempted": 1000,
+          "exempt_tokens": 0
+        },
+        {
+          "sources": 80,
+          "accepted": 1000,
+          "attempted": 1000,
+          "exempt_tokens": 0
+        },
+        {
+          "sources": 800,
+          "accepted": 382,
+          "attempted": 1000,
+          "exempt_tokens": 0
+        }
+      ]
+    },
+    {
+      "family": "wrong_sign",
+      "oracle_full_fact_label": "incorrect",
+      "conditions": [
+        {
+          "sources": 8,
+          "accepted": 1000,
+          "attempted": 1000,
+          "exempt_tokens": 0
+        },
+        {
+          "sources": 80,
+          "accepted": 1000,
+          "attempted": 1000,
+          "exempt_tokens": 0
+        },
+        {
+          "sources": 800,
+          "accepted": 382,
+          "attempted": 1000,
+          "exempt_tokens": 0
+        }
+      ]
+    }
+  ],
+  "seed_cluster_intervals": [
+    {
+      "family": "direct_exact",
+      "sources": 8,
+      "rate": 1.0,
+      "interval": [
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "family": "direct_exact",
+      "sources": 80,
+      "rate": 1.0,
+      "interval": [
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "family": "direct_exact",
+      "sources": 800,
+      "rate": 0.382,
+      "interval": [
+        0.377,
+        0.388
+      ]
+    },
+    {
+      "family": "direct_compact",
+      "sources": 8,
+      "rate": 1.0,
+      "interval": [
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "family": "direct_compact",
+      "sources": 80,
+      "rate": 1.0,
+      "interval": [
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "family": "direct_compact",
+      "sources": 800,
+      "rate": 0.558,
+      "interval": [
+        0.529,
+        0.581
+      ]
+    },
+    {
+      "family": "sum",
+      "sources": 8,
+      "rate": 1.0,
+      "interval": [
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "family": "sum",
+      "sources": 80,
+      "rate": 1.0,
+      "interval": [
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "family": "sum",
+      "sources": 800,
+      "rate": 1.0,
+      "interval": [
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "family": "difference",
+      "sources": 8,
+      "rate": 1.0,
+      "interval": [
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "family": "difference",
+      "sources": 80,
+      "rate": 0.223,
+      "interval": [
+        0.22,
+        0.226
+      ]
+    },
+    {
+      "family": "difference",
+      "sources": 800,
+      "rate": 0.035,
+      "interval": [
+        0.031,
+        0.039
+      ]
+    },
+    {
+      "family": "ratio_named",
+      "sources": 8,
+      "rate": 1.0,
+      "interval": [
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "family": "ratio_named",
+      "sources": 80,
+      "rate": 1.0,
+      "interval": [
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "family": "ratio_named",
+      "sources": 800,
+      "rate": 0.378,
+      "interval": [
+        0.375,
+        0.38
+      ]
+    },
+    {
+      "family": "percent",
+      "sources": 8,
+      "rate": 1.0,
+      "interval": [
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "family": "percent",
+      "sources": 80,
+      "rate": 0.301,
+      "interval": [
+        0.28300000000000003,
+        0.322
+      ]
+    },
+    {
+      "family": "percent",
+      "sources": 800,
+      "rate": 0.134,
+      "interval": [
+        0.115,
+        0.153
+      ]
+    }
+  ],
+  "recorded_aggregate": {
+    "source": {
+      "path": "evaluation-source/FINAL_COMBINED_AUDIT.json",
+      "sha256": "0de712de5723ba4aa25fb311442db4dd72b38a8d2a94ff07178137a5582638cc"
+    },
+    "current_source": {
+      "total": 8187,
+      "exempt": 6283,
+      "supported": 1904
+    },
+    "historical_ingested": {
+      "total": 6488,
+      "exempt": 5112,
+      "supported": 1376
+    },
+    "negative_source_leaf_occurrences": 137,
+    "across_prefix_sign_loss_exposures": 290
+  }
+}

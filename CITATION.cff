@@ -1,0 +1,14 @@
+cff-version: 1.2.0
+message: "If you use these reproducibility materials, cite this exact Zenodo release. Its DOI identifies the materials, not a separately assigned manuscript or arXiv DOI."
+title: "LAH - Evidence-Aware Agent Harness"
+type: software
+authors:
+  - family-names: Singh
+    given-names: Anil Kumar
+    affiliation: Lifesight
+version: "2026-11-07"
+date-released: "2026-11-07"
+doi: "10.5281/zenodo.24036084"
+url: "https://zenodo.org/records/24036084"
+repository-code: "https://github.com/lifesight/lah-paper-experiments"
+license: CC-BY-4.0

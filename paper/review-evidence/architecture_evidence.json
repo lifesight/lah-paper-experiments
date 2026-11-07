@@ -1,0 +1,273 @@
+{
+  "artifact_type": "phase2_architecture_evidence_map",
+  "date": "2026-11-07",
+  "code_head": "744d96938daabb8be0c83974c78b0348b8fc2ac2",
+  "scope": "Checked-out current code, not attestation of deployed production. Structure-only inspection; no tests or new experiments executed by this role.",
+  "claims": [
+    {
+      "id": "A01",
+      "allowed_claim": "The inspected implementation provides strict workspace/session event envelopes and an append/read contract with monotonically assigned per-session sequence numbers and optional idempotency keys.",
+      "evidence": [
+        {
+          "repository_relative_path": "harness-core/harness_core/events.py",
+          "line_start": 56,
+          "line_end": 92,
+          "sha256": "e928884053870d9c7073600fab75e98ee97e77b399e721f4c60fdadc8f545c4c",
+          "evidence_type": "current_code_inspection"
+        },
+        {
+          "repository_relative_path": "harness-core/harness_core/log.py",
+          "line_start": 58,
+          "line_end": 122,
+          "sha256": "8f773cad6b27526e80510e75f3561383f85bef40474509c93766fe028fee7ba9",
+          "evidence_type": "current_code_inspection"
+        },
+        {
+          "repository_relative_path": "harness-core/harness_core/log.py",
+          "line_start": 149,
+          "line_end": 199,
+          "sha256": "8f773cad6b27526e80510e75f3561383f85bef40474509c93766fe028fee7ba9",
+          "evidence_type": "current_code_inspection"
+        }
+      ],
+      "limitation": "Interface and inspected in-memory implementation only; distributed backend behavior, durability and all deployment settings are not established by inspection. Optional keys are not universal deduplication.",
+      "available_tests_not_executed_by_structure_agent": [
+        "tests/test_harness_leases.py"
+      ]
+    },
+    {
+      "id": "A02",
+      "allowed_claim": "Derived model-history representations map user/model/tool events to messages, apply logged compaction, and omit audit-only events. Canonical SHA256 functions and a tap fingerprint support observability.",
+      "evidence": [
+        {
+          "repository_relative_path": "harness-core/harness_core/derive.py",
+          "line_start": 54,
+          "line_end": 116,
+          "sha256": "f41a95bb0ebad597ef73db54f9160fdd9e911036be4d7480aa629446dd7aec47",
+          "evidence_type": "current_code_inspection"
+        },
+        {
+          "repository_relative_path": "src/mia/harness/adk_tap.py",
+          "line_start": 345,
+          "line_end": 373,
+          "sha256": "a831a601723fbf694e41e4dfdda114a451302fa40d7e3b2f324bd3f078c6b7d7",
+          "evidence_type": "current_code_inspection"
+        }
+      ],
+      "limitation": "Do not assert universal request/derive hash equality or full deterministic reexecution. The tap can emit an empty request hash after serialization failure; hashing records contents rather than attesting semantic completeness.",
+      "available_tests_not_executed_by_structure_agent": []
+    },
+    {
+      "id": "A03",
+      "allowed_claim": "Caller resolution requires workspace, user and a forwarded bearer and rejects known Google identity-token issuers. This relies on the gateway trust boundary; it is not complete JWT/membership validation in this function.",
+      "evidence": [
+        {
+          "repository_relative_path": "src/mia/harness/identity.py",
+          "line_start": 61,
+          "line_end": 115,
+          "sha256": "5e7c17e69f2511202db6289198f42c1f4403d73e07d887627c987f997b7dd8b2",
+          "evidence_type": "current_code_inspection"
+        },
+        {
+          "repository_relative_path": "harness-core/harness_core/log.py",
+          "line_start": 183,
+          "line_end": 199,
+          "sha256": "8f773cad6b27526e80510e75f3561383f85bef40474509c93766fe028fee7ba9",
+          "evidence_type": "current_code_inspection"
+        }
+      ],
+      "limitation": "Do not claim verified tenant isolation, authentication security or penetration-test coverage from these snippets. The log user check is optional in its API.",
+      "available_tests_not_executed_by_structure_agent": [
+        "tests/test_harness_identity.py"
+      ]
+    },
+    {
+      "id": "A04",
+      "allowed_claim": "The policy engine imposes a human-approval floor on declared spend-moving tools, rejects configuration below that floor, and consults workspace-scoped overrides and turn denials.",
+      "evidence": [
+        {
+          "repository_relative_path": "src/mia/harness/policy.py",
+          "line_start": 144,
+          "line_end": 223,
+          "sha256": "8e08dff874a2780e7d92d87b35ed6aabf4bb7c02bd6c40168fc6d5a689a965bb",
+          "evidence_type": "current_code_inspection"
+        }
+      ],
+      "limitation": "The approval floor covers the declared spend-moving registry, not undiscovered side effects. Policy audit append errors are logged and do not abort the turn; universal audit completeness is not supported.",
+      "available_tests_not_executed_by_structure_agent": [
+        "tests/test_approval_flow.py"
+      ]
+    },
+    {
+      "id": "A05",
+      "allowed_claim": "Approval resolution reserves a pending approval through compare-and-set lease transfer, records a resolution, holds the session guard, and reconciles a consumed claim lacking the log event. Execution rechecks declared permission and converts failures to logged error results.",
+      "evidence": [
+        {
+          "repository_relative_path": "src/mia/harness/loop.py",
+          "line_start": 1991,
+          "line_end": 2075,
+          "sha256": "e93df51b752d865cb68a67c154a8f52615c58b03bc79a0ac52660da128c82ef5",
+          "evidence_type": "current_code_inspection"
+        },
+        {
+          "repository_relative_path": "src/mia/harness/loop.py",
+          "line_start": 2223,
+          "line_end": 2260,
+          "sha256": "e93df51b752d865cb68a67c154a8f52615c58b03bc79a0ac52660da128c82ef5",
+          "evidence_type": "current_code_inspection"
+        },
+        {
+          "repository_relative_path": "harness-core/harness_core/leases.py",
+          "line_start": 237,
+          "line_end": 253,
+          "sha256": "08ab5181542d069278c56afc39edbf7d91dc4d6df2c95fec07b1000f4f6a821a",
+          "evidence_type": "current_code_inspection"
+        }
+      ],
+      "limitation": "CAS claim admission is not exactly-once external effects. Log and lease are not one transaction, and downstream effect/crash/cancel fencing require their own tests.",
+      "available_tests_not_executed_by_structure_agent": [
+        "tests/test_approval_flow.py",
+        "tests/test_harness_leases.py"
+      ]
+    },
+    {
+      "id": "A06",
+      "allowed_claim": "Coded findings and model verification judgments are separate event types. Coded checks examine plans, result presence, reconciliation visibility, redactions, orientation contradictions and budget disclosure; observations and repair triggers are separately classified.",
+      "evidence": [
+        {
+          "repository_relative_path": "harness-core/harness_core/events.py",
+          "line_start": 293,
+          "line_end": 344,
+          "sha256": "e928884053870d9c7073600fab75e98ee97e77b399e721f4c60fdadc8f545c4c",
+          "evidence_type": "current_code_inspection"
+        },
+        {
+          "repository_relative_path": "src/mia/harness/gate.py",
+          "line_start": 68,
+          "line_end": 110,
+          "sha256": "88a7ef55101f92704ec795ca9470dc37410a8a300e575e99b4960be7b5e18616",
+          "evidence_type": "current_code_inspection"
+        },
+        {
+          "repository_relative_path": "src/mia/harness/gate.py",
+          "line_start": 202,
+          "line_end": 295,
+          "sha256": "88a7ef55101f92704ec795ca9470dc37410a8a300e575e99b4960be7b5e18616",
+          "evidence_type": "current_code_inspection"
+        }
+      ],
+      "limitation": "A pass means these implemented rules did not find a problem, not that every factual claim is true. Evidence-present checks successful-tool existence rather than semantic claim-to-result binding.",
+      "available_tests_not_executed_by_structure_agent": [
+        "tests/test_release_gate.py"
+      ]
+    },
+    {
+      "id": "A07",
+      "allowed_claim": "Workflow invocations receive call-specific run identities and scoped working-state access, with explicit per-node retry/timeout/concurrency policies.",
+      "evidence": [
+        {
+          "repository_relative_path": "src/mia/workflows/run.py",
+          "line_start": 138,
+          "line_end": 205,
+          "sha256": "7f07442f06d861b3d652aca4d11a45b9864b9242811eacf9540c0993d56e5ae0",
+          "evidence_type": "current_code_inspection"
+        },
+        {
+          "repository_relative_path": "src/mia/workflows/_ctx.py",
+          "line_start": 168,
+          "line_end": 220,
+          "sha256": "371ad3d9aed555cab4ed56b1b0ebf3c3d01d60709d0bd61e0055f7df795565c5",
+          "evidence_type": "current_code_inspection"
+        },
+        {
+          "repository_relative_path": "src/mia/workflows/policies.py",
+          "line_start": 24,
+          "line_end": 73,
+          "sha256": "6d5ca22aeb2a6f693d8e6bbf89f1d60cff02e1e1970c4a622a38a25c31e8eb41",
+          "evidence_type": "current_code_inspection"
+        }
+      ],
+      "limitation": "Implementation and test availability do not prove all future graphs use scoped state, nor current production concurrency safety. The runner has an explicit nonisolated serialization path.",
+      "available_tests_not_executed_by_structure_agent": [
+        "tests/test_execution_substrate.py",
+        "tests/test_workflow_policies.py"
+      ]
+    },
+    {
+      "id": "A08",
+      "allowed_claim": "Capabilities are assembled from pack tool definitions into a shared registry; this is an implementation reuse mechanism rather than proof of identical caller authorization or all-surface behavior.",
+      "evidence": [
+        {
+          "repository_relative_path": "src/mia/tools/registry.py",
+          "line_start": 1,
+          "line_end": 75,
+          "sha256": "96d987dd914113153d831f5a334ca4aed8cf1dfee7459f4a31cfa54d60faae33",
+          "evidence_type": "current_code_inspection"
+        }
+      ],
+      "limitation": "Avoid frozen historical pack/tool counts; no completeness or full MCP/interactive parity inference.",
+      "available_tests_not_executed_by_structure_agent": []
+    },
+    {
+      "id": "A09",
+      "allowed_claim": "NumberLedger stores source-specific numeric values and structured bases, named fields, counts, currency annotations and totals; it applies numeric matching, specified derivation rules, exemptions and bounded retention.",
+      "evidence": [
+        {
+          "repository_relative_path": "harness-core/harness_core/provenance.py",
+          "line_start": 648,
+          "line_end": 683,
+          "sha256": "c90e00fde672964e208f6e18ae415c83a4296267c9d3c4e1cfaa52e7ea081a02",
+          "evidence_type": "current_code_inspection"
+        },
+        {
+          "repository_relative_path": "harness-core/harness_core/provenance.py",
+          "line_start": 743,
+          "line_end": 828,
+          "sha256": "c90e00fde672964e208f6e18ae415c83a4296267c9d3c4e1cfaa52e7ea081a02",
+          "evidence_type": "current_code_inspection"
+        },
+        {
+          "repository_relative_path": "harness-core/harness_core/provenance.py",
+          "line_start": 946,
+          "line_end": 1073,
+          "sha256": "c90e00fde672964e208f6e18ae415c83a4296267c9d3c4e1cfaa52e7ea081a02",
+          "evidence_type": "current_code_inspection"
+        },
+        {
+          "repository_relative_path": "harness-core/harness_core/provenance.py",
+          "line_start": 1213,
+          "line_end": 1245,
+          "sha256": "c90e00fde672964e208f6e18ae415c83a4296267c9d3c4e1cfaa52e7ea081a02",
+          "evidence_type": "current_code_inspection"
+        }
+      ],
+      "limitation": "Numeric support is not semantic truth; sign, entity/date/currency bindings and exemption behavior require explicit evaluation. Named/count/group state can persist differently from raw/base pools.",
+      "available_tests_not_executed_by_structure_agent": [
+        "tests/test_provenance_currency.py",
+        "tests/test_derived_figures.py"
+      ]
+    },
+    {
+      "id": "A10",
+      "allowed_claim": "The production integrity plugin harvests structured results/session content and applies post-check cross-source derivation treatment; component explained/find_ungrounded tests do not exercise this entire path.",
+      "evidence": [
+        {
+          "repository_relative_path": "src/mia/guardrails/plugin.py",
+          "line_start": 288,
+          "line_end": 360,
+          "sha256": "d156f4e39abe6d78c3b60440c9bf5f0a6d49e718ae3dd6ae6fe81d787116eb57",
+          "evidence_type": "current_code_inspection"
+        },
+        {
+          "repository_relative_path": "src/mia/guardrails/plugin.py",
+          "line_start": 505,
+          "line_end": 554,
+          "sha256": "d156f4e39abe6d78c3b60440c9bf5f0a6d49e718ae3dd6ae6fe81d787116eb57",
+          "evidence_type": "current_code_inspection"
+        }
+      ],
+      "limitation": "No full-plugin, model compliance, release-gate or end-to-end accuracy claim follows from NumberLedger component measurements.",
+      "available_tests_not_executed_by_structure_agent": []
+    }
+  ]
+}

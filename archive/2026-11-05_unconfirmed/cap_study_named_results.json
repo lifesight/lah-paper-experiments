@@ -1,0 +1,117 @@
+{
+ "config": {
+  "seeds": [
+   1,
+   2
+  ],
+  "claims_per_cell": 300,
+  "fixtures": "<harness repository>/tests/fixtures/dashgraph/asks"
+ },
+ "threads": {
+  "causal": {
+   "honest_named_last": 99.0,
+   "honest_named_any": 51.0,
+   "honest_bare_last": 20.33,
+   "fab_bare_6fig": 0.67,
+   "fab_named_wrong": 0.67,
+   "fab_named_invented": 0.0,
+   "fab_named_rounded": 0.0,
+   "fab_2fig": 52.66,
+   "values_kept": 3730,
+   "ms_per_check": 0.81,
+   "honest_rejected": "other 1.67%"
+  },
+  "cmo": {
+   "honest_named_last": 99.34,
+   "honest_named_any": 100.0,
+   "honest_bare_last": 1.67,
+   "fab_bare_6fig": 0.17,
+   "fab_named_wrong": 0.17,
+   "fab_named_invented": 0.0,
+   "fab_named_rounded": 0.67,
+   "fab_2fig": 62.0,
+   "values_kept": 2138,
+   "ms_per_check": 0.53,
+   "honest_rejected": "other 0.33%"
+  },
+  "geo-experiment": {
+   "honest_named_last": 100.0,
+   "honest_named_any": 100.0,
+   "honest_bare_last": 17.84,
+   "fab_bare_6fig": 0.17,
+   "fab_named_wrong": 0.17,
+   "fab_named_invented": 0.0,
+   "fab_named_rounded": 1.0,
+   "fab_2fig": 10.5,
+   "values_kept": 309,
+   "ms_per_check": 0.06,
+   "honest_rejected": ""
+  },
+  "model": {
+   "honest_named_last": 100.0,
+   "honest_named_any": 100.0,
+   "honest_bare_last": 5.83,
+   "fab_bare_6fig": 0.17,
+   "fab_named_wrong": 0.17,
+   "fab_named_invented": 0.0,
+   "fab_named_rounded": 0.17,
+   "fab_2fig": 40.34,
+   "values_kept": 1346,
+   "ms_per_check": 0.4,
+   "honest_rejected": ""
+  },
+  "promoted-plan": {
+   "honest_named_last": 99.34,
+   "honest_named_any": 73.16,
+   "honest_bare_last": 1.67,
+   "fab_bare_6fig": 0.34,
+   "fab_named_wrong": 0.34,
+   "fab_named_invented": 0.17,
+   "fab_named_rounded": 1.0,
+   "fab_2fig": 46.84,
+   "values_kept": 1661,
+   "ms_per_check": 0.68,
+   "honest_rejected": "other 0.33%"
+  },
+  "q4-leads": {
+   "honest_named_last": 100.0,
+   "honest_named_any": 100.0,
+   "honest_bare_last": 50.5,
+   "fab_bare_6fig": 0.0,
+   "fab_named_wrong": 0.0,
+   "fab_named_invented": 0.0,
+   "fab_named_rounded": 0.0,
+   "fab_2fig": 4.0,
+   "values_kept": 106,
+   "ms_per_check": 0.05,
+   "honest_rejected": ""
+  },
+  "q4-performance": {
+   "honest_named_last": 100.0,
+   "honest_named_any": 100.0,
+   "honest_bare_last": 7.0,
+   "fab_bare_6fig": 0.0,
+   "fab_named_wrong": 0.0,
+   "fab_named_invented": 0.0,
+   "fab_named_rounded": 1.0,
+   "fab_2fig": 32.84,
+   "values_kept": 503,
+   "ms_per_check": 0.14,
+   "honest_rejected": ""
+  },
+  "LONG (all asks in sequence)": {
+   "honest_named_last": 100.0,
+   "honest_named_any": 54.17,
+   "honest_bare_last": 7.0,
+   "fab_bare_6fig": 0.0,
+   "fab_named_wrong": 0.0,
+   "fab_named_invented": 0.0,
+   "fab_named_rounded": 2.33,
+   "fab_2fig": 58.84,
+   "values_kept": 2182,
+   "ms_per_check": 1.2,
+   "honest_rejected": ""
+  }
+ },
+ "seconds": 22.3
+}

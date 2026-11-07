@@ -1,0 +1,6558 @@
+[
+  {
+    "sources": 8,
+    "family": "difference",
+    "truth_axis": "full_fact_correct",
+    "truth_class": "True",
+    "baseline": "direct_full_inventory",
+    "eligible_seed_ids": [
+      1001,
+      1002,
+      1003,
+      1004,
+      1005,
+      1006,
+      1007,
+      1008,
+      1009,
+      1010
+    ],
+    "eligible_seed_count": 10,
+    "undefined_seed_ids": [],
+    "point_estimates": {
+      "current_rate": 1.0,
+      "baseline_rate": 0.0,
+      "paired_difference": 1.0
+    },
+    "intervals": {
+      "current_rate": [
+        1.0,
+        1.0
+      ],
+      "baseline_rate": [
+        0.0,
+        0.0
+      ],
+      "paired_difference": [
+        1.0,
+        1.0
+      ]
+    },
+    "interval_kind": "descriptive 95% paired seed-cluster percentile; seed macro mean",
+    "bootstrap_seed": 740031,
+    "resamples": 10000
+  },
+  {
+    "sources": 8,
+    "family": "difference",
+    "truth_axis": "full_fact_correct",
+    "truth_class": "True",
+    "baseline": "direct_retained",
+    "eligible_seed_ids": [
+      1001,
+      1002,
+      1003,
+      1004,
+      1005,
+      1006,
+      1007,
+      1008,
+      1009,
+      1010
+    ],
+    "eligible_seed_count": 10,
+    "undefined_seed_ids": [],
+    "point_estimates": {
+      "current_rate": 1.0,
+      "baseline_rate": 0.0,
+      "paired_difference": 1.0
+    },
+    "intervals": {
+      "current_rate": [
+        1.0,
+        1.0
+      ],
+      "baseline_rate": [
+        0.0,
+        0.0
+      ],
+      "paired_difference": [
+        1.0,
+        1.0
+      ]
+    },
+    "interval_kind": "descriptive 95% paired seed-cluster percentile; seed macro mean",
+    "bootstrap_seed": 740031,
+    "resamples": 10000
+  },
+  {
+    "sources": 8,
+    "family": "difference",
+    "truth_axis": "numeric_support",
+    "truth_class": "True",
+    "baseline": "direct_full_inventory",
+    "eligible_seed_ids": [
+      1001,
+      1002,
+      1003,
+      1004,
+      1005,
+      1006,
+      1007,
+      1008,
+      1009,
+      1010
+    ],
+    "eligible_seed_count": 10,
+    "undefined_seed_ids": [],
+    "point_estimates": {
+      "current_rate": 1.0,
+      "baseline_rate": 0.0,
+      "paired_difference": 1.0
+    },
+    "intervals": {
+      "current_rate": [
+        1.0,
+        1.0
+      ],
+      "baseline_rate": [
+        0.0,
+        0.0
+      ],
+      "paired_difference": [
+        1.0,
+        1.0
+      ]
+    },
+    "interval_kind": "descriptive 95% paired seed-cluster percentile; seed macro mean",
+    "bootstrap_seed": 740031,
+    "resamples": 10000
+  },
+  {
+    "sources": 8,
+    "family": "difference",
+    "truth_axis": "numeric_support",
+    "truth_class": "True",
+    "baseline": "direct_retained",
+    "eligible_seed_ids": [
+      1001,
+      1002,
+      1003,
+      1004,
+      1005,
+      1006,
+      1007,
+      1008,
+      1009,
+      1010
+    ],
+    "eligible_seed_count": 10,
+    "undefined_seed_ids": [],
+    "point_estimates": {
+      "current_rate": 1.0,
+      "baseline_rate": 0.0,
+      "paired_difference": 1.0
+    },
+    "intervals": {
+      "current_rate": [
+        1.0,
+        1.0
+      ],
+      "baseline_rate": [
+        0.0,
+        0.0
+      ],
+      "paired_difference": [
+        1.0,
+        1.0
+      ]
+    },
+    "interval_kind": "descriptive 95% paired seed-cluster percentile; seed macro mean",
+    "bootstrap_seed": 740031,
+    "resamples": 10000
+  },
+  {
+    "sources": 8,
+    "family": "direct_compact",
+    "truth_axis": "full_fact_correct",
+    "truth_class": "True",
+    "baseline": "direct_full_inventory",
+    "eligible_seed_ids": [
+      1001,
+      1002,
+      1003,
+      1004,
+      1005,
+      1006,
+      1007,
+      1008,
+      1009,
+      1010
+    ],
+    "eligible_seed_count": 10,
+    "undefined_seed_ids": [],
+    "point_estimates": {
+      "current_rate": 1.0,
+      "baseline_rate": 1.0,
+      "paired_difference": 0.0
+    },
+    "intervals": {
+      "current_rate": [
+        1.0,
+        1.0
+      ],
+      "baseline_rate": [
+        1.0,
+        1.0
+      ],
+      "paired_difference": [
+        0.0,
+        0.0
+      ]
+    },
+    "interval_kind": "descriptive 95% paired seed-cluster percentile; seed macro mean",
+    "bootstrap_seed": 740031,
+    "resamples": 10000
+  },
+  {
+    "sources": 8,
+    "family": "direct_compact",
+    "truth_axis": "full_fact_correct",
+    "truth_class": "True",
+    "baseline": "direct_retained",
+    "eligible_seed_ids": [
+      1001,
+      1002,
+      1003,
+      1004,
+      1005,
+      1006,
+      1007,
+      1008,
+      1009,
+      1010
+    ],
+    "eligible_seed_count": 10,
+    "undefined_seed_ids": [],
+    "point_estimates": {
+      "current_rate": 1.0,
+      "baseline_rate": 1.0,
+      "paired_difference": 0.0
+    },
+    "intervals": {
+      "current_rate": [
+        1.0,
+        1.0
+      ],
+      "baseline_rate": [
+        1.0,
+        1.0
+      ],
+      "paired_difference": [
+        0.0,
+        0.0
+      ]
+    },
+    "interval_kind": "descriptive 95% paired seed-cluster percentile; seed macro mean",
+    "bootstrap_seed": 740031,
+    "resamples": 10000
+  },
+  {
+    "sources": 8,
+    "family": "direct_compact",
+    "truth_axis": "numeric_support",
+    "truth_class": "True",
+    "baseline": "direct_full_inventory",
+    "eligible_seed_ids": [
+      1001,
+      1002,
+      1003,
+      1004,
+      1005,
+      1006,
+      1007,
+      1008,
+      1009,
+      1010
+    ],
+    "eligible_seed_count": 10,
+    "undefined_seed_ids": [],
+    "point_estimates": {
+      "current_rate": 1.0,
+      "baseline_rate": 1.0,
+      "paired_difference": 0.0
+    },
+    "intervals": {
+      "current_rate": [
+        1.0,
+        1.0
+      ],
+      "baseline_rate": [
+        1.0,
+        1.0
+      ],
+      "paired_difference": [
+        0.0,
+        0.0
+      ]
+    },
+    "interval_kind": "descriptive 95% paired seed-cluster percentile; seed macro mean",
+    "bootstrap_seed": 740031,
+    "resamples": 10000
+  },
+  {
+    "sources": 8,
+    "family": "direct_compact",
+    "truth_axis": "numeric_support",
+    "truth_class": "True",
+    "baseline": "direct_retained",
+    "eligible_seed_ids": [
+      1001,
+      1002,
+      1003,
+      1004,
+      1005,
+      1006,
+      1007,
+      1008,
+      1009,
+      1010
+    ],
+    "eligible_seed_count": 10,
+    "undefined_seed_ids": [],
+    "point_estimates": {
+      "current_rate": 1.0,
+      "baseline_rate": 1.0,
+      "paired_difference": 0.0
+    },
+    "intervals": {
+      "current_rate": [
+        1.0,
+        1.0
+      ],
+      "baseline_rate": [
+        1.0,
+        1.0
+      ],
+      "paired_difference": [
+        0.0,
+        0.0
+      ]
+    },
+    "interval_kind": "descriptive 95% paired seed-cluster percentile; seed macro mean",
+    "bootstrap_seed": 740031,
+    "resamples": 10000
+  },
+  {
+    "sources": 8,
+    "family": "direct_exact",
+    "truth_axis": "full_fact_correct",
+    "truth_class": "True",
+    "baseline": "direct_full_inventory",
+    "eligible_seed_ids": [
+      1001,
+      1002,
+      1003,
+      1004,
+      1005,
+      1006,
+      1007,
+      1008,
+      1009,
+      1010
+    ],
+    "eligible_seed_count": 10,
+    "undefined_seed_ids": [],
+    "point_estimates": {
+      "current_rate": 1.0,
+      "baseline_rate": 1.0,
+      "paired_difference": 0.0
+    },
+    "intervals": {
+      "current_rate": [
+        1.0,
+        1.0
+      ],
+      "baseline_rate": [
+        1.0,
+        1.0
+      ],
+      "paired_difference": [
+        0.0,
+        0.0
+      ]
+    },
+    "interval_kind": "descriptive 95% paired seed-cluster percentile; seed macro mean",
+    "bootstrap_seed": 740031,
+    "resamples": 10000
+  },
+  {
+    "sources": 8,
+    "family": "direct_exact",
+    "truth_axis": "full_fact_correct",
+    "truth_class": "True",
+    "baseline": "direct_retained",
+    "eligible_seed_ids": [
+      1001,
+      1002,
+      1003,
+      1004,
+      1005,
+      1006,
+      1007,
+      1008,
+      1009,
+      1010
+    ],
+    "eligible_seed_count": 10,
+    "undefined_seed_ids": [],
+    "point_estimates": {
+      "current_rate": 1.0,
+      "baseline_rate": 1.0,
+      "paired_difference": 0.0
+    },
+    "intervals": {
+      "current_rate": [
+        1.0,
+        1.0
+      ],
+      "baseline_rate": [
+        1.0,
+        1.0
+      ],
+      "paired_difference": [
+        0.0,
+        0.0
+      ]
+    },
+    "interval_kind": "descriptive 95% paired seed-cluster percentile; seed macro mean",
+    "bootstrap_seed": 740031,
+    "resamples": 10000
+  },
+  {
+    "sources": 8,
+    "family": "direct_exact",
+    "truth_axis": "numeric_support",
+    "truth_class": "True",
+    "baseline": "direct_full_inventory",
+    "eligible_seed_ids": [
+      1001,
+      1002,
+      1003,
+      1004,
+      1005,
+      1006,
+      1007,
+      1008,
+      1009,
+      1010
+    ],
+    "eligible_seed_count": 10,
+    "undefined_seed_ids": [],
+    "point_estimates": {
+      "current_rate": 1.0,
+      "baseline_rate": 1.0,
+      "paired_difference": 0.0
+    },
+    "intervals": {
+      "current_rate": [
+        1.0,
+        1.0
+      ],
+      "baseline_rate": [
+        1.0,
+        1.0
+      ],
+      "paired_difference": [
+        0.0,
+        0.0
+      ]
+    },
+    "interval_kind": "descriptive 95% paired seed-cluster percentile; seed macro mean",
+    "bootstrap_seed": 740031,
+    "resamples": 10000
+  },
+  {
+    "sources": 8,
+    "family": "direct_exact",
+    "truth_axis": "numeric_support",
+    "truth_class": "True",
+    "baseline": "direct_retained",
+    "eligible_seed_ids": [
+      1001,
+      1002,
+      1003,
+      1004,
+      1005,
+      1006,
+      1007,
+      1008,
+      1009,
+      1010
+    ],
+    "eligible_seed_count": 10,
+    "undefined_seed_ids": [],
+    "point_estimates": {
+      "current_rate": 1.0,
+      "baseline_rate": 1.0,
+      "paired_difference": 0.0
+    },
+    "intervals": {
+      "current_rate": [
+        1.0,
+        1.0
+      ],
+      "baseline_rate": [
+        1.0,
+        1.0
+      ],
+      "paired_difference": [
+        0.0,
+        0.0
+      ]
+    },
+    "interval_kind": "descriptive 95% paired seed-cluster percentile; seed macro mean",
+    "bootstrap_seed": 740031,
+    "resamples": 10000
+  },
+  {
+    "sources": 8,
+    "family": "near_value",
+    "truth_axis": "full_fact_correct",
+    "truth_class": "False",
+    "baseline": "direct_full_inventory",
+    "eligible_seed_ids": [
+      1001,
+      1002,
+      1003,
+      1004,
+      1005,
+      1006,
+      1007,
+      1008,
+      1009,
+      1010
+    ],
+    "eligible_seed_count": 10,
+    "undefined_seed_ids": [],
+    "point_estimates": {
+      "current_rate": 0.0,
+      "baseline_rate": 0.0,
+      "paired_difference": 0.0
+    },
+    "intervals": {
+      "current_rate": [
+        0.0,
+        0.0
+      ],
+      "baseline_rate": [
+        0.0,
+        0.0
+      ],
+      "paired_difference": [
+        0.0,
+        0.0
+      ]
+    },
+    "interval_kind": "descriptive 95% paired seed-cluster percentile; seed macro mean",
+    "bootstrap_seed": 740031,
+    "resamples": 10000
+  },
+  {
+    "sources": 8,
+    "family": "near_value",
+    "truth_axis": "full_fact_correct",
+    "truth_class": "False",
+    "baseline": "direct_retained",
+    "eligible_seed_ids": [
+      1001,
+      1002,
+      1003,
+      1004,
+      1005,
+      1006,
+      1007,
+      1008,
+      1009,
+      1010
+    ],
+    "eligible_seed_count": 10,
+    "undefined_seed_ids": [],
+    "point_estimates": {
+      "current_rate": 0.0,
+      "baseline_rate": 0.0,
+      "paired_difference": 0.0
+    },
+    "intervals": {
+      "current_rate": [
+        0.0,
+        0.0
+      ],
+      "baseline_rate": [
+        0.0,
+        0.0
+      ],
+      "paired_difference": [
+        0.0,
+        0.0
+      ]
+    },
+    "interval_kind": "descriptive 95% paired seed-cluster percentile; seed macro mean",
+    "bootstrap_seed": 740031,
+    "resamples": 10000
+  },
+  {
+    "sources": 8,
+    "family": "near_value",
+    "truth_axis": "numeric_support",
+    "truth_class": "False",
+    "baseline": "direct_full_inventory",
+    "eligible_seed_ids": [
+      1001,
+      1002,
+      1003,
+      1004,
+      1005,
+      1006,
+      1007,
+      1008,
+      1009,
+      1010
+    ],
+    "eligible_seed_count": 10,
+    "undefined_seed_ids": [],
+    "point_estimates": {
+      "current_rate": 0.0,
+      "baseline_rate": 0.0,
+      "paired_difference": 0.0
+    },
+    "intervals": {
+      "current_rate": [
+        0.0,
+        0.0
+      ],
+      "baseline_rate": [
+        0.0,
+        0.0
+      ],
+      "paired_difference": [
+        0.0,
+        0.0
+      ]
+    },
+    "interval_kind": "descriptive 95% paired seed-cluster percentile; seed macro mean",
+    "bootstrap_seed": 740031,
+    "resamples": 10000
+  },
+  {
+    "sources": 8,
+    "family": "near_value",
+    "truth_axis": "numeric_support",
+    "truth_class": "False",
+    "baseline": "direct_retained",
+    "eligible_seed_ids": [
+      1001,
+      1002,
+      1003,
+      1004,
+      1005,
+      1006,
+      1007,
+      1008,
+      1009,
+      1010
+    ],
+    "eligible_seed_count": 10,
+    "undefined_seed_ids": [],
+    "point_estimates": {
+      "current_rate": 0.0,
+      "baseline_rate": 0.0,
+      "paired_difference": 0.0
+    },
+    "intervals": {
+      "current_rate": [
+        0.0,
+        0.0
+      ],
+      "baseline_rate": [
+        0.0,
+        0.0
+      ],
+      "paired_difference": [
+        0.0,
+        0.0
+      ]
+    },
+    "interval_kind": "descriptive 95% paired seed-cluster percentile; seed macro mean",
+    "bootstrap_seed": 740031,
+    "resamples": 10000
+  },
+  {
+    "sources": 8,
+    "family": "percent",
+    "truth_axis": "full_fact_correct",
+    "truth_class": "True",
+    "baseline": "direct_full_inventory",
+    "eligible_seed_ids": [
+      1001,
+      1002,
+      1003,
+      1004,
+      1005,
+      1006,
+      1007,
+      1008,
+      1009,
+      1010
+    ],
+    "eligible_seed_count": 10,
+    "undefined_seed_ids": [],
+    "point_estimates": {
+      "current_rate": 1.0,
+      "baseline_rate": 0.0,
+      "paired_difference": 1.0
+    },
+    "intervals": {
+      "current_rate": [
+        1.0,
+        1.0
+      ],
+      "baseline_rate": [
+        0.0,
+        0.0
+      ],
+      "paired_difference": [
+        1.0,
+        1.0
+      ]
+    },
+    "interval_kind": "descriptive 95% paired seed-cluster percentile; seed macro mean",
+    "bootstrap_seed": 740031,
+    "resamples": 10000
+  },
+  {
+    "sources": 8,
+    "family": "percent",
+    "truth_axis": "full_fact_correct",
+    "truth_class": "True",
+    "baseline": "direct_retained",
+    "eligible_seed_ids": [
+      1001,
+      1002,
+      1003,
+      1004,
+      1005,
+      1006,
+      1007,
+      1008,
+      1009,
+      1010
+    ],
+    "eligible_seed_count": 10,
+    "undefined_seed_ids": [],
+    "point_estimates": {
+      "current_rate": 1.0,
+      "baseline_rate": 0.0,
+      "paired_difference": 1.0
+    },
+    "intervals": {
+      "current_rate": [
+        1.0,
+        1.0
+      ],
+      "baseline_rate": [
+        0.0,
+        0.0
+      ],
+      "paired_difference": [
+        1.0,
+        1.0
+      ]
+    },
+    "interval_kind": "descriptive 95% paired seed-cluster percentile; seed macro mean",
+    "bootstrap_seed": 740031,
+    "resamples": 10000
+  },
+  {
+    "sources": 8,
+    "family": "percent",
+    "truth_axis": "numeric_support",
+    "truth_class": "True",
+    "baseline": "direct_full_inventory",
+    "eligible_seed_ids": [
+      1001,
+      1002,
+      1003,
+      1004,
+      1005,
+      1006,
+      1007,
+      1008,
+      1009,
+      1010
+    ],
+    "eligible_seed_count": 10,
+    "undefined_seed_ids": [],
+    "point_estimates": {
+      "current_rate": 1.0,
+      "baseline_rate": 0.0,
+      "paired_difference": 1.0
+    },
+    "intervals": {
+      "current_rate": [
+        1.0,
+        1.0
+      ],
+      "baseline_rate": [
+        0.0,
+        0.0
+      ],
+      "paired_difference": [
+        1.0,
+        1.0
+      ]
+    },
+    "interval_kind": "descriptive 95% paired seed-cluster percentile; seed macro mean",
+    "bootstrap_seed": 740031,
+    "resamples": 10000
+  },
+  {
+    "sources": 8,
+    "family": "percent",
+    "truth_axis": "numeric_support",
+    "truth_class": "True",
+    "baseline": "direct_retained",
+    "eligible_seed_ids": [
+      1001,
+      1002,
+      1003,
+      1004,
+      1005,
+      1006,
+      1007,
+      1008,
+      1009,
+      1010
+    ],
+    "eligible_seed_count": 10,
+    "undefined_seed_ids": [],
+    "point_estimates": {
+      "current_rate": 1.0,
+      "baseline_rate": 0.0,
+      "paired_difference": 1.0
+    },
+    "intervals": {
+      "current_rate": [
+        1.0,
+        1.0
+      ],
+      "baseline_rate": [
+        0.0,
+        0.0
+      ],
+      "paired_difference": [
+        1.0,
+        1.0
+      ]
+    },
+    "interval_kind": "descriptive 95% paired seed-cluster percentile; seed macro mean",
+    "bootstrap_seed": 740031,
+    "resamples": 10000
+  },
+  {
+    "sources": 8,
+    "family": "random_value",
+    "truth_axis": "full_fact_correct",
+    "truth_class": "False",
+    "baseline": "direct_full_inventory",
+    "eligible_seed_ids": [
+      1001,
+      1002,
+      1003,
+      1004,
+      1005,
+      1006,
+      1007,
+      1008,
+      1009,
+      1010
+    ],
+    "eligible_seed_count": 10,
+    "undefined_seed_ids": [],
+    "point_estimates": {
+      "current_rate": 0.0,
+      "baseline_rate": 0.0,
+      "paired_difference": 0.0
+    },
+    "intervals": {
+      "current_rate": [
+        0.0,
+        0.0
+      ],
+      "baseline_rate": [
+        0.0,
+        0.0
+      ],
+      "paired_difference": [
+        0.0,
+        0.0
+      ]
+    },
+    "interval_kind": "descriptive 95% paired seed-cluster percentile; seed macro mean",
+    "bootstrap_seed": 740031,
+    "resamples": 10000
+  },
+  {
+    "sources": 8,
+    "family": "random_value",
+    "truth_axis": "full_fact_correct",
+    "truth_class": "False",
+    "baseline": "direct_retained",
+    "eligible_seed_ids": [
+      1001,
+      1002,
+      1003,
+      1004,
+      1005,
+      1006,
+      1007,
+      1008,
+      1009,
+      1010
+    ],
+    "eligible_seed_count": 10,
+    "undefined_seed_ids": [],
+    "point_estimates": {
+      "current_rate": 0.0,
+      "baseline_rate": 0.0,
+      "paired_difference": 0.0
+    },
+    "intervals": {
+      "current_rate": [
+        0.0,
+        0.0
+      ],
+      "baseline_rate": [
+        0.0,
+        0.0
+      ],
+      "paired_difference": [
+        0.0,
+        0.0
+      ]
+    },
+    "interval_kind": "descriptive 95% paired seed-cluster percentile; seed macro mean",
+    "bootstrap_seed": 740031,
+    "resamples": 10000
+  },
+  {
+    "sources": 8,
+    "family": "random_value",
+    "truth_axis": "numeric_support",
+    "truth_class": "False",
+    "baseline": "direct_full_inventory",
+    "eligible_seed_ids": [
+      1001,
+      1002,
+      1003,
+      1004,
+      1005,
+      1006,
+      1007,
+      1008,
+      1009,
+      1010
+    ],
+    "eligible_seed_count": 10,
+    "undefined_seed_ids": [],
+    "point_estimates": {
+      "current_rate": 0.0,
+      "baseline_rate": 0.0,
+      "paired_difference": 0.0
+    },
+    "intervals": {
+      "current_rate": [
+        0.0,
+        0.0
+      ],
+      "baseline_rate": [
+        0.0,
+        0.0
+      ],
+      "paired_difference": [
+        0.0,
+        0.0
+      ]
+    },
+    "interval_kind": "descriptive 95% paired seed-cluster percentile; seed macro mean",
+    "bootstrap_seed": 740031,
+    "resamples": 10000
+  },
+  {
+    "sources": 8,
+    "family": "random_value",
+    "truth_axis": "numeric_support",
+    "truth_class": "False",
+    "baseline": "direct_retained",
+    "eligible_seed_ids": [
+      1001,
+      1002,
+      1003,
+      1004,
+      1005,
+      1006,
+      1007,
+      1008,
+      1009,
+      1010
+    ],
+    "eligible_seed_count": 10,
+    "undefined_seed_ids": [],
+    "point_estimates": {
+      "current_rate": 0.0,
+      "baseline_rate": 0.0,
+      "paired_difference": 0.0
+    },
+    "intervals": {
+      "current_rate": [
+        0.0,
+        0.0
+      ],
+      "baseline_rate": [
+        0.0,
+        0.0
+      ],
+      "paired_difference": [
+        0.0,
+        0.0
+      ]
+    },
+    "interval_kind": "descriptive 95% paired seed-cluster percentile; seed macro mean",
+    "bootstrap_seed": 740031,
+    "resamples": 10000
+  },
+  {
+    "sources": 8,
+    "family": "ratio_named",
+    "truth_axis": "full_fact_correct",
+    "truth_class": "True",
+    "baseline": "direct_full_inventory",
+    "eligible_seed_ids": [
+      1001,
+      1002,
+      1003,
+      1004,
+      1005,
+      1006,
+      1007,
+      1008,
+      1009,
+      1010
+    ],
+    "eligible_seed_count": 10,
+    "undefined_seed_ids": [],
+    "point_estimates": {
+      "current_rate": 1.0,
+      "baseline_rate": 0.0,
+      "paired_difference": 1.0
+    },
+    "intervals": {
+      "current_rate": [
+        1.0,
+        1.0
+      ],
+      "baseline_rate": [
+        0.0,
+        0.0
+      ],
+      "paired_difference": [
+        1.0,
+        1.0
+      ]
+    },
+    "interval_kind": "descriptive 95% paired seed-cluster percentile; seed macro mean",
+    "bootstrap_seed": 740031,
+    "resamples": 10000
+  },
+  {
+    "sources": 8,
+    "family": "ratio_named",
+    "truth_axis": "full_fact_correct",
+    "truth_class": "True",
+    "baseline": "direct_retained",
+    "eligible_seed_ids": [
+      1001,
+      1002,
+      1003,
+      1004,
+      1005,
+      1006,
+      1007,
+      1008,
+      1009,
+      1010
+    ],
+    "eligible_seed_count": 10,
+    "undefined_seed_ids": [],
+    "point_estimates": {
+      "current_rate": 1.0,
+      "baseline_rate": 0.0,
+      "paired_difference": 1.0
+    },
+    "intervals": {
+      "current_rate": [
+        1.0,
+        1.0
+      ],
+      "baseline_rate": [
+        0.0,
+        0.0
+      ],
+      "paired_difference": [
+        1.0,
+        1.0
+      ]
+    },
+    "interval_kind": "descriptive 95% paired seed-cluster percentile; seed macro mean",
+    "bootstrap_seed": 740031,
+    "resamples": 10000
+  },
+  {
+    "sources": 8,
+    "family": "ratio_named",
+    "truth_axis": "numeric_support",
+    "truth_class": "True",
+    "baseline": "direct_full_inventory",
+    "eligible_seed_ids": [
+      1001,
+      1002,
+      1003,
+      1004,
+      1005,
+      1006,
+      1007,
+      1008,
+      1009,
+      1010
+    ],
+    "eligible_seed_count": 10,
+    "undefined_seed_ids": [],
+    "point_estimates": {
+      "current_rate": 1.0,
+      "baseline_rate": 0.0,
+      "paired_difference": 1.0
+    },
+    "intervals": {
+      "current_rate": [
+        1.0,
+        1.0
+      ],
+      "baseline_rate": [
+        0.0,
+        0.0
+      ],
+      "paired_difference": [
+        1.0,
+        1.0
+      ]
+    },
+    "interval_kind": "descriptive 95% paired seed-cluster percentile; seed macro mean",
+    "bootstrap_seed": 740031,
+    "resamples": 10000
+  },
+  {
+    "sources": 8,
+    "family": "ratio_named",
+    "truth_axis": "numeric_support",
+    "truth_class": "True",
+    "baseline": "direct_retained",
+    "eligible_seed_ids": [
+      1001,
+      1002,
+      1003,
+      1004,
+      1005,
+      1006,
+      1007,
+      1008,
+      1009,
+      1010
+    ],
+    "eligible_seed_count": 10,
+    "undefined_seed_ids": [],
+    "point_estimates": {
+      "current_rate": 1.0,
+      "baseline_rate": 0.0,
+      "paired_difference": 1.0
+    },
+    "intervals": {
+      "current_rate": [
+        1.0,
+        1.0
+      ],
+      "baseline_rate": [
+        0.0,
+        0.0
+      ],
+      "paired_difference": [
+        1.0,
+        1.0
+      ]
+    },
+    "interval_kind": "descriptive 95% paired seed-cluster percentile; seed macro mean",
+    "bootstrap_seed": 740031,
+    "resamples": 10000
+  },
+  {
+    "sources": 8,
+    "family": "sum",
+    "truth_axis": "full_fact_correct",
+    "truth_class": "True",
+    "baseline": "direct_full_inventory",
+    "eligible_seed_ids": [
+      1001,
+      1002,
+      1003,
+      1004,
+      1005,
+      1006,
+      1007,
+      1008,
+      1009,
+      1010
+    ],
+    "eligible_seed_count": 10,
+    "undefined_seed_ids": [],
+    "point_estimates": {
+      "current_rate": 1.0,
+      "baseline_rate": 0.0,
+      "paired_difference": 1.0
+    },
+    "intervals": {
+      "current_rate": [
+        1.0,
+        1.0
+      ],
+      "baseline_rate": [
+        0.0,
+        0.0
+      ],
+      "paired_difference": [
+        1.0,
+        1.0
+      ]
+    },
+    "interval_kind": "descriptive 95% paired seed-cluster percentile; seed macro mean",
+    "bootstrap_seed": 740031,
+    "resamples": 10000
+  },
+  {
+    "sources": 8,
+    "family": "sum",
+    "truth_axis": "full_fact_correct",
+    "truth_class": "True",
+    "baseline": "direct_retained",
+    "eligible_seed_ids": [
+      1001,
+      1002,
+      1003,
+      1004,
+      1005,
+      1006,
+      1007,
+      1008,
+      1009,
+      1010
+    ],
+    "eligible_seed_count": 10,
+    "undefined_seed_ids": [],
+    "point_estimates": {
+      "current_rate": 1.0,
+      "baseline_rate": 0.0,
+      "paired_difference": 1.0
+    },
+    "intervals": {
+      "current_rate": [
+        1.0,
+        1.0
+      ],
+      "baseline_rate": [
+        0.0,
+        0.0
+      ],
+      "paired_difference": [
+        1.0,
+        1.0
+      ]
+    },
+    "interval_kind": "descriptive 95% paired seed-cluster percentile; seed macro mean",
+    "bootstrap_seed": 740031,
+    "resamples": 10000
+  },
+  {
+    "sources": 8,
+    "family": "sum",
+    "truth_axis": "numeric_support",
+    "truth_class": "True",
+    "baseline": "direct_full_inventory",
+    "eligible_seed_ids": [
+      1001,
+      1002,
+      1003,
+      1004,
+      1005,
+      1006,
+      1007,
+      1008,
+      1009,
+      1010
+    ],
+    "eligible_seed_count": 10,
+    "undefined_seed_ids": [],
+    "point_estimates": {
+      "current_rate": 1.0,
+      "baseline_rate": 0.0,
+      "paired_difference": 1.0
+    },
+    "intervals": {
+      "current_rate": [
+        1.0,
+        1.0
+      ],
+      "baseline_rate": [
+        0.0,
+        0.0
+      ],
+      "paired_difference": [
+        1.0,
+        1.0
+      ]
+    },
+    "interval_kind": "descriptive 95% paired seed-cluster percentile; seed macro mean",
+    "bootstrap_seed": 740031,
+    "resamples": 10000
+  },
+  {
+    "sources": 8,
+    "family": "sum",
+    "truth_axis": "numeric_support",
+    "truth_class": "True",
+    "baseline": "direct_retained",
+    "eligible_seed_ids": [
+      1001,
+      1002,
+      1003,
+      1004,
+      1005,
+      1006,
+      1007,
+      1008,
+      1009,
+      1010
+    ],
+    "eligible_seed_count": 10,
+    "undefined_seed_ids": [],
+    "point_estimates": {
+      "current_rate": 1.0,
+      "baseline_rate": 0.0,
+      "paired_difference": 1.0
+    },
+    "intervals": {
+      "current_rate": [
+        1.0,
+        1.0
+      ],
+      "baseline_rate": [
+        0.0,
+        0.0
+      ],
+      "paired_difference": [
+        1.0,
+        1.0
+      ]
+    },
+    "interval_kind": "descriptive 95% paired seed-cluster percentile; seed macro mean",
+    "bootstrap_seed": 740031,
+    "resamples": 10000
+  },
+  {
+    "sources": 8,
+    "family": "wrong_currency",
+    "truth_axis": "full_fact_correct",
+    "truth_class": "False",
+    "baseline": "direct_full_inventory",
+    "eligible_seed_ids": [
+      1001,
+      1002,
+      1003,
+      1004,
+      1005,
+      1006,
+      1007,
+      1008,
+      1009,
+      1010
+    ],
+    "eligible_seed_count": 10,
+    "undefined_seed_ids": [],
+    "point_estimates": {
+      "current_rate": 1.0,
+      "baseline_rate": 1.0,
+      "paired_difference": 0.0
+    },
+    "intervals": {
+      "current_rate": [
+        1.0,
+        1.0
+      ],
+      "baseline_rate": [
+        1.0,
+        1.0
+      ],
+      "paired_difference": [
+        0.0,
+        0.0
+      ]
+    },
+    "interval_kind": "descriptive 95% paired seed-cluster percentile; seed macro mean",
+    "bootstrap_seed": 740031,
+    "resamples": 10000
+  },
+  {
+    "sources": 8,
+    "family": "wrong_currency",
+    "truth_axis": "full_fact_correct",
+    "truth_class": "False",
+    "baseline": "direct_retained",
+    "eligible_seed_ids": [
+      1001,
+      1002,
+      1003,
+      1004,
+      1005,
+      1006,
+      1007,
+      1008,
+      1009,
+      1010
+    ],
+    "eligible_seed_count": 10,
+    "undefined_seed_ids": [],
+    "point_estimates": {
+      "current_rate": 1.0,
+      "baseline_rate": 1.0,
+      "paired_difference": 0.0
+    },
+    "intervals": {
+      "current_rate": [
+        1.0,
+        1.0
+      ],
+      "baseline_rate": [
+        1.0,
+        1.0
+      ],
+      "paired_difference": [
+        0.0,
+        0.0
+      ]
+    },
+    "interval_kind": "descriptive 95% paired seed-cluster percentile; seed macro mean",
+    "bootstrap_seed": 740031,
+    "resamples": 10000
+  },
+  {
+    "sources": 8,
+    "family": "wrong_currency",
+    "truth_axis": "numeric_support",
+    "truth_class": "True",
+    "baseline": "direct_full_inventory",
+    "eligible_seed_ids": [
+      1001,
+      1002,
+      1003,
+      1004,
+      1005,
+      1006,
+      1007,
+      1008,
+      1009,
+      1010
+    ],
+    "eligible_seed_count": 10,
+    "undefined_seed_ids": [],
+    "point_estimates": {
+      "current_rate": 1.0,
+      "baseline_rate": 1.0,
+      "paired_difference": 0.0
+    },
+    "intervals": {
+      "current_rate": [
+        1.0,
+        1.0
+      ],
+      "baseline_rate": [
+        1.0,
+        1.0
+      ],
+      "paired_difference": [
+        0.0,
+        0.0
+      ]
+    },
+    "interval_kind": "descriptive 95% paired seed-cluster percentile; seed macro mean",
+    "bootstrap_seed": 740031,
+    "resamples": 10000
+  },
+  {
+    "sources": 8,
+    "family": "wrong_currency",
+    "truth_axis": "numeric_support",
+    "truth_class": "True",
+    "baseline": "direct_retained",
+    "eligible_seed_ids": [
+      1001,
+      1002,
+      1003,
+      1004,
+      1005,
+      1006,
+      1007,
+      1008,
+      1009,
+      1010
+    ],
+    "eligible_seed_count": 10,
+    "undefined_seed_ids": [],
+    "point_estimates": {
+      "current_rate": 1.0,
+      "baseline_rate": 1.0,
+      "paired_difference": 0.0
+    },
+    "intervals": {
+      "current_rate": [
+        1.0,
+        1.0
+      ],
+      "baseline_rate": [
+        1.0,
+        1.0
+      ],
+      "paired_difference": [
+        0.0,
+        0.0
+      ]
+    },
+    "interval_kind": "descriptive 95% paired seed-cluster percentile; seed macro mean",
+    "bootstrap_seed": 740031,
+    "resamples": 10000
+  },
+  {
+    "sources": 8,
+    "family": "wrong_date",
+    "truth_axis": "full_fact_correct",
+    "truth_class": "False",
+    "baseline": "direct_full_inventory",
+    "eligible_seed_ids": [
+      1001,
+      1002,
+      1003,
+      1004,
+      1005,
+      1006,
+      1007,
+      1008,
+      1009,
+      1010
+    ],
+    "eligible_seed_count": 10,
+    "undefined_seed_ids": [],
+    "point_estimates": {
+      "current_rate": 1.0,
+      "baseline_rate": 1.0,
+      "paired_difference": 0.0
+    },
+    "intervals": {
+      "current_rate": [
+        1.0,
+        1.0
+      ],
+      "baseline_rate": [
+        1.0,
+        1.0
+      ],
+      "paired_difference": [
+        0.0,
+        0.0
+      ]
+    },
+    "interval_kind": "descriptive 95% paired seed-cluster percentile; seed macro mean",
+    "bootstrap_seed": 740031,
+    "resamples": 10000
+  },
+  {
+    "sources": 8,
+    "family": "wrong_date",
+    "truth_axis": "full_fact_correct",
+    "truth_class": "False",
+    "baseline": "direct_retained",
+    "eligible_seed_ids": [
+      1001,
+      1002,
+      1003,
+      1004,
+      1005,
+      1006,
+      1007,
+      1008,
+      1009,
+      1010
+    ],
+    "eligible_seed_count": 10,
+    "undefined_seed_ids": [],
+    "point_estimates": {
+      "current_rate": 1.0,
+      "baseline_rate": 1.0,
+      "paired_difference": 0.0
+    },
+    "intervals": {
+      "current_rate": [
+        1.0,
+        1.0
+      ],
+      "baseline_rate": [
+        1.0,
+        1.0
+      ],
+      "paired_difference": [
+        0.0,
+        0.0
+      ]
+    },
+    "interval_kind": "descriptive 95% paired seed-cluster percentile; seed macro mean",
+    "bootstrap_seed": 740031,
+    "resamples": 10000
+  },
+  {
+    "sources": 8,
+    "family": "wrong_date",
+    "truth_axis": "numeric_support",
+    "truth_class": "True",
+    "baseline": "direct_full_inventory",
+    "eligible_seed_ids": [
+      1001,
+      1002,
+      1003,
+      1004,
+      1005,
+      1006,
+      1007,
+      1008,
+      1009,
+      1010
+    ],
+    "eligible_seed_count": 10,
+    "undefined_seed_ids": [],
+    "point_estimates": {
+      "current_rate": 1.0,
+      "baseline_rate": 1.0,
+      "paired_difference": 0.0
+    },
+    "intervals": {
+      "current_rate": [
+        1.0,
+        1.0
+      ],
+      "baseline_rate": [
+        1.0,
+        1.0
+      ],
+      "paired_difference": [
+        0.0,
+        0.0
+      ]
+    },
+    "interval_kind": "descriptive 95% paired seed-cluster percentile; seed macro mean",
+    "bootstrap_seed": 740031,
+    "resamples": 10000
+  },
+  {
+    "sources": 8,
+    "family": "wrong_date",
+    "truth_axis": "numeric_support",
+    "truth_class": "True",
+    "baseline": "direct_retained",
+    "eligible_seed_ids": [
+      1001,
+      1002,
+      1003,
+      1004,
+      1005,
+      1006,
+      1007,
+      1008,
+      1009,
+      1010
+    ],
+    "eligible_seed_count": 10,
+    "undefined_seed_ids": [],
+    "point_estimates": {
+      "current_rate": 1.0,
+      "baseline_rate": 1.0,
+      "paired_difference": 0.0
+    },
+    "intervals": {
+      "current_rate": [
+        1.0,
+        1.0
+      ],
+      "baseline_rate": [
+        1.0,
+        1.0
+      ],
+      "paired_difference": [
+        0.0,
+        0.0
+      ]
+    },
+    "interval_kind": "descriptive 95% paired seed-cluster percentile; seed macro mean",
+    "bootstrap_seed": 740031,
+    "resamples": 10000
+  },
+  {
+    "sources": 8,
+    "family": "wrong_entity",
+    "truth_axis": "full_fact_correct",
+    "truth_class": "False",
+    "baseline": "direct_full_inventory",
+    "eligible_seed_ids": [
+      1001,
+      1002,
+      1003,
+      1004,
+      1005,
+      1006,
+      1007,
+      1008,
+      1009,
+      1010
+    ],
+    "eligible_seed_count": 10,
+    "undefined_seed_ids": [],
+    "point_estimates": {
+      "current_rate": 1.0,
+      "baseline_rate": 1.0,
+      "paired_difference": 0.0
+    },
+    "intervals": {
+      "current_rate": [
+        1.0,
+        1.0
+      ],
+      "baseline_rate": [
+        1.0,
+        1.0
+      ],
+      "paired_difference": [
+        0.0,
+        0.0
+      ]
+    },
+    "interval_kind": "descriptive 95% paired seed-cluster percentile; seed macro mean",
+    "bootstrap_seed": 740031,
+    "resamples": 10000
+  },
+  {
+    "sources": 8,
+    "family": "wrong_entity",
+    "truth_axis": "full_fact_correct",
+    "truth_class": "False",
+    "baseline": "direct_retained",
+    "eligible_seed_ids": [
+      1001,
+      1002,
+      1003,
+      1004,
+      1005,
+      1006,
+      1007,
+      1008,
+      1009,
+      1010
+    ],
+    "eligible_seed_count": 10,
+    "undefined_seed_ids": [],
+    "point_estimates": {
+      "current_rate": 1.0,
+      "baseline_rate": 1.0,
+      "paired_difference": 0.0
+    },
+    "intervals": {
+      "current_rate": [
+        1.0,
+        1.0
+      ],
+      "baseline_rate": [
+        1.0,
+        1.0
+      ],
+      "paired_difference": [
+        0.0,
+        0.0
+      ]
+    },
+    "interval_kind": "descriptive 95% paired seed-cluster percentile; seed macro mean",
+    "bootstrap_seed": 740031,
+    "resamples": 10000
+  },
+  {
+    "sources": 8,
+    "family": "wrong_entity",
+    "truth_axis": "numeric_support",
+    "truth_class": "True",
+    "baseline": "direct_full_inventory",
+    "eligible_seed_ids": [
+      1001,
+      1002,
+      1003,
+      1004,
+      1005,
+      1006,
+      1007,
+      1008,
+      1009,
+      1010
+    ],
+    "eligible_seed_count": 10,
+    "undefined_seed_ids": [],
+    "point_estimates": {
+      "current_rate": 1.0,
+      "baseline_rate": 1.0,
+      "paired_difference": 0.0
+    },
+    "intervals": {
+      "current_rate": [
+        1.0,
+        1.0
+      ],
+      "baseline_rate": [
+        1.0,
+        1.0
+      ],
+      "paired_difference": [
+        0.0,
+        0.0
+      ]
+    },
+    "interval_kind": "descriptive 95% paired seed-cluster percentile; seed macro mean",
+    "bootstrap_seed": 740031,
+    "resamples": 10000
+  },
+  {
+    "sources": 8,
+    "family": "wrong_entity",
+    "truth_axis": "numeric_support",
+    "truth_class": "True",
+    "baseline": "direct_retained",
+    "eligible_seed_ids": [
+      1001,
+      1002,
+      1003,
+      1004,
+      1005,
+      1006,
+      1007,
+      1008,
+      1009,
+      1010
+    ],
+    "eligible_seed_count": 10,
+    "undefined_seed_ids": [],
+    "point_estimates": {
+      "current_rate": 1.0,
+      "baseline_rate": 1.0,
+      "paired_difference": 0.0
+    },
+    "intervals": {
+      "current_rate": [
+        1.0,
+        1.0
+      ],
+      "baseline_rate": [
+        1.0,
+        1.0
+      ],
+      "paired_difference": [
+        0.0,
+        0.0
+      ]
+    },
+    "interval_kind": "descriptive 95% paired seed-cluster percentile; seed macro mean",
+    "bootstrap_seed": 740031,
+    "resamples": 10000
+  },
+  {
+    "sources": 8,
+    "family": "wrong_sign",
+    "truth_axis": "full_fact_correct",
+    "truth_class": "False",
+    "baseline": "direct_full_inventory",
+    "eligible_seed_ids": [
+      1001,
+      1002,
+      1003,
+      1004,
+      1005,
+      1006,
+      1007,
+      1008,
+      1009,
+      1010
+    ],
+    "eligible_seed_count": 10,
+    "undefined_seed_ids": [],
+    "point_estimates": {
+      "current_rate": 1.0,
+      "baseline_rate": 0.0,
+      "paired_difference": 1.0
+    },
+    "intervals": {
+      "current_rate": [
+        1.0,
+        1.0
+      ],
+      "baseline_rate": [
+        0.0,
+        0.0
+      ],
+      "paired_difference": [
+        1.0,
+        1.0
+      ]
+    },
+    "interval_kind": "descriptive 95% paired seed-cluster percentile; seed macro mean",
+    "bootstrap_seed": 740031,
+    "resamples": 10000
+  },
+  {
+    "sources": 8,
+    "family": "wrong_sign",
+    "truth_axis": "full_fact_correct",
+    "truth_class": "False",
+    "baseline": "direct_retained",
+    "eligible_seed_ids": [
+      1001,
+      1002,
+      1003,
+      1004,
+      1005,
+      1006,
+      1007,
+      1008,
+      1009,
+      1010
+    ],
+    "eligible_seed_count": 10,
+    "undefined_seed_ids": [],
+    "point_estimates": {
+      "current_rate": 1.0,
+      "baseline_rate": 0.0,
+      "paired_difference": 1.0
+    },
+    "intervals": {
+      "current_rate": [
+        1.0,
+        1.0
+      ],
+      "baseline_rate": [
+        0.0,
+        0.0
+      ],
+      "paired_difference": [
+        1.0,
+        1.0
+      ]
+    },
+    "interval_kind": "descriptive 95% paired seed-cluster percentile; seed macro mean",
+    "bootstrap_seed": 740031,
+    "resamples": 10000
+  },
+  {
+    "sources": 8,
+    "family": "wrong_sign",
+    "truth_axis": "numeric_support",
+    "truth_class": "False",
+    "baseline": "direct_full_inventory",
+    "eligible_seed_ids": [
+      1001,
+      1002,
+      1003,
+      1004,
+      1005,
+      1006,
+      1007,
+      1008,
+      1009,
+      1010
+    ],
+    "eligible_seed_count": 10,
+    "undefined_seed_ids": [],
+    "point_estimates": {
+      "current_rate": 1.0,
+      "baseline_rate": 0.0,
+      "paired_difference": 1.0
+    },
+    "intervals": {
+      "current_rate": [
+        1.0,
+        1.0
+      ],
+      "baseline_rate": [
+        0.0,
+        0.0
+      ],
+      "paired_difference": [
+        1.0,
+        1.0
+      ]
+    },
+    "interval_kind": "descriptive 95% paired seed-cluster percentile; seed macro mean",
+    "bootstrap_seed": 740031,
+    "resamples": 10000
+  },
+  {
+    "sources": 8,
+    "family": "wrong_sign",
+    "truth_axis": "numeric_support",
+    "truth_class": "False",
+    "baseline": "direct_retained",
+    "eligible_seed_ids": [
+      1001,
+      1002,
+      1003,
+      1004,
+      1005,
+      1006,
+      1007,
+      1008,
+      1009,
+      1010
+    ],
+    "eligible_seed_count": 10,
+    "undefined_seed_ids": [],
+    "point_estimates": {
+      "current_rate": 1.0,
+      "baseline_rate": 0.0,
+      "paired_difference": 1.0
+    },
+    "intervals": {
+      "current_rate": [
+        1.0,
+        1.0
+      ],
+      "baseline_rate": [
+        0.0,
+        0.0
+      ],
+      "paired_difference": [
+        1.0,
+        1.0
+      ]
+    },
+    "interval_kind": "descriptive 95% paired seed-cluster percentile; seed macro mean",
+    "bootstrap_seed": 740031,
+    "resamples": 10000
+  },
+  {
+    "sources": 80,
+    "family": "difference",
+    "truth_axis": "full_fact_correct",
+    "truth_class": "True",
+    "baseline": "direct_full_inventory",
+    "eligible_seed_ids": [
+      1001,
+      1002,
+      1003,
+      1004,
+      1005,
+      1006,
+      1007,
+      1008,
+      1009,
+      1010
+    ],
+    "eligible_seed_count": 10,
+    "undefined_seed_ids": [],
+    "point_estimates": {
+      "current_rate": 0.223,
+      "baseline_rate": 0.0,
+      "paired_difference": 0.223
+    },
+    "intervals": {
+      "current_rate": [
+        0.22,
+        0.226
+      ],
+      "baseline_rate": [
+        0.0,
+        0.0
+      ],
+      "paired_difference": [
+        0.22,
+        0.226
+      ]
+    },
+    "interval_kind": "descriptive 95% paired seed-cluster percentile; seed macro mean",
+    "bootstrap_seed": 740031,
+    "resamples": 10000
+  },
+  {
+    "sources": 80,
+    "family": "difference",
+    "truth_axis": "full_fact_correct",
+    "truth_class": "True",
+    "baseline": "direct_retained",
+    "eligible_seed_ids": [
+      1001,
+      1002,
+      1003,
+      1004,
+      1005,
+      1006,
+      1007,
+      1008,
+      1009,
+      1010
+    ],
+    "eligible_seed_count": 10,
+    "undefined_seed_ids": [],
+    "point_estimates": {
+      "current_rate": 0.223,
+      "baseline_rate": 0.0,
+      "paired_difference": 0.223
+    },
+    "intervals": {
+      "current_rate": [
+        0.22,
+        0.226
+      ],
+      "baseline_rate": [
+        0.0,
+        0.0
+      ],
+      "paired_difference": [
+        0.22,
+        0.226
+      ]
+    },
+    "interval_kind": "descriptive 95% paired seed-cluster percentile; seed macro mean",
+    "bootstrap_seed": 740031,
+    "resamples": 10000
+  },
+  {
+    "sources": 80,
+    "family": "difference",
+    "truth_axis": "numeric_support",
+    "truth_class": "True",
+    "baseline": "direct_full_inventory",
+    "eligible_seed_ids": [
+      1001,
+      1002,
+      1003,
+      1004,
+      1005,
+      1006,
+      1007,
+      1008,
+      1009,
+      1010
+    ],
+    "eligible_seed_count": 10,
+    "undefined_seed_ids": [],
+    "point_estimates": {
+      "current_rate": 0.223,
+      "baseline_rate": 0.0,
+      "paired_difference": 0.223
+    },
+    "intervals": {
+      "current_rate": [
+        0.22,
+        0.226
+      ],
+      "baseline_rate": [
+        0.0,
+        0.0
+      ],
+      "paired_difference": [
+        0.22,
+        0.226
+      ]
+    },
+    "interval_kind": "descriptive 95% paired seed-cluster percentile; seed macro mean",
+    "bootstrap_seed": 740031,
+    "resamples": 10000
+  },
+  {
+    "sources": 80,
+    "family": "difference",
+    "truth_axis": "numeric_support",
+    "truth_class": "True",
+    "baseline": "direct_retained",
+    "eligible_seed_ids": [
+      1001,
+      1002,
+      1003,
+      1004,
+      1005,
+      1006,
+      1007,
+      1008,
+      1009,
+      1010
+    ],
+    "eligible_seed_count": 10,
+    "undefined_seed_ids": [],
+    "point_estimates": {
+      "current_rate": 0.223,
+      "baseline_rate": 0.0,
+      "paired_difference": 0.223
+    },
+    "intervals": {
+      "current_rate": [
+        0.22,
+        0.226
+      ],
+      "baseline_rate": [
+        0.0,
+        0.0
+      ],
+      "paired_difference": [
+        0.22,
+        0.226
+      ]
+    },
+    "interval_kind": "descriptive 95% paired seed-cluster percentile; seed macro mean",
+    "bootstrap_seed": 740031,
+    "resamples": 10000
+  },
+  {
+    "sources": 80,
+    "family": "direct_compact",
+    "truth_axis": "full_fact_correct",
+    "truth_class": "True",
+    "baseline": "direct_full_inventory",
+    "eligible_seed_ids": [
+      1001,
+      1002,
+      1003,
+      1004,
+      1005,
+      1006,
+      1007,
+      1008,
+      1009,
+      1010
+    ],
+    "eligible_seed_count": 10,
+    "undefined_seed_ids": [],
+    "point_estimates": {
+      "current_rate": 1.0,
+      "baseline_rate": 1.0,
+      "paired_difference": 0.0
+    },
+    "intervals": {
+      "current_rate": [
+        1.0,
+        1.0
+      ],
+      "baseline_rate": [
+        1.0,
+        1.0
+      ],
+      "paired_difference": [
+        0.0,
+        0.0
+      ]
+    },
+    "interval_kind": "descriptive 95% paired seed-cluster percentile; seed macro mean",
+    "bootstrap_seed": 740031,
+    "resamples": 10000
+  },
+  {
+    "sources": 80,
+    "family": "direct_compact",
+    "truth_axis": "full_fact_correct",
+    "truth_class": "True",
+    "baseline": "direct_retained",
+    "eligible_seed_ids": [
+      1001,
+      1002,
+      1003,
+      1004,
+      1005,
+      1006,
+      1007,
+      1008,
+      1009,
+      1010
+    ],
+    "eligible_seed_count": 10,
+    "undefined_seed_ids": [],
+    "point_estimates": {
+      "current_rate": 1.0,
+      "baseline_rate": 1.0,
+      "paired_difference": 0.0
+    },
+    "intervals": {
+      "current_rate": [
+        1.0,
+        1.0
+      ],
+      "baseline_rate": [
+        1.0,
+        1.0
+      ],
+      "paired_difference": [
+        0.0,
+        0.0
+      ]
+    },
+    "interval_kind": "descriptive 95% paired seed-cluster percentile; seed macro mean",
+    "bootstrap_seed": 740031,
+    "resamples": 10000
+  },
+  {
+    "sources": 80,
+    "family": "direct_compact",
+    "truth_axis": "numeric_support",
+    "truth_class": "True",
+    "baseline": "direct_full_inventory",
+    "eligible_seed_ids": [
+      1001,
+      1002,
+      1003,
+      1004,
+      1005,
+      1006,
+      1007,
+      1008,
+      1009,
+      1010
+    ],
+    "eligible_seed_count": 10,
+    "undefined_seed_ids": [],
+    "point_estimates": {
+      "current_rate": 1.0,
+      "baseline_rate": 1.0,
+      "paired_difference": 0.0
+    },
+    "intervals": {
+      "current_rate": [
+        1.0,
+        1.0
+      ],
+      "baseline_rate": [
+        1.0,
+        1.0
+      ],
+      "paired_difference": [
+        0.0,
+        0.0
+      ]
+    },
+    "interval_kind": "descriptive 95% paired seed-cluster percentile; seed macro mean",
+    "bootstrap_seed": 740031,
+    "resamples": 10000
+  },
+  {
+    "sources": 80,
+    "family": "direct_compact",
+    "truth_axis": "numeric_support",
+    "truth_class": "True",
+    "baseline": "direct_retained",
+    "eligible_seed_ids": [
+      1001,
+      1002,
+      1003,
+      1004,
+      1005,
+      1006,
+      1007,
+      1008,
+      1009,
+      1010
+    ],
+    "eligible_seed_count": 10,
+    "undefined_seed_ids": [],
+    "point_estimates": {
+      "current_rate": 1.0,
+      "baseline_rate": 1.0,
+      "paired_difference": 0.0
+    },
+    "intervals": {
+      "current_rate": [
+        1.0,
+        1.0
+      ],
+      "baseline_rate": [
+        1.0,
+        1.0
+      ],
+      "paired_difference": [
+        0.0,
+        0.0
+      ]
+    },
+    "interval_kind": "descriptive 95% paired seed-cluster percentile; seed macro mean",
+    "bootstrap_seed": 740031,
+    "resamples": 10000
+  },
+  {
+    "sources": 80,
+    "family": "direct_exact",
+    "truth_axis": "full_fact_correct",
+    "truth_class": "True",
+    "baseline": "direct_full_inventory",
+    "eligible_seed_ids": [
+      1001,
+      1002,
+      1003,
+      1004,
+      1005,
+      1006,
+      1007,
+      1008,
+      1009,
+      1010
+    ],
+    "eligible_seed_count": 10,
+    "undefined_seed_ids": [],
+    "point_estimates": {
+      "current_rate": 1.0,
+      "baseline_rate": 1.0,
+      "paired_difference": 0.0
+    },
+    "intervals": {
+      "current_rate": [
+        1.0,
+        1.0
+      ],
+      "baseline_rate": [
+        1.0,
+        1.0
+      ],
+      "paired_difference": [
+        0.0,
+        0.0
+      ]
+    },
+    "interval_kind": "descriptive 95% paired seed-cluster percentile; seed macro mean",
+    "bootstrap_seed": 740031,
+    "resamples": 10000
+  },
+  {
+    "sources": 80,
+    "family": "direct_exact",
+    "truth_axis": "full_fact_correct",
+    "truth_class": "True",
+    "baseline": "direct_retained",
+    "eligible_seed_ids": [
+      1001,
+      1002,
+      1003,
+      1004,
+      1005,
+      1006,
+      1007,
+      1008,
+      1009,
+      1010
+    ],
+    "eligible_seed_count": 10,
+    "undefined_seed_ids": [],
+    "point_estimates": {
+      "current_rate": 1.0,
+      "baseline_rate": 1.0,
+      "paired_difference": 0.0
+    },
+    "intervals": {
+      "current_rate": [
+        1.0,
+        1.0
+      ],
+      "baseline_rate": [
+        1.0,
+        1.0
+      ],
+      "paired_difference": [
+        0.0,
+        0.0
+      ]
+    },
+    "interval_kind": "descriptive 95% paired seed-cluster percentile; seed macro mean",
+    "bootstrap_seed": 740031,
+    "resamples": 10000
+  },
+  {
+    "sources": 80,
+    "family": "direct_exact",
+    "truth_axis": "numeric_support",
+    "truth_class": "True",
+    "baseline": "direct_full_inventory",
+    "eligible_seed_ids": [
+      1001,
+      1002,
+      1003,
+      1004,
+      1005,
+      1006,
+      1007,
+      1008,
+      1009,
+      1010
+    ],
+    "eligible_seed_count": 10,
+    "undefined_seed_ids": [],
+    "point_estimates": {
+      "current_rate": 1.0,
+      "baseline_rate": 1.0,
+      "paired_difference": 0.0
+    },
+    "intervals": {
+      "current_rate": [
+        1.0,
+        1.0
+      ],
+      "baseline_rate": [
+        1.0,
+        1.0
+      ],
+      "paired_difference": [
+        0.0,
+        0.0
+      ]
+    },
+    "interval_kind": "descriptive 95% paired seed-cluster percentile; seed macro mean",
+    "bootstrap_seed": 740031,
+    "resamples": 10000
+  },
+  {
+    "sources": 80,
+    "family": "direct_exact",
+    "truth_axis": "numeric_support",
+    "truth_class": "True",
+    "baseline": "direct_retained",
+    "eligible_seed_ids": [
+      1001,
+      1002,
+      1003,
+      1004,
+      1005,
+      1006,
+      1007,
+      1008,
+      1009,
+      1010
+    ],
+    "eligible_seed_count": 10,
+    "undefined_seed_ids": [],
+    "point_estimates": {
+      "current_rate": 1.0,
+      "baseline_rate": 1.0,
+      "paired_difference": 0.0
+    },
+    "intervals": {
+      "current_rate": [
+        1.0,
+        1.0
+      ],
+      "baseline_rate": [
+        1.0,
+        1.0
+      ],
+      "paired_difference": [
+        0.0,
+        0.0
+      ]
+    },
+    "interval_kind": "descriptive 95% paired seed-cluster percentile; seed macro mean",
+    "bootstrap_seed": 740031,
+    "resamples": 10000
+  },
+  {
+    "sources": 80,
+    "family": "near_value",
+    "truth_axis": "full_fact_correct",
+    "truth_class": "False",
+    "baseline": "direct_full_inventory",
+    "eligible_seed_ids": [
+      1001,
+      1002,
+      1003,
+      1004,
+      1005,
+      1006,
+      1007,
+      1008,
+      1009,
+      1010
+    ],
+    "eligible_seed_count": 10,
+    "undefined_seed_ids": [],
+    "point_estimates": {
+      "current_rate": 0.001,
+      "baseline_rate": 0.0,
+      "paired_difference": 0.001
+    },
+    "intervals": {
+      "current_rate": [
+        0.0,
+        0.003
+      ],
+      "baseline_rate": [
+        0.0,
+        0.0
+      ],
+      "paired_difference": [
+        0.0,
+        0.003
+      ]
+    },
+    "interval_kind": "descriptive 95% paired seed-cluster percentile; seed macro mean",
+    "bootstrap_seed": 740031,
+    "resamples": 10000
+  },
+  {
+    "sources": 80,
+    "family": "near_value",
+    "truth_axis": "full_fact_correct",
+    "truth_class": "False",
+    "baseline": "direct_retained",
+    "eligible_seed_ids": [
+      1001,
+      1002,
+      1003,
+      1004,
+      1005,
+      1006,
+      1007,
+      1008,
+      1009,
+      1010
+    ],
+    "eligible_seed_count": 10,
+    "undefined_seed_ids": [],
+    "point_estimates": {
+      "current_rate": 0.001,
+      "baseline_rate": 0.0,
+      "paired_difference": 0.001
+    },
+    "intervals": {
+      "current_rate": [
+        0.0,
+        0.003
+      ],
+      "baseline_rate": [
+        0.0,
+        0.0
+      ],
+      "paired_difference": [
+        0.0,
+        0.003
+      ]
+    },
+    "interval_kind": "descriptive 95% paired seed-cluster percentile; seed macro mean",
+    "bootstrap_seed": 740031,
+    "resamples": 10000
+  },
+  {
+    "sources": 80,
+    "family": "near_value",
+    "truth_axis": "numeric_support",
+    "truth_class": "False",
+    "baseline": "direct_full_inventory",
+    "eligible_seed_ids": [
+      1001,
+      1002,
+      1003,
+      1004,
+      1005,
+      1006,
+      1007,
+      1008,
+      1009,
+      1010
+    ],
+    "eligible_seed_count": 10,
+    "undefined_seed_ids": [],
+    "point_estimates": {
+      "current_rate": 0.001,
+      "baseline_rate": 0.0,
+      "paired_difference": 0.001
+    },
+    "intervals": {
+      "current_rate": [
+        0.0,
+        0.003
+      ],
+      "baseline_rate": [
+        0.0,
+        0.0
+      ],
+      "paired_difference": [
+        0.0,
+        0.003
+      ]
+    },
+    "interval_kind": "descriptive 95% paired seed-cluster percentile; seed macro mean",
+    "bootstrap_seed": 740031,
+    "resamples": 10000
+  },
+  {
+    "sources": 80,
+    "family": "near_value",
+    "truth_axis": "numeric_support",
+    "truth_class": "False",
+    "baseline": "direct_retained",
+    "eligible_seed_ids": [
+      1001,
+      1002,
+      1003,
+      1004,
+      1005,
+      1006,
+      1007,
+      1008,
+      1009,
+      1010
+    ],
+    "eligible_seed_count": 10,
+    "undefined_seed_ids": [],
+    "point_estimates": {
+      "current_rate": 0.001,
+      "baseline_rate": 0.0,
+      "paired_difference": 0.001
+    },
+    "intervals": {
+      "current_rate": [
+        0.0,
+        0.003
+      ],
+      "baseline_rate": [
+        0.0,
+        0.0
+      ],
+      "paired_difference": [
+        0.0,
+        0.003
+      ]
+    },
+    "interval_kind": "descriptive 95% paired seed-cluster percentile; seed macro mean",
+    "bootstrap_seed": 740031,
+    "resamples": 10000
+  },
+  {
+    "sources": 80,
+    "family": "near_value",
+    "truth_axis": "numeric_support",
+    "truth_class": "True",
+    "baseline": "direct_full_inventory",
+    "eligible_seed_ids": [
+      1008
+    ],
+    "eligible_seed_count": 1,
+    "undefined_seed_ids": [
+      1001,
+      1002,
+      1003,
+      1004,
+      1005,
+      1006,
+      1007,
+      1009,
+      1010
+    ],
+    "point_estimates": {
+      "current_rate": 0.0,
+      "baseline_rate": 0.0,
+      "paired_difference": 0.0
+    },
+    "intervals": null,
+    "interval_kind": "descriptive 95% paired seed-cluster percentile; seed macro mean",
+    "bootstrap_seed": 740031,
+    "resamples": 10000,
+    "interval_missing_reason": "needs all ten main seeds with nonzero complete-pair truth-class denominator; undefined rates not zero-filled"
+  },
+  {
+    "sources": 80,
+    "family": "near_value",
+    "truth_axis": "numeric_support",
+    "truth_class": "True",
+    "baseline": "direct_retained",
+    "eligible_seed_ids": [
+      1008
+    ],
+    "eligible_seed_count": 1,
+    "undefined_seed_ids": [
+      1001,
+      1002,
+      1003,
+      1004,
+      1005,
+      1006,
+      1007,
+      1009,
+      1010
+    ],
+    "point_estimates": {
+      "current_rate": 0.0,
+      "baseline_rate": 0.0,
+      "paired_difference": 0.0
+    },
+    "intervals": null,
+    "interval_kind": "descriptive 95% paired seed-cluster percentile; seed macro mean",
+    "bootstrap_seed": 740031,
+    "resamples": 10000,
+    "interval_missing_reason": "needs all ten main seeds with nonzero complete-pair truth-class denominator; undefined rates not zero-filled"
+  },
+  {
+    "sources": 80,
+    "family": "percent",
+    "truth_axis": "full_fact_correct",
+    "truth_class": "True",
+    "baseline": "direct_full_inventory",
+    "eligible_seed_ids": [
+      1001,
+      1002,
+      1003,
+      1004,
+      1005,
+      1006,
+      1007,
+      1008,
+      1009,
+      1010
+    ],
+    "eligible_seed_count": 10,
+    "undefined_seed_ids": [],
+    "point_estimates": {
+      "current_rate": 0.301,
+      "baseline_rate": 0.0,
+      "paired_difference": 0.301
+    },
+    "intervals": {
+      "current_rate": [
+        0.28300000000000003,
+        0.322
+      ],
+      "baseline_rate": [
+        0.0,
+        0.0
+      ],
+      "paired_difference": [
+        0.28300000000000003,
+        0.322
+      ]
+    },
+    "interval_kind": "descriptive 95% paired seed-cluster percentile; seed macro mean",
+    "bootstrap_seed": 740031,
+    "resamples": 10000
+  },
+  {
+    "sources": 80,
+    "family": "percent",
+    "truth_axis": "full_fact_correct",
+    "truth_class": "True",
+    "baseline": "direct_retained",
+    "eligible_seed_ids": [
+      1001,
+      1002,
+      1003,
+      1004,
+      1005,
+      1006,
+      1007,
+      1008,
+      1009,
+      1010
+    ],
+    "eligible_seed_count": 10,
+    "undefined_seed_ids": [],
+    "point_estimates": {
+      "current_rate": 0.301,
+      "baseline_rate": 0.0,
+      "paired_difference": 0.301
+    },
+    "intervals": {
+      "current_rate": [
+        0.28300000000000003,
+        0.322
+      ],
+      "baseline_rate": [
+        0.0,
+        0.0
+      ],
+      "paired_difference": [
+        0.28300000000000003,
+        0.322
+      ]
+    },
+    "interval_kind": "descriptive 95% paired seed-cluster percentile; seed macro mean",
+    "bootstrap_seed": 740031,
+    "resamples": 10000
+  },
+  {
+    "sources": 80,
+    "family": "percent",
+    "truth_axis": "numeric_support",
+    "truth_class": "True",
+    "baseline": "direct_full_inventory",
+    "eligible_seed_ids": [
+      1001,
+      1002,
+      1003,
+      1004,
+      1005,
+      1006,
+      1007,
+      1008,
+      1009,
+      1010
+    ],
+    "eligible_seed_count": 10,
+    "undefined_seed_ids": [],
+    "point_estimates": {
+      "current_rate": 0.301,
+      "baseline_rate": 0.0,
+      "paired_difference": 0.301
+    },
+    "intervals": {
+      "current_rate": [
+        0.28300000000000003,
+        0.322
+      ],
+      "baseline_rate": [
+        0.0,
+        0.0
+      ],
+      "paired_difference": [
+        0.28300000000000003,
+        0.322
+      ]
+    },
+    "interval_kind": "descriptive 95% paired seed-cluster percentile; seed macro mean",
+    "bootstrap_seed": 740031,
+    "resamples": 10000
+  },
+  {
+    "sources": 80,
+    "family": "percent",
+    "truth_axis": "numeric_support",
+    "truth_class": "True",
+    "baseline": "direct_retained",
+    "eligible_seed_ids": [
+      1001,
+      1002,
+      1003,
+      1004,
+      1005,
+      1006,
+      1007,
+      1008,
+      1009,
+      1010
+    ],
+    "eligible_seed_count": 10,
+    "undefined_seed_ids": [],
+    "point_estimates": {
+      "current_rate": 0.301,
+      "baseline_rate": 0.0,
+      "paired_difference": 0.301
+    },
+    "intervals": {
+      "current_rate": [
+        0.28300000000000003,
+        0.322
+      ],
+      "baseline_rate": [
+        0.0,
+        0.0
+      ],
+      "paired_difference": [
+        0.28300000000000003,
+        0.322
+      ]
+    },
+    "interval_kind": "descriptive 95% paired seed-cluster percentile; seed macro mean",
+    "bootstrap_seed": 740031,
+    "resamples": 10000
+  },
+  {
+    "sources": 80,
+    "family": "random_value",
+    "truth_axis": "full_fact_correct",
+    "truth_class": "False",
+    "baseline": "direct_full_inventory",
+    "eligible_seed_ids": [
+      1001,
+      1002,
+      1003,
+      1004,
+      1005,
+      1006,
+      1007,
+      1008,
+      1009,
+      1010
+    ],
+    "eligible_seed_count": 10,
+    "undefined_seed_ids": [],
+    "point_estimates": {
+      "current_rate": 0.001,
+      "baseline_rate": 0.001,
+      "paired_difference": 0.0
+    },
+    "intervals": {
+      "current_rate": [
+        0.0,
+        0.003
+      ],
+      "baseline_rate": [
+        0.0,
+        0.003
+      ],
+      "paired_difference": [
+        0.0,
+        0.0
+      ]
+    },
+    "interval_kind": "descriptive 95% paired seed-cluster percentile; seed macro mean",
+    "bootstrap_seed": 740031,
+    "resamples": 10000
+  },
+  {
+    "sources": 80,
+    "family": "random_value",
+    "truth_axis": "full_fact_correct",
+    "truth_class": "False",
+    "baseline": "direct_retained",
+    "eligible_seed_ids": [
+      1001,
+      1002,
+      1003,
+      1004,
+      1005,
+      1006,
+      1007,
+      1008,
+      1009,
+      1010
+    ],
+    "eligible_seed_count": 10,
+    "undefined_seed_ids": [],
+    "point_estimates": {
+      "current_rate": 0.001,
+      "baseline_rate": 0.001,
+      "paired_difference": 0.0
+    },
+    "intervals": {
+      "current_rate": [
+        0.0,
+        0.003
+      ],
+      "baseline_rate": [
+        0.0,
+        0.003
+      ],
+      "paired_difference": [
+        0.0,
+        0.0
+      ]
+    },
+    "interval_kind": "descriptive 95% paired seed-cluster percentile; seed macro mean",
+    "bootstrap_seed": 740031,
+    "resamples": 10000
+  },
+  {
+    "sources": 80,
+    "family": "random_value",
+    "truth_axis": "numeric_support",
+    "truth_class": "False",
+    "baseline": "direct_full_inventory",
+    "eligible_seed_ids": [
+      1001,
+      1002,
+      1003,
+      1004,
+      1005,
+      1006,
+      1007,
+      1008,
+      1009,
+      1010
+    ],
+    "eligible_seed_count": 10,
+    "undefined_seed_ids": [],
+    "point_estimates": {
+      "current_rate": 0.0,
+      "baseline_rate": 0.0,
+      "paired_difference": 0.0
+    },
+    "intervals": {
+      "current_rate": [
+        0.0,
+        0.0
+      ],
+      "baseline_rate": [
+        0.0,
+        0.0
+      ],
+      "paired_difference": [
+        0.0,
+        0.0
+      ]
+    },
+    "interval_kind": "descriptive 95% paired seed-cluster percentile; seed macro mean",
+    "bootstrap_seed": 740031,
+    "resamples": 10000
+  },
+  {
+    "sources": 80,
+    "family": "random_value",
+    "truth_axis": "numeric_support",
+    "truth_class": "False",
+    "baseline": "direct_retained",
+    "eligible_seed_ids": [
+      1001,
+      1002,
+      1003,
+      1004,
+      1005,
+      1006,
+      1007,
+      1008,
+      1009,
+      1010
+    ],
+    "eligible_seed_count": 10,
+    "undefined_seed_ids": [],
+    "point_estimates": {
+      "current_rate": 0.0,
+      "baseline_rate": 0.0,
+      "paired_difference": 0.0
+    },
+    "intervals": {
+      "current_rate": [
+        0.0,
+        0.0
+      ],
+      "baseline_rate": [
+        0.0,
+        0.0
+      ],
+      "paired_difference": [
+        0.0,
+        0.0
+      ]
+    },
+    "interval_kind": "descriptive 95% paired seed-cluster percentile; seed macro mean",
+    "bootstrap_seed": 740031,
+    "resamples": 10000
+  },
+  {
+    "sources": 80,
+    "family": "random_value",
+    "truth_axis": "numeric_support",
+    "truth_class": "True",
+    "baseline": "direct_full_inventory",
+    "eligible_seed_ids": [
+      1001,
+      1003
+    ],
+    "eligible_seed_count": 2,
+    "undefined_seed_ids": [
+      1002,
+      1004,
+      1005,
+      1006,
+      1007,
+      1008,
+      1009,
+      1010
+    ],
+    "point_estimates": {
+      "current_rate": 0.5,
+      "baseline_rate": 0.5,
+      "paired_difference": 0.0
+    },
+    "intervals": null,
+    "interval_kind": "descriptive 95% paired seed-cluster percentile; seed macro mean",
+    "bootstrap_seed": 740031,
+    "resamples": 10000,
+    "interval_missing_reason": "needs all ten main seeds with nonzero complete-pair truth-class denominator; undefined rates not zero-filled"
+  },
+  {
+    "sources": 80,
+    "family": "random_value",
+    "truth_axis": "numeric_support",
+    "truth_class": "True",
+    "baseline": "direct_retained",
+    "eligible_seed_ids": [
+      1001,
+      1003
+    ],
+    "eligible_seed_count": 2,
+    "undefined_seed_ids": [
+      1002,
+      1004,
+      1005,
+      1006,
+      1007,
+      1008,
+      1009,
+      1010
+    ],
+    "point_estimates": {
+      "current_rate": 0.5,
+      "baseline_rate": 0.5,
+      "paired_difference": 0.0
+    },
+    "intervals": null,
+    "interval_kind": "descriptive 95% paired seed-cluster percentile; seed macro mean",
+    "bootstrap_seed": 740031,
+    "resamples": 10000,
+    "interval_missing_reason": "needs all ten main seeds with nonzero complete-pair truth-class denominator; undefined rates not zero-filled"
+  },
+  {
+    "sources": 80,
+    "family": "ratio_named",
+    "truth_axis": "full_fact_correct",
+    "truth_class": "True",
+    "baseline": "direct_full_inventory",
+    "eligible_seed_ids": [
+      1001,
+      1002,
+      1003,
+      1004,
+      1005,
+      1006,
+      1007,
+      1008,
+      1009,
+      1010
+    ],
+    "eligible_seed_count": 10,
+    "undefined_seed_ids": [],
+    "point_estimates": {
+      "current_rate": 1.0,
+      "baseline_rate": 0.0,
+      "paired_difference": 1.0
+    },
+    "intervals": {
+      "current_rate": [
+        1.0,
+        1.0
+      ],
+      "baseline_rate": [
+        0.0,
+        0.0
+      ],
+      "paired_difference": [
+        1.0,
+        1.0
+      ]
+    },
+    "interval_kind": "descriptive 95% paired seed-cluster percentile; seed macro mean",
+    "bootstrap_seed": 740031,
+    "resamples": 10000
+  },
+  {
+    "sources": 80,
+    "family": "ratio_named",
+    "truth_axis": "full_fact_correct",
+    "truth_class": "True",
+    "baseline": "direct_retained",
+    "eligible_seed_ids": [
+      1001,
+      1002,
+      1003,
+      1004,
+      1005,
+      1006,
+      1007,
+      1008,
+      1009,
+      1010
+    ],
+    "eligible_seed_count": 10,
+    "undefined_seed_ids": [],
+    "point_estimates": {
+      "current_rate": 1.0,
+      "baseline_rate": 0.0,
+      "paired_difference": 1.0
+    },
+    "intervals": {
+      "current_rate": [
+        1.0,
+        1.0
+      ],
+      "baseline_rate": [
+        0.0,
+        0.0
+      ],
+      "paired_difference": [
+        1.0,
+        1.0
+      ]
+    },
+    "interval_kind": "descriptive 95% paired seed-cluster percentile; seed macro mean",
+    "bootstrap_seed": 740031,
+    "resamples": 10000
+  },
+  {
+    "sources": 80,
+    "family": "ratio_named",
+    "truth_axis": "numeric_support",
+    "truth_class": "True",
+    "baseline": "direct_full_inventory",
+    "eligible_seed_ids": [
+      1001,
+      1002,
+      1003,
+      1004,
+      1005,
+      1006,
+      1007,
+      1008,
+      1009,
+      1010
+    ],
+    "eligible_seed_count": 10,
+    "undefined_seed_ids": [],
+    "point_estimates": {
+      "current_rate": 1.0,
+      "baseline_rate": 0.0,
+      "paired_difference": 1.0
+    },
+    "intervals": {
+      "current_rate": [
+        1.0,
+        1.0
+      ],
+      "baseline_rate": [
+        0.0,
+        0.0
+      ],
+      "paired_difference": [
+        1.0,
+        1.0
+      ]
+    },
+    "interval_kind": "descriptive 95% paired seed-cluster percentile; seed macro mean",
+    "bootstrap_seed": 740031,
+    "resamples": 10000
+  },
+  {
+    "sources": 80,
+    "family": "ratio_named",
+    "truth_axis": "numeric_support",
+    "truth_class": "True",
+    "baseline": "direct_retained",
+    "eligible_seed_ids": [
+      1001,
+      1002,
+      1003,
+      1004,
+      1005,
+      1006,
+      1007,
+      1008,
+      1009,
+      1010
+    ],
+    "eligible_seed_count": 10,
+    "undefined_seed_ids": [],
+    "point_estimates": {
+      "current_rate": 1.0,
+      "baseline_rate": 0.0,
+      "paired_difference": 1.0
+    },
+    "intervals": {
+      "current_rate": [
+        1.0,
+        1.0
+      ],
+      "baseline_rate": [
+        0.0,
+        0.0
+      ],
+      "paired_difference": [
+        1.0,
+        1.0
+      ]
+    },
+    "interval_kind": "descriptive 95% paired seed-cluster percentile; seed macro mean",
+    "bootstrap_seed": 740031,
+    "resamples": 10000
+  },
+  {
+    "sources": 80,
+    "family": "sum",
+    "truth_axis": "full_fact_correct",
+    "truth_class": "True",
+    "baseline": "direct_full_inventory",
+    "eligible_seed_ids": [
+      1001,
+      1002,
+      1003,
+      1004,
+      1005,
+      1006,
+      1007,
+      1008,
+      1009,
+      1010
+    ],
+    "eligible_seed_count": 10,
+    "undefined_seed_ids": [],
+    "point_estimates": {
+      "current_rate": 1.0,
+      "baseline_rate": 0.0,
+      "paired_difference": 1.0
+    },
+    "intervals": {
+      "current_rate": [
+        1.0,
+        1.0
+      ],
+      "baseline_rate": [
+        0.0,
+        0.0
+      ],
+      "paired_difference": [
+        1.0,
+        1.0
+      ]
+    },
+    "interval_kind": "descriptive 95% paired seed-cluster percentile; seed macro mean",
+    "bootstrap_seed": 740031,
+    "resamples": 10000
+  },
+  {
+    "sources": 80,
+    "family": "sum",
+    "truth_axis": "full_fact_correct",
+    "truth_class": "True",
+    "baseline": "direct_retained",
+    "eligible_seed_ids": [
+      1001,
+      1002,
+      1003,
+      1004,
+      1005,
+      1006,
+      1007,
+      1008,
+      1009,
+      1010
+    ],
+    "eligible_seed_count": 10,
+    "undefined_seed_ids": [],
+    "point_estimates": {
+      "current_rate": 1.0,
+      "baseline_rate": 0.0,
+      "paired_difference": 1.0
+    },
+    "intervals": {
+      "current_rate": [
+        1.0,
+        1.0
+      ],
+      "baseline_rate": [
+        0.0,
+        0.0
+      ],
+      "paired_difference": [
+        1.0,
+        1.0
+      ]
+    },
+    "interval_kind": "descriptive 95% paired seed-cluster percentile; seed macro mean",
+    "bootstrap_seed": 740031,
+    "resamples": 10000
+  },
+  {
+    "sources": 80,
+    "family": "sum",
+    "truth_axis": "numeric_support",
+    "truth_class": "True",
+    "baseline": "direct_full_inventory",
+    "eligible_seed_ids": [
+      1001,
+      1002,
+      1003,
+      1004,
+      1005,
+      1006,
+      1007,
+      1008,
+      1009,
+      1010
+    ],
+    "eligible_seed_count": 10,
+    "undefined_seed_ids": [],
+    "point_estimates": {
+      "current_rate": 1.0,
+      "baseline_rate": 0.0,
+      "paired_difference": 1.0
+    },
+    "intervals": {
+      "current_rate": [
+        1.0,
+        1.0
+      ],
+      "baseline_rate": [
+        0.0,
+        0.0
+      ],
+      "paired_difference": [
+        1.0,
+        1.0
+      ]
+    },
+    "interval_kind": "descriptive 95% paired seed-cluster percentile; seed macro mean",
+    "bootstrap_seed": 740031,
+    "resamples": 10000
+  },
+  {
+    "sources": 80,
+    "family": "sum",
+    "truth_axis": "numeric_support",
+    "truth_class": "True",
+    "baseline": "direct_retained",
+    "eligible_seed_ids": [
+      1001,
+      1002,
+      1003,
+      1004,
+      1005,
+      1006,
+      1007,
+      1008,
+      1009,
+      1010
+    ],
+    "eligible_seed_count": 10,
+    "undefined_seed_ids": [],
+    "point_estimates": {
+      "current_rate": 1.0,
+      "baseline_rate": 0.0,
+      "paired_difference": 1.0
+    },
+    "intervals": {
+      "current_rate": [
+        1.0,
+        1.0
+      ],
+      "baseline_rate": [
+        0.0,
+        0.0
+      ],
+      "paired_difference": [
+        1.0,
+        1.0
+      ]
+    },
+    "interval_kind": "descriptive 95% paired seed-cluster percentile; seed macro mean",
+    "bootstrap_seed": 740031,
+    "resamples": 10000
+  },
+  {
+    "sources": 80,
+    "family": "wrong_currency",
+    "truth_axis": "full_fact_correct",
+    "truth_class": "False",
+    "baseline": "direct_full_inventory",
+    "eligible_seed_ids": [
+      1001,
+      1002,
+      1003,
+      1004,
+      1005,
+      1006,
+      1007,
+      1008,
+      1009,
+      1010
+    ],
+    "eligible_seed_count": 10,
+    "undefined_seed_ids": [],
+    "point_estimates": {
+      "current_rate": 1.0,
+      "baseline_rate": 1.0,
+      "paired_difference": 0.0
+    },
+    "intervals": {
+      "current_rate": [
+        1.0,
+        1.0
+      ],
+      "baseline_rate": [
+        1.0,
+        1.0
+      ],
+      "paired_difference": [
+        0.0,
+        0.0
+      ]
+    },
+    "interval_kind": "descriptive 95% paired seed-cluster percentile; seed macro mean",
+    "bootstrap_seed": 740031,
+    "resamples": 10000
+  },
+  {
+    "sources": 80,
+    "family": "wrong_currency",
+    "truth_axis": "full_fact_correct",
+    "truth_class": "False",
+    "baseline": "direct_retained",
+    "eligible_seed_ids": [
+      1001,
+      1002,
+      1003,
+      1004,
+      1005,
+      1006,
+      1007,
+      1008,
+      1009,
+      1010
+    ],
+    "eligible_seed_count": 10,
+    "undefined_seed_ids": [],
+    "point_estimates": {
+      "current_rate": 1.0,
+      "baseline_rate": 1.0,
+      "paired_difference": 0.0
+    },
+    "intervals": {
+      "current_rate": [
+        1.0,
+        1.0
+      ],
+      "baseline_rate": [
+        1.0,
+        1.0
+      ],
+      "paired_difference": [
+        0.0,
+        0.0
+      ]
+    },
+    "interval_kind": "descriptive 95% paired seed-cluster percentile; seed macro mean",
+    "bootstrap_seed": 740031,
+    "resamples": 10000
+  },
+  {
+    "sources": 80,
+    "family": "wrong_currency",
+    "truth_axis": "numeric_support",
+    "truth_class": "True",
+    "baseline": "direct_full_inventory",
+    "eligible_seed_ids": [
+      1001,
+      1002,
+      1003,
+      1004,
+      1005,
+      1006,
+      1007,
+      1008,
+      1009,
+      1010
+    ],
+    "eligible_seed_count": 10,
+    "undefined_seed_ids": [],
+    "point_estimates": {
+      "current_rate": 1.0,
+      "baseline_rate": 1.0,
+      "paired_difference": 0.0
+    },
+    "intervals": {
+      "current_rate": [
+        1.0,
+        1.0
+      ],
+      "baseline_rate": [
+        1.0,
+        1.0
+      ],
+      "paired_difference": [
+        0.0,
+        0.0
+      ]
+    },
+    "interval_kind": "descriptive 95% paired seed-cluster percentile; seed macro mean",
+    "bootstrap_seed": 740031,
+    "resamples": 10000
+  },
+  {
+    "sources": 80,
+    "family": "wrong_currency",
+    "truth_axis": "numeric_support",
+    "truth_class": "True",
+    "baseline": "direct_retained",
+    "eligible_seed_ids": [
+      1001,
+      1002,
+      1003,
+      1004,
+      1005,
+      1006,
+      1007,
+      1008,
+      1009,
+      1010
+    ],
+    "eligible_seed_count": 10,
+    "undefined_seed_ids": [],
+    "point_estimates": {
+      "current_rate": 1.0,
+      "baseline_rate": 1.0,
+      "paired_difference": 0.0
+    },
+    "intervals": {
+      "current_rate": [
+        1.0,
+        1.0
+      ],
+      "baseline_rate": [
+        1.0,
+        1.0
+      ],
+      "paired_difference": [
+        0.0,
+        0.0
+      ]
+    },
+    "interval_kind": "descriptive 95% paired seed-cluster percentile; seed macro mean",
+    "bootstrap_seed": 740031,
+    "resamples": 10000
+  },
+  {
+    "sources": 80,
+    "family": "wrong_date",
+    "truth_axis": "full_fact_correct",
+    "truth_class": "False",
+    "baseline": "direct_full_inventory",
+    "eligible_seed_ids": [
+      1001,
+      1002,
+      1003,
+      1004,
+      1005,
+      1006,
+      1007,
+      1008,
+      1009,
+      1010
+    ],
+    "eligible_seed_count": 10,
+    "undefined_seed_ids": [],
+    "point_estimates": {
+      "current_rate": 1.0,
+      "baseline_rate": 1.0,
+      "paired_difference": 0.0
+    },
+    "intervals": {
+      "current_rate": [
+        1.0,
+        1.0
+      ],
+      "baseline_rate": [
+        1.0,
+        1.0
+      ],
+      "paired_difference": [
+        0.0,
+        0.0
+      ]
+    },
+    "interval_kind": "descriptive 95% paired seed-cluster percentile; seed macro mean",
+    "bootstrap_seed": 740031,
+    "resamples": 10000
+  },
+  {
+    "sources": 80,
+    "family": "wrong_date",
+    "truth_axis": "full_fact_correct",
+    "truth_class": "False",
+    "baseline": "direct_retained",
+    "eligible_seed_ids": [
+      1001,
+      1002,
+      1003,
+      1004,
+      1005,
+      1006,
+      1007,
+      1008,
+      1009,
+      1010
+    ],
+    "eligible_seed_count": 10,
+    "undefined_seed_ids": [],
+    "point_estimates": {
+      "current_rate": 1.0,
+      "baseline_rate": 1.0,
+      "paired_difference": 0.0
+    },
+    "intervals": {
+      "current_rate": [
+        1.0,
+        1.0
+      ],
+      "baseline_rate": [
+        1.0,
+        1.0
+      ],
+      "paired_difference": [
+        0.0,
+        0.0
+      ]
+    },
+    "interval_kind": "descriptive 95% paired seed-cluster percentile; seed macro mean",
+    "bootstrap_seed": 740031,
+    "resamples": 10000
+  },
+  {
+    "sources": 80,
+    "family": "wrong_date",
+    "truth_axis": "numeric_support",
+    "truth_class": "True",
+    "baseline": "direct_full_inventory",
+    "eligible_seed_ids": [
+      1001,
+      1002,
+      1003,
+      1004,
+      1005,
+      1006,
+      1007,
+      1008,
+      1009,
+      1010
+    ],
+    "eligible_seed_count": 10,
+    "undefined_seed_ids": [],
+    "point_estimates": {
+      "current_rate": 1.0,
+      "baseline_rate": 1.0,
+      "paired_difference": 0.0
+    },
+    "intervals": {
+      "current_rate": [
+        1.0,
+        1.0
+      ],
+      "baseline_rate": [
+        1.0,
+        1.0
+      ],
+      "paired_difference": [
+        0.0,
+        0.0
+      ]
+    },
+    "interval_kind": "descriptive 95% paired seed-cluster percentile; seed macro mean",
+    "bootstrap_seed": 740031,
+    "resamples": 10000
+  },
+  {
+    "sources": 80,
+    "family": "wrong_date",
+    "truth_axis": "numeric_support",
+    "truth_class": "True",
+    "baseline": "direct_retained",
+    "eligible_seed_ids": [
+      1001,
+      1002,
+      1003,
+      1004,
+      1005,
+      1006,
+      1007,
+      1008,
+      1009,
+      1010
+    ],
+    "eligible_seed_count": 10,
+    "undefined_seed_ids": [],
+    "point_estimates": {
+      "current_rate": 1.0,
+      "baseline_rate": 1.0,
+      "paired_difference": 0.0
+    },
+    "intervals": {
+      "current_rate": [
+        1.0,
+        1.0
+      ],
+      "baseline_rate": [
+        1.0,
+        1.0
+      ],
+      "paired_difference": [
+        0.0,
+        0.0
+      ]
+    },
+    "interval_kind": "descriptive 95% paired seed-cluster percentile; seed macro mean",
+    "bootstrap_seed": 740031,
+    "resamples": 10000
+  },
+  {
+    "sources": 80,
+    "family": "wrong_entity",
+    "truth_axis": "full_fact_correct",
+    "truth_class": "False",
+    "baseline": "direct_full_inventory",
+    "eligible_seed_ids": [
+      1001,
+      1002,
+      1003,
+      1004,
+      1005,
+      1006,
+      1007,
+      1008,
+      1009,
+      1010
+    ],
+    "eligible_seed_count": 10,
+    "undefined_seed_ids": [],
+    "point_estimates": {
+      "current_rate": 1.0,
+      "baseline_rate": 1.0,
+      "paired_difference": 0.0
+    },
+    "intervals": {
+      "current_rate": [
+        1.0,
+        1.0
+      ],
+      "baseline_rate": [
+        1.0,
+        1.0
+      ],
+      "paired_difference": [
+        0.0,
+        0.0
+      ]
+    },
+    "interval_kind": "descriptive 95% paired seed-cluster percentile; seed macro mean",
+    "bootstrap_seed": 740031,
+    "resamples": 10000
+  },
+  {
+    "sources": 80,
+    "family": "wrong_entity",
+    "truth_axis": "full_fact_correct",
+    "truth_class": "False",
+    "baseline": "direct_retained",
+    "eligible_seed_ids": [
+      1001,
+      1002,
+      1003,
+      1004,
+      1005,
+      1006,
+      1007,
+      1008,
+      1009,
+      1010
+    ],
+    "eligible_seed_count": 10,
+    "undefined_seed_ids": [],
+    "point_estimates": {
+      "current_rate": 1.0,
+      "baseline_rate": 1.0,
+      "paired_difference": 0.0
+    },
+    "intervals": {
+      "current_rate": [
+        1.0,
+        1.0
+      ],
+      "baseline_rate": [
+        1.0,
+        1.0
+      ],
+      "paired_difference": [
+        0.0,
+        0.0
+      ]
+    },
+    "interval_kind": "descriptive 95% paired seed-cluster percentile; seed macro mean",
+    "bootstrap_seed": 740031,
+    "resamples": 10000
+  },
+  {
+    "sources": 80,
+    "family": "wrong_entity",
+    "truth_axis": "numeric_support",
+    "truth_class": "True",
+    "baseline": "direct_full_inventory",
+    "eligible_seed_ids": [
+      1001,
+      1002,
+      1003,
+      1004,
+      1005,
+      1006,
+      1007,
+      1008,
+      1009,
+      1010
+    ],
+    "eligible_seed_count": 10,
+    "undefined_seed_ids": [],
+    "point_estimates": {
+      "current_rate": 1.0,
+      "baseline_rate": 1.0,
+      "paired_difference": 0.0
+    },
+    "intervals": {
+      "current_rate": [
+        1.0,
+        1.0
+      ],
+      "baseline_rate": [
+        1.0,
+        1.0
+      ],
+      "paired_difference": [
+        0.0,
+        0.0
+      ]
+    },
+    "interval_kind": "descriptive 95% paired seed-cluster percentile; seed macro mean",
+    "bootstrap_seed": 740031,
+    "resamples": 10000
+  },
+  {
+    "sources": 80,
+    "family": "wrong_entity",
+    "truth_axis": "numeric_support",
+    "truth_class": "True",
+    "baseline": "direct_retained",
+    "eligible_seed_ids": [
+      1001,
+      1002,
+      1003,
+      1004,
+      1005,
+      1006,
+      1007,
+      1008,
+      1009,
+      1010
+    ],
+    "eligible_seed_count": 10,
+    "undefined_seed_ids": [],
+    "point_estimates": {
+      "current_rate": 1.0,
+      "baseline_rate": 1.0,
+      "paired_difference": 0.0
+    },
+    "intervals": {
+      "current_rate": [
+        1.0,
+        1.0
+      ],
+      "baseline_rate": [
+        1.0,
+        1.0
+      ],
+      "paired_difference": [
+        0.0,
+        0.0
+      ]
+    },
+    "interval_kind": "descriptive 95% paired seed-cluster percentile; seed macro mean",
+    "bootstrap_seed": 740031,
+    "resamples": 10000
+  },
+  {
+    "sources": 80,
+    "family": "wrong_sign",
+    "truth_axis": "full_fact_correct",
+    "truth_class": "False",
+    "baseline": "direct_full_inventory",
+    "eligible_seed_ids": [
+      1001,
+      1002,
+      1003,
+      1004,
+      1005,
+      1006,
+      1007,
+      1008,
+      1009,
+      1010
+    ],
+    "eligible_seed_count": 10,
+    "undefined_seed_ids": [],
+    "point_estimates": {
+      "current_rate": 1.0,
+      "baseline_rate": 0.0,
+      "paired_difference": 1.0
+    },
+    "intervals": {
+      "current_rate": [
+        1.0,
+        1.0
+      ],
+      "baseline_rate": [
+        0.0,
+        0.0
+      ],
+      "paired_difference": [
+        1.0,
+        1.0
+      ]
+    },
+    "interval_kind": "descriptive 95% paired seed-cluster percentile; seed macro mean",
+    "bootstrap_seed": 740031,
+    "resamples": 10000
+  },
+  {
+    "sources": 80,
+    "family": "wrong_sign",
+    "truth_axis": "full_fact_correct",
+    "truth_class": "False",
+    "baseline": "direct_retained",
+    "eligible_seed_ids": [
+      1001,
+      1002,
+      1003,
+      1004,
+      1005,
+      1006,
+      1007,
+      1008,
+      1009,
+      1010
+    ],
+    "eligible_seed_count": 10,
+    "undefined_seed_ids": [],
+    "point_estimates": {
+      "current_rate": 1.0,
+      "baseline_rate": 0.0,
+      "paired_difference": 1.0
+    },
+    "intervals": {
+      "current_rate": [
+        1.0,
+        1.0
+      ],
+      "baseline_rate": [
+        0.0,
+        0.0
+      ],
+      "paired_difference": [
+        1.0,
+        1.0
+      ]
+    },
+    "interval_kind": "descriptive 95% paired seed-cluster percentile; seed macro mean",
+    "bootstrap_seed": 740031,
+    "resamples": 10000
+  },
+  {
+    "sources": 80,
+    "family": "wrong_sign",
+    "truth_axis": "numeric_support",
+    "truth_class": "False",
+    "baseline": "direct_full_inventory",
+    "eligible_seed_ids": [
+      1001,
+      1002,
+      1003,
+      1004,
+      1005,
+      1006,
+      1007,
+      1008,
+      1009,
+      1010
+    ],
+    "eligible_seed_count": 10,
+    "undefined_seed_ids": [],
+    "point_estimates": {
+      "current_rate": 1.0,
+      "baseline_rate": 0.0,
+      "paired_difference": 1.0
+    },
+    "intervals": {
+      "current_rate": [
+        1.0,
+        1.0
+      ],
+      "baseline_rate": [
+        0.0,
+        0.0
+      ],
+      "paired_difference": [
+        1.0,
+        1.0
+      ]
+    },
+    "interval_kind": "descriptive 95% paired seed-cluster percentile; seed macro mean",
+    "bootstrap_seed": 740031,
+    "resamples": 10000
+  },
+  {
+    "sources": 80,
+    "family": "wrong_sign",
+    "truth_axis": "numeric_support",
+    "truth_class": "False",
+    "baseline": "direct_retained",
+    "eligible_seed_ids": [
+      1001,
+      1002,
+      1003,
+      1004,
+      1005,
+      1006,
+      1007,
+      1008,
+      1009,
+      1010
+    ],
+    "eligible_seed_count": 10,
+    "undefined_seed_ids": [],
+    "point_estimates": {
+      "current_rate": 1.0,
+      "baseline_rate": 0.0,
+      "paired_difference": 1.0
+    },
+    "intervals": {
+      "current_rate": [
+        1.0,
+        1.0
+      ],
+      "baseline_rate": [
+        0.0,
+        0.0
+      ],
+      "paired_difference": [
+        1.0,
+        1.0
+      ]
+    },
+    "interval_kind": "descriptive 95% paired seed-cluster percentile; seed macro mean",
+    "bootstrap_seed": 740031,
+    "resamples": 10000
+  },
+  {
+    "sources": 800,
+    "family": "difference",
+    "truth_axis": "full_fact_correct",
+    "truth_class": "True",
+    "baseline": "direct_full_inventory",
+    "eligible_seed_ids": [
+      1001,
+      1002,
+      1003,
+      1004,
+      1005,
+      1006,
+      1007,
+      1008,
+      1009,
+      1010
+    ],
+    "eligible_seed_count": 10,
+    "undefined_seed_ids": [],
+    "point_estimates": {
+      "current_rate": 0.035,
+      "baseline_rate": 0.006,
+      "paired_difference": 0.028999999999999998
+    },
+    "intervals": {
+      "current_rate": [
+        0.031,
+        0.039
+      ],
+      "baseline_rate": [
+        0.001,
+        0.012
+      ],
+      "paired_difference": [
+        0.024,
+        0.034
+      ]
+    },
+    "interval_kind": "descriptive 95% paired seed-cluster percentile; seed macro mean",
+    "bootstrap_seed": 740031,
+    "resamples": 10000
+  },
+  {
+    "sources": 800,
+    "family": "difference",
+    "truth_axis": "full_fact_correct",
+    "truth_class": "True",
+    "baseline": "direct_retained",
+    "eligible_seed_ids": [
+      1001,
+      1002,
+      1003,
+      1004,
+      1005,
+      1006,
+      1007,
+      1008,
+      1009,
+      1010
+    ],
+    "eligible_seed_count": 10,
+    "undefined_seed_ids": [],
+    "point_estimates": {
+      "current_rate": 0.035,
+      "baseline_rate": 0.0,
+      "paired_difference": 0.035
+    },
+    "intervals": {
+      "current_rate": [
+        0.031,
+        0.039
+      ],
+      "baseline_rate": [
+        0.0,
+        0.0
+      ],
+      "paired_difference": [
+        0.031,
+        0.039
+      ]
+    },
+    "interval_kind": "descriptive 95% paired seed-cluster percentile; seed macro mean",
+    "bootstrap_seed": 740031,
+    "resamples": 10000
+  },
+  {
+    "sources": 800,
+    "family": "difference",
+    "truth_axis": "numeric_support",
+    "truth_class": "True",
+    "baseline": "direct_full_inventory",
+    "eligible_seed_ids": [
+      1001,
+      1002,
+      1003,
+      1004,
+      1005,
+      1006,
+      1007,
+      1008,
+      1009,
+      1010
+    ],
+    "eligible_seed_count": 10,
+    "undefined_seed_ids": [],
+    "point_estimates": {
+      "current_rate": 0.035,
+      "baseline_rate": 0.006,
+      "paired_difference": 0.028999999999999998
+    },
+    "intervals": {
+      "current_rate": [
+        0.031,
+        0.039
+      ],
+      "baseline_rate": [
+        0.001,
+        0.012
+      ],
+      "paired_difference": [
+        0.024,
+        0.034
+      ]
+    },
+    "interval_kind": "descriptive 95% paired seed-cluster percentile; seed macro mean",
+    "bootstrap_seed": 740031,
+    "resamples": 10000
+  },
+  {
+    "sources": 800,
+    "family": "difference",
+    "truth_axis": "numeric_support",
+    "truth_class": "True",
+    "baseline": "direct_retained",
+    "eligible_seed_ids": [
+      1001,
+      1002,
+      1003,
+      1004,
+      1005,
+      1006,
+      1007,
+      1008,
+      1009,
+      1010
+    ],
+    "eligible_seed_count": 10,
+    "undefined_seed_ids": [],
+    "point_estimates": {
+      "current_rate": 0.035,
+      "baseline_rate": 0.0,
+      "paired_difference": 0.035
+    },
+    "intervals": {
+      "current_rate": [
+        0.031,
+        0.039
+      ],
+      "baseline_rate": [
+        0.0,
+        0.0
+      ],
+      "paired_difference": [
+        0.031,
+        0.039
+      ]
+    },
+    "interval_kind": "descriptive 95% paired seed-cluster percentile; seed macro mean",
+    "bootstrap_seed": 740031,
+    "resamples": 10000
+  },
+  {
+    "sources": 800,
+    "family": "direct_compact",
+    "truth_axis": "full_fact_correct",
+    "truth_class": "True",
+    "baseline": "direct_full_inventory",
+    "eligible_seed_ids": [
+      1001,
+      1002,
+      1003,
+      1004,
+      1005,
+      1006,
+      1007,
+      1008,
+      1009,
+      1010
+    ],
+    "eligible_seed_count": 10,
+    "undefined_seed_ids": [],
+    "point_estimates": {
+      "current_rate": 0.558,
+      "baseline_rate": 1.0,
+      "paired_difference": -0.442
+    },
+    "intervals": {
+      "current_rate": [
+        0.529,
+        0.581
+      ],
+      "baseline_rate": [
+        1.0,
+        1.0
+      ],
+      "paired_difference": [
+        -0.47100000000000003,
+        -0.41900000000000004
+      ]
+    },
+    "interval_kind": "descriptive 95% paired seed-cluster percentile; seed macro mean",
+    "bootstrap_seed": 740031,
+    "resamples": 10000
+  },
+  {
+    "sources": 800,
+    "family": "direct_compact",
+    "truth_axis": "full_fact_correct",
+    "truth_class": "True",
+    "baseline": "direct_retained",
+    "eligible_seed_ids": [
+      1001,
+      1002,
+      1003,
+      1004,
+      1005,
+      1006,
+      1007,
+      1008,
+      1009,
+      1010
+    ],
+    "eligible_seed_count": 10,
+    "undefined_seed_ids": [],
+    "point_estimates": {
+      "current_rate": 0.558,
+      "baseline_rate": 0.487,
+      "paired_difference": 0.071
+    },
+    "intervals": {
+      "current_rate": [
+        0.529,
+        0.581
+      ],
+      "baseline_rate": [
+        0.466,
+        0.507
+      ],
+      "paired_difference": [
+        0.052000000000000005,
+        0.08799999999999998
+      ]
+    },
+    "interval_kind": "descriptive 95% paired seed-cluster percentile; seed macro mean",
+    "bootstrap_seed": 740031,
+    "resamples": 10000
+  },
+  {
+    "sources": 800,
+    "family": "direct_compact",
+    "truth_axis": "numeric_support",
+    "truth_class": "True",
+    "baseline": "direct_full_inventory",
+    "eligible_seed_ids": [
+      1001,
+      1002,
+      1003,
+      1004,
+      1005,
+      1006,
+      1007,
+      1008,
+      1009,
+      1010
+    ],
+    "eligible_seed_count": 10,
+    "undefined_seed_ids": [],
+    "point_estimates": {
+      "current_rate": 0.558,
+      "baseline_rate": 1.0,
+      "paired_difference": -0.442
+    },
+    "intervals": {
+      "current_rate": [
+        0.529,
+        0.581
+      ],
+      "baseline_rate": [
+        1.0,
+        1.0
+      ],
+      "paired_difference": [
+        -0.47100000000000003,
+        -0.41900000000000004
+      ]
+    },
+    "interval_kind": "descriptive 95% paired seed-cluster percentile; seed macro mean",
+    "bootstrap_seed": 740031,
+    "resamples": 10000
+  },
+  {
+    "sources": 800,
+    "family": "direct_compact",
+    "truth_axis": "numeric_support",
+    "truth_class": "True",
+    "baseline": "direct_retained",
+    "eligible_seed_ids": [
+      1001,
+      1002,
+      1003,
+      1004,
+      1005,
+      1006,
+      1007,
+      1008,
+      1009,
+      1010
+    ],
+    "eligible_seed_count": 10,
+    "undefined_seed_ids": [],
+    "point_estimates": {
+      "current_rate": 0.558,
+      "baseline_rate": 0.487,
+      "paired_difference": 0.071
+    },
+    "intervals": {
+      "current_rate": [
+        0.529,
+        0.581
+      ],
+      "baseline_rate": [
+        0.466,
+        0.507
+      ],
+      "paired_difference": [
+        0.052000000000000005,
+        0.08799999999999998
+      ]
+    },
+    "interval_kind": "descriptive 95% paired seed-cluster percentile; seed macro mean",
+    "bootstrap_seed": 740031,
+    "resamples": 10000
+  },
+  {
+    "sources": 800,
+    "family": "direct_exact",
+    "truth_axis": "full_fact_correct",
+    "truth_class": "True",
+    "baseline": "direct_full_inventory",
+    "eligible_seed_ids": [
+      1001,
+      1002,
+      1003,
+      1004,
+      1005,
+      1006,
+      1007,
+      1008,
+      1009,
+      1010
+    ],
+    "eligible_seed_count": 10,
+    "undefined_seed_ids": [],
+    "point_estimates": {
+      "current_rate": 0.382,
+      "baseline_rate": 1.0,
+      "paired_difference": -0.618
+    },
+    "intervals": {
+      "current_rate": [
+        0.377,
+        0.388
+      ],
+      "baseline_rate": [
+        1.0,
+        1.0
+      ],
+      "paired_difference": [
+        -0.623,
+        -0.612
+      ]
+    },
+    "interval_kind": "descriptive 95% paired seed-cluster percentile; seed macro mean",
+    "bootstrap_seed": 740031,
+    "resamples": 10000
+  },
+  {
+    "sources": 800,
+    "family": "direct_exact",
+    "truth_axis": "full_fact_correct",
+    "truth_class": "True",
+    "baseline": "direct_retained",
+    "eligible_seed_ids": [
+      1001,
+      1002,
+      1003,
+      1004,
+      1005,
+      1006,
+      1007,
+      1008,
+      1009,
+      1010
+    ],
+    "eligible_seed_count": 10,
+    "undefined_seed_ids": [],
+    "point_estimates": {
+      "current_rate": 0.382,
+      "baseline_rate": 0.38,
+      "paired_difference": 0.0020000000000000018
+    },
+    "intervals": {
+      "current_rate": [
+        0.377,
+        0.388
+      ],
+      "baseline_rate": [
+        0.376,
+        0.384
+      ],
+      "paired_difference": [
+        0.0,
+        0.0050000000000000044
+      ]
+    },
+    "interval_kind": "descriptive 95% paired seed-cluster percentile; seed macro mean",
+    "bootstrap_seed": 740031,
+    "resamples": 10000
+  },
+  {
+    "sources": 800,
+    "family": "direct_exact",
+    "truth_axis": "numeric_support",
+    "truth_class": "True",
+    "baseline": "direct_full_inventory",
+    "eligible_seed_ids": [
+      1001,
+      1002,
+      1003,
+      1004,
+      1005,
+      1006,
+      1007,
+      1008,
+      1009,
+      1010
+    ],
+    "eligible_seed_count": 10,
+    "undefined_seed_ids": [],
+    "point_estimates": {
+      "current_rate": 0.382,
+      "baseline_rate": 1.0,
+      "paired_difference": -0.618
+    },
+    "intervals": {
+      "current_rate": [
+        0.377,
+        0.388
+      ],
+      "baseline_rate": [
+        1.0,
+        1.0
+      ],
+      "paired_difference": [
+        -0.623,
+        -0.612
+      ]
+    },
+    "interval_kind": "descriptive 95% paired seed-cluster percentile; seed macro mean",
+    "bootstrap_seed": 740031,
+    "resamples": 10000
+  },
+  {
+    "sources": 800,
+    "family": "direct_exact",
+    "truth_axis": "numeric_support",
+    "truth_class": "True",
+    "baseline": "direct_retained",
+    "eligible_seed_ids": [
+      1001,
+      1002,
+      1003,
+      1004,
+      1005,
+      1006,
+      1007,
+      1008,
+      1009,
+      1010
+    ],
+    "eligible_seed_count": 10,
+    "undefined_seed_ids": [],
+    "point_estimates": {
+      "current_rate": 0.382,
+      "baseline_rate": 0.38,
+      "paired_difference": 0.0020000000000000018
+    },
+    "intervals": {
+      "current_rate": [
+        0.377,
+        0.388
+      ],
+      "baseline_rate": [
+        0.376,
+        0.384
+      ],
+      "paired_difference": [
+        0.0,
+        0.0050000000000000044
+      ]
+    },
+    "interval_kind": "descriptive 95% paired seed-cluster percentile; seed macro mean",
+    "bootstrap_seed": 740031,
+    "resamples": 10000
+  },
+  {
+    "sources": 800,
+    "family": "near_value",
+    "truth_axis": "full_fact_correct",
+    "truth_class": "False",
+    "baseline": "direct_full_inventory",
+    "eligible_seed_ids": [
+      1001,
+      1002,
+      1003,
+      1004,
+      1005,
+      1006,
+      1007,
+      1008,
+      1009,
+      1010
+    ],
+    "eligible_seed_count": 10,
+    "undefined_seed_ids": [],
+    "point_estimates": {
+      "current_rate": 0.01,
+      "baseline_rate": 0.009,
+      "paired_difference": 0.0009999999999999998
+    },
+    "intervals": {
+      "current_rate": [
+        0.003,
+        0.019
+      ],
+      "baseline_rate": [
+        0.004,
+        0.015
+      ],
+      "paired_difference": [
+        -0.009,
+        0.01
+      ]
+    },
+    "interval_kind": "descriptive 95% paired seed-cluster percentile; seed macro mean",
+    "bootstrap_seed": 740031,
+    "resamples": 10000
+  },
+  {
+    "sources": 800,
+    "family": "near_value",
+    "truth_axis": "full_fact_correct",
+    "truth_class": "False",
+    "baseline": "direct_retained",
+    "eligible_seed_ids": [
+      1001,
+      1002,
+      1003,
+      1004,
+      1005,
+      1006,
+      1007,
+      1008,
+      1009,
+      1010
+    ],
+    "eligible_seed_count": 10,
+    "undefined_seed_ids": [],
+    "point_estimates": {
+      "current_rate": 0.01,
+      "baseline_rate": 0.004,
+      "paired_difference": 0.006
+    },
+    "intervals": {
+      "current_rate": [
+        0.003,
+        0.019
+      ],
+      "baseline_rate": [
+        0.0,
+        0.008
+      ],
+      "paired_difference": [
+        0.001,
+        0.012
+      ]
+    },
+    "interval_kind": "descriptive 95% paired seed-cluster percentile; seed macro mean",
+    "bootstrap_seed": 740031,
+    "resamples": 10000
+  },
+  {
+    "sources": 800,
+    "family": "near_value",
+    "truth_axis": "numeric_support",
+    "truth_class": "False",
+    "baseline": "direct_full_inventory",
+    "eligible_seed_ids": [
+      1001,
+      1002,
+      1003,
+      1004,
+      1005,
+      1006,
+      1007,
+      1008,
+      1009,
+      1010
+    ],
+    "eligible_seed_count": 10,
+    "undefined_seed_ids": [],
+    "point_estimates": {
+      "current_rate": 0.005102897532021243,
+      "baseline_rate": 0.0,
+      "paired_difference": 0.005102897532021243
+    },
+    "intervals": {
+      "current_rate": [
+        0.0,
+        0.012121212121212121
+      ],
+      "baseline_rate": [
+        0.0,
+        0.0
+      ],
+      "paired_difference": [
+        0.0,
+        0.012121212121212121
+      ]
+    },
+    "interval_kind": "descriptive 95% paired seed-cluster percentile; seed macro mean",
+    "bootstrap_seed": 740031,
+    "resamples": 10000
+  },
+  {
+    "sources": 800,
+    "family": "near_value",
+    "truth_axis": "numeric_support",
+    "truth_class": "False",
+    "baseline": "direct_retained",
+    "eligible_seed_ids": [
+      1001,
+      1002,
+      1003,
+      1004,
+      1005,
+      1006,
+      1007,
+      1008,
+      1009,
+      1010
+    ],
+    "eligible_seed_count": 10,
+    "undefined_seed_ids": [],
+    "point_estimates": {
+      "current_rate": 0.005102897532021243,
+      "baseline_rate": 0.0,
+      "paired_difference": 0.005102897532021243
+    },
+    "intervals": {
+      "current_rate": [
+        0.0,
+        0.012121212121212121
+      ],
+      "baseline_rate": [
+        0.0,
+        0.0
+      ],
+      "paired_difference": [
+        0.0,
+        0.012121212121212121
+      ]
+    },
+    "interval_kind": "descriptive 95% paired seed-cluster percentile; seed macro mean",
+    "bootstrap_seed": 740031,
+    "resamples": 10000
+  },
+  {
+    "sources": 800,
+    "family": "near_value",
+    "truth_axis": "numeric_support",
+    "truth_class": "True",
+    "baseline": "direct_full_inventory",
+    "eligible_seed_ids": [
+      1001,
+      1002,
+      1003,
+      1004,
+      1005,
+      1006,
+      1007,
+      1008,
+      1009,
+      1010
+    ],
+    "eligible_seed_count": 10,
+    "undefined_seed_ids": [],
+    "point_estimates": {
+      "current_rate": 0.25,
+      "baseline_rate": 0.3433333333333333,
+      "paired_difference": -0.09333333333333332
+    },
+    "intervals": {
+      "current_rate": [
+        0.05,
+        0.45
+      ],
+      "baseline_rate": [
+        0.15,
+        0.5467499999999987
+      ],
+      "paired_difference": [
+        -0.27999999999999997,
+        0.1
+      ]
+    },
+    "interval_kind": "descriptive 95% paired seed-cluster percentile; seed macro mean",
+    "bootstrap_seed": 740031,
+    "resamples": 10000
+  },
+  {
+    "sources": 800,
+    "family": "near_value",
+    "truth_axis": "numeric_support",
+    "truth_class": "True",
+    "baseline": "direct_retained",
+    "eligible_seed_ids": [
+      1001,
+      1002,
+      1003,
+      1004,
+      1005,
+      1006,
+      1007,
+      1008,
+      1009,
+      1010
+    ],
+    "eligible_seed_count": 10,
+    "undefined_seed_ids": [],
+    "point_estimates": {
+      "current_rate": 0.25,
+      "baseline_rate": 0.2,
+      "paired_difference": 0.05
+    },
+    "intervals": {
+      "current_rate": [
+        0.05,
+        0.45
+      ],
+      "baseline_rate": [
+        0.0,
+        0.4
+      ],
+      "paired_difference": [
+        0.0,
+        0.15
+      ]
+    },
+    "interval_kind": "descriptive 95% paired seed-cluster percentile; seed macro mean",
+    "bootstrap_seed": 740031,
+    "resamples": 10000
+  },
+  {
+    "sources": 800,
+    "family": "percent",
+    "truth_axis": "full_fact_correct",
+    "truth_class": "True",
+    "baseline": "direct_full_inventory",
+    "eligible_seed_ids": [
+      1001,
+      1002,
+      1003,
+      1004,
+      1005,
+      1006,
+      1007,
+      1008,
+      1009,
+      1010
+    ],
+    "eligible_seed_count": 10,
+    "undefined_seed_ids": [],
+    "point_estimates": {
+      "current_rate": 0.134,
+      "baseline_rate": 0.0,
+      "paired_difference": 0.134
+    },
+    "intervals": {
+      "current_rate": [
+        0.115,
+        0.153
+      ],
+      "baseline_rate": [
+        0.0,
+        0.0
+      ],
+      "paired_difference": [
+        0.115,
+        0.153
+      ]
+    },
+    "interval_kind": "descriptive 95% paired seed-cluster percentile; seed macro mean",
+    "bootstrap_seed": 740031,
+    "resamples": 10000
+  },
+  {
+    "sources": 800,
+    "family": "percent",
+    "truth_axis": "full_fact_correct",
+    "truth_class": "True",
+    "baseline": "direct_retained",
+    "eligible_seed_ids": [
+      1001,
+      1002,
+      1003,
+      1004,
+      1005,
+      1006,
+      1007,
+      1008,
+      1009,
+      1010
+    ],
+    "eligible_seed_count": 10,
+    "undefined_seed_ids": [],
+    "point_estimates": {
+      "current_rate": 0.134,
+      "baseline_rate": 0.0,
+      "paired_difference": 0.134
+    },
+    "intervals": {
+      "current_rate": [
+        0.115,
+        0.153
+      ],
+      "baseline_rate": [
+        0.0,
+        0.0
+      ],
+      "paired_difference": [
+        0.115,
+        0.153
+      ]
+    },
+    "interval_kind": "descriptive 95% paired seed-cluster percentile; seed macro mean",
+    "bootstrap_seed": 740031,
+    "resamples": 10000
+  },
+  {
+    "sources": 800,
+    "family": "percent",
+    "truth_axis": "numeric_support",
+    "truth_class": "True",
+    "baseline": "direct_full_inventory",
+    "eligible_seed_ids": [
+      1001,
+      1002,
+      1003,
+      1004,
+      1005,
+      1006,
+      1007,
+      1008,
+      1009,
+      1010
+    ],
+    "eligible_seed_count": 10,
+    "undefined_seed_ids": [],
+    "point_estimates": {
+      "current_rate": 0.134,
+      "baseline_rate": 0.0,
+      "paired_difference": 0.134
+    },
+    "intervals": {
+      "current_rate": [
+        0.115,
+        0.153
+      ],
+      "baseline_rate": [
+        0.0,
+        0.0
+      ],
+      "paired_difference": [
+        0.115,
+        0.153
+      ]
+    },
+    "interval_kind": "descriptive 95% paired seed-cluster percentile; seed macro mean",
+    "bootstrap_seed": 740031,
+    "resamples": 10000
+  },
+  {
+    "sources": 800,
+    "family": "percent",
+    "truth_axis": "numeric_support",
+    "truth_class": "True",
+    "baseline": "direct_retained",
+    "eligible_seed_ids": [
+      1001,
+      1002,
+      1003,
+      1004,
+      1005,
+      1006,
+      1007,
+      1008,
+      1009,
+      1010
+    ],
+    "eligible_seed_count": 10,
+    "undefined_seed_ids": [],
+    "point_estimates": {
+      "current_rate": 0.134,
+      "baseline_rate": 0.0,
+      "paired_difference": 0.134
+    },
+    "intervals": {
+      "current_rate": [
+        0.115,
+        0.153
+      ],
+      "baseline_rate": [
+        0.0,
+        0.0
+      ],
+      "paired_difference": [
+        0.115,
+        0.153
+      ]
+    },
+    "interval_kind": "descriptive 95% paired seed-cluster percentile; seed macro mean",
+    "bootstrap_seed": 740031,
+    "resamples": 10000
+  },
+  {
+    "sources": 800,
+    "family": "random_value",
+    "truth_axis": "full_fact_correct",
+    "truth_class": "False",
+    "baseline": "direct_full_inventory",
+    "eligible_seed_ids": [
+      1001,
+      1002,
+      1003,
+      1004,
+      1005,
+      1006,
+      1007,
+      1008,
+      1009,
+      1010
+    ],
+    "eligible_seed_count": 10,
+    "undefined_seed_ids": [],
+    "point_estimates": {
+      "current_rate": 0.007,
+      "baseline_rate": 0.01,
+      "paired_difference": -0.003
+    },
+    "intervals": {
+      "current_rate": [
+        0.004,
+        0.01
+      ],
+      "baseline_rate": [
+        0.005,
+        0.015
+      ],
+      "paired_difference": [
+        -0.008,
+        0.002
+      ]
+    },
+    "interval_kind": "descriptive 95% paired seed-cluster percentile; seed macro mean",
+    "bootstrap_seed": 740031,
+    "resamples": 10000
+  },
+  {
+    "sources": 800,
+    "family": "random_value",
+    "truth_axis": "full_fact_correct",
+    "truth_class": "False",
+    "baseline": "direct_retained",
+    "eligible_seed_ids": [
+      1001,
+      1002,
+      1003,
+      1004,
+      1005,
+      1006,
+      1007,
+      1008,
+      1009,
+      1010
+    ],
+    "eligible_seed_count": 10,
+    "undefined_seed_ids": [],
+    "point_estimates": {
+      "current_rate": 0.007,
+      "baseline_rate": 0.005,
+      "paired_difference": 0.002
+    },
+    "intervals": {
+      "current_rate": [
+        0.004,
+        0.01
+      ],
+      "baseline_rate": [
+        0.002,
+        0.008
+      ],
+      "paired_difference": [
+        0.0,
+        0.005
+      ]
+    },
+    "interval_kind": "descriptive 95% paired seed-cluster percentile; seed macro mean",
+    "bootstrap_seed": 740031,
+    "resamples": 10000
+  },
+  {
+    "sources": 800,
+    "family": "random_value",
+    "truth_axis": "numeric_support",
+    "truth_class": "False",
+    "baseline": "direct_full_inventory",
+    "eligible_seed_ids": [
+      1001,
+      1002,
+      1003,
+      1004,
+      1005,
+      1006,
+      1007,
+      1008,
+      1009,
+      1010
+    ],
+    "eligible_seed_count": 10,
+    "undefined_seed_ids": [],
+    "point_estimates": {
+      "current_rate": 0.0010416666666666667,
+      "baseline_rate": 0.0,
+      "paired_difference": 0.0010416666666666667
+    },
+    "intervals": {
+      "current_rate": [
+        0.0,
+        0.0031249999999999997
+      ],
+      "baseline_rate": [
+        0.0,
+        0.0
+      ],
+      "paired_difference": [
+        0.0,
+        0.0031249999999999997
+      ]
+    },
+    "interval_kind": "descriptive 95% paired seed-cluster percentile; seed macro mean",
+    "bootstrap_seed": 740031,
+    "resamples": 10000
+  },
+  {
+    "sources": 800,
+    "family": "random_value",
+    "truth_axis": "numeric_support",
+    "truth_class": "False",
+    "baseline": "direct_retained",
+    "eligible_seed_ids": [
+      1001,
+      1002,
+      1003,
+      1004,
+      1005,
+      1006,
+      1007,
+      1008,
+      1009,
+      1010
+    ],
+    "eligible_seed_count": 10,
+    "undefined_seed_ids": [],
+    "point_estimates": {
+      "current_rate": 0.0010416666666666667,
+      "baseline_rate": 0.0,
+      "paired_difference": 0.0010416666666666667
+    },
+    "intervals": {
+      "current_rate": [
+        0.0,
+        0.0031249999999999997
+      ],
+      "baseline_rate": [
+        0.0,
+        0.0
+      ],
+      "paired_difference": [
+        0.0,
+        0.0031249999999999997
+      ]
+    },
+    "interval_kind": "descriptive 95% paired seed-cluster percentile; seed macro mean",
+    "bootstrap_seed": 740031,
+    "resamples": 10000
+  },
+  {
+    "sources": 800,
+    "family": "random_value",
+    "truth_axis": "numeric_support",
+    "truth_class": "True",
+    "baseline": "direct_full_inventory",
+    "eligible_seed_ids": [
+      1001,
+      1002,
+      1003,
+      1004,
+      1005,
+      1006,
+      1007,
+      1008,
+      1009,
+      1010
+    ],
+    "eligible_seed_count": 10,
+    "undefined_seed_ids": [],
+    "point_estimates": {
+      "current_rate": 0.16999999999999998,
+      "baseline_rate": 0.285,
+      "paired_difference": -0.115
+    },
+    "intervals": {
+      "current_rate": [
+        0.07333333333333333,
+        0.275
+      ],
+      "baseline_rate": [
+        0.125,
+        0.485
+      ],
+      "paired_difference": [
+        -0.25,
+        0.025
+      ]
+    },
+    "interval_kind": "descriptive 95% paired seed-cluster percentile; seed macro mean",
+    "bootstrap_seed": 740031,
+    "resamples": 10000
+  },
+  {
+    "sources": 800,
+    "family": "random_value",
+    "truth_axis": "numeric_support",
+    "truth_class": "True",
+    "baseline": "direct_retained",
+    "eligible_seed_ids": [
+      1001,
+      1002,
+      1003,
+      1004,
+      1005,
+      1006,
+      1007,
+      1008,
+      1009,
+      1010
+    ],
+    "eligible_seed_count": 10,
+    "undefined_seed_ids": [],
+    "point_estimates": {
+      "current_rate": 0.16999999999999998,
+      "baseline_rate": 0.145,
+      "paired_difference": 0.025
+    },
+    "intervals": {
+      "current_rate": [
+        0.07333333333333333,
+        0.275
+      ],
+      "baseline_rate": [
+        0.049999999999999996,
+        0.25666666666666665
+      ],
+      "paired_difference": [
+        0.0,
+        0.075
+      ]
+    },
+    "interval_kind": "descriptive 95% paired seed-cluster percentile; seed macro mean",
+    "bootstrap_seed": 740031,
+    "resamples": 10000
+  },
+  {
+    "sources": 800,
+    "family": "ratio_named",
+    "truth_axis": "full_fact_correct",
+    "truth_class": "True",
+    "baseline": "direct_full_inventory",
+    "eligible_seed_ids": [
+      1001,
+      1002,
+      1003,
+      1004,
+      1005,
+      1006,
+      1007,
+      1008,
+      1009,
+      1010
+    ],
+    "eligible_seed_count": 10,
+    "undefined_seed_ids": [],
+    "point_estimates": {
+      "current_rate": 0.378,
+      "baseline_rate": 0.0,
+      "paired_difference": 0.378
+    },
+    "intervals": {
+      "current_rate": [
+        0.375,
+        0.38
+      ],
+      "baseline_rate": [
+        0.0,
+        0.0
+      ],
+      "paired_difference": [
+        0.375,
+        0.38
+      ]
+    },
+    "interval_kind": "descriptive 95% paired seed-cluster percentile; seed macro mean",
+    "bootstrap_seed": 740031,
+    "resamples": 10000
+  },
+  {
+    "sources": 800,
+    "family": "ratio_named",
+    "truth_axis": "full_fact_correct",
+    "truth_class": "True",
+    "baseline": "direct_retained",
+    "eligible_seed_ids": [
+      1001,
+      1002,
+      1003,
+      1004,
+      1005,
+      1006,
+      1007,
+      1008,
+      1009,
+      1010
+    ],
+    "eligible_seed_count": 10,
+    "undefined_seed_ids": [],
+    "point_estimates": {
+      "current_rate": 0.378,
+      "baseline_rate": 0.0,
+      "paired_difference": 0.378
+    },
+    "intervals": {
+      "current_rate": [
+        0.375,
+        0.38
+      ],
+      "baseline_rate": [
+        0.0,
+        0.0
+      ],
+      "paired_difference": [
+        0.375,
+        0.38
+      ]
+    },
+    "interval_kind": "descriptive 95% paired seed-cluster percentile; seed macro mean",
+    "bootstrap_seed": 740031,
+    "resamples": 10000
+  },
+  {
+    "sources": 800,
+    "family": "ratio_named",
+    "truth_axis": "numeric_support",
+    "truth_class": "True",
+    "baseline": "direct_full_inventory",
+    "eligible_seed_ids": [
+      1001,
+      1002,
+      1003,
+      1004,
+      1005,
+      1006,
+      1007,
+      1008,
+      1009,
+      1010
+    ],
+    "eligible_seed_count": 10,
+    "undefined_seed_ids": [],
+    "point_estimates": {
+      "current_rate": 0.378,
+      "baseline_rate": 0.0,
+      "paired_difference": 0.378
+    },
+    "intervals": {
+      "current_rate": [
+        0.375,
+        0.38
+      ],
+      "baseline_rate": [
+        0.0,
+        0.0
+      ],
+      "paired_difference": [
+        0.375,
+        0.38
+      ]
+    },
+    "interval_kind": "descriptive 95% paired seed-cluster percentile; seed macro mean",
+    "bootstrap_seed": 740031,
+    "resamples": 10000
+  },
+  {
+    "sources": 800,
+    "family": "ratio_named",
+    "truth_axis": "numeric_support",
+    "truth_class": "True",
+    "baseline": "direct_retained",
+    "eligible_seed_ids": [
+      1001,
+      1002,
+      1003,
+      1004,
+      1005,
+      1006,
+      1007,
+      1008,
+      1009,
+      1010
+    ],
+    "eligible_seed_count": 10,
+    "undefined_seed_ids": [],
+    "point_estimates": {
+      "current_rate": 0.378,
+      "baseline_rate": 0.0,
+      "paired_difference": 0.378
+    },
+    "intervals": {
+      "current_rate": [
+        0.375,
+        0.38
+      ],
+      "baseline_rate": [
+        0.0,
+        0.0
+      ],
+      "paired_difference": [
+        0.375,
+        0.38
+      ]
+    },
+    "interval_kind": "descriptive 95% paired seed-cluster percentile; seed macro mean",
+    "bootstrap_seed": 740031,
+    "resamples": 10000
+  },
+  {
+    "sources": 800,
+    "family": "sum",
+    "truth_axis": "full_fact_correct",
+    "truth_class": "True",
+    "baseline": "direct_full_inventory",
+    "eligible_seed_ids": [
+      1001,
+      1002,
+      1003,
+      1004,
+      1005,
+      1006,
+      1007,
+      1008,
+      1009,
+      1010
+    ],
+    "eligible_seed_count": 10,
+    "undefined_seed_ids": [],
+    "point_estimates": {
+      "current_rate": 1.0,
+      "baseline_rate": 0.006,
+      "paired_difference": 0.994
+    },
+    "intervals": {
+      "current_rate": [
+        1.0,
+        1.0
+      ],
+      "baseline_rate": [
+        0.001,
+        0.012
+      ],
+      "paired_difference": [
+        0.988,
+        0.999
+      ]
+    },
+    "interval_kind": "descriptive 95% paired seed-cluster percentile; seed macro mean",
+    "bootstrap_seed": 740031,
+    "resamples": 10000
+  },
+  {
+    "sources": 800,
+    "family": "sum",
+    "truth_axis": "full_fact_correct",
+    "truth_class": "True",
+    "baseline": "direct_retained",
+    "eligible_seed_ids": [
+      1001,
+      1002,
+      1003,
+      1004,
+      1005,
+      1006,
+      1007,
+      1008,
+      1009,
+      1010
+    ],
+    "eligible_seed_count": 10,
+    "undefined_seed_ids": [],
+    "point_estimates": {
+      "current_rate": 1.0,
+      "baseline_rate": 0.002,
+      "paired_difference": 0.998
+    },
+    "intervals": {
+      "current_rate": [
+        1.0,
+        1.0
+      ],
+      "baseline_rate": [
+        0.0,
+        0.005
+      ],
+      "paired_difference": [
+        0.995,
+        1.0
+      ]
+    },
+    "interval_kind": "descriptive 95% paired seed-cluster percentile; seed macro mean",
+    "bootstrap_seed": 740031,
+    "resamples": 10000
+  },
+  {
+    "sources": 800,
+    "family": "sum",
+    "truth_axis": "numeric_support",
+    "truth_class": "True",
+    "baseline": "direct_full_inventory",
+    "eligible_seed_ids": [
+      1001,
+      1002,
+      1003,
+      1004,
+      1005,
+      1006,
+      1007,
+      1008,
+      1009,
+      1010
+    ],
+    "eligible_seed_count": 10,
+    "undefined_seed_ids": [],
+    "point_estimates": {
+      "current_rate": 1.0,
+      "baseline_rate": 0.006,
+      "paired_difference": 0.994
+    },
+    "intervals": {
+      "current_rate": [
+        1.0,
+        1.0
+      ],
+      "baseline_rate": [
+        0.001,
+        0.012
+      ],
+      "paired_difference": [
+        0.988,
+        0.999
+      ]
+    },
+    "interval_kind": "descriptive 95% paired seed-cluster percentile; seed macro mean",
+    "bootstrap_seed": 740031,
+    "resamples": 10000
+  },
+  {
+    "sources": 800,
+    "family": "sum",
+    "truth_axis": "numeric_support",
+    "truth_class": "True",
+    "baseline": "direct_retained",
+    "eligible_seed_ids": [
+      1001,
+      1002,
+      1003,
+      1004,
+      1005,
+      1006,
+      1007,
+      1008,
+      1009,
+      1010
+    ],
+    "eligible_seed_count": 10,
+    "undefined_seed_ids": [],
+    "point_estimates": {
+      "current_rate": 1.0,
+      "baseline_rate": 0.002,
+      "paired_difference": 0.998
+    },
+    "intervals": {
+      "current_rate": [
+        1.0,
+        1.0
+      ],
+      "baseline_rate": [
+        0.0,
+        0.005
+      ],
+      "paired_difference": [
+        0.995,
+        1.0
+      ]
+    },
+    "interval_kind": "descriptive 95% paired seed-cluster percentile; seed macro mean",
+    "bootstrap_seed": 740031,
+    "resamples": 10000
+  },
+  {
+    "sources": 800,
+    "family": "wrong_currency",
+    "truth_axis": "full_fact_correct",
+    "truth_class": "False",
+    "baseline": "direct_full_inventory",
+    "eligible_seed_ids": [
+      1001,
+      1002,
+      1003,
+      1004,
+      1005,
+      1006,
+      1007,
+      1008,
+      1009,
+      1010
+    ],
+    "eligible_seed_count": 10,
+    "undefined_seed_ids": [],
+    "point_estimates": {
+      "current_rate": 0.382,
+      "baseline_rate": 1.0,
+      "paired_difference": -0.618
+    },
+    "intervals": {
+      "current_rate": [
+        0.377,
+        0.388
+      ],
+      "baseline_rate": [
+        1.0,
+        1.0
+      ],
+      "paired_difference": [
+        -0.623,
+        -0.612
+      ]
+    },
+    "interval_kind": "descriptive 95% paired seed-cluster percentile; seed macro mean",
+    "bootstrap_seed": 740031,
+    "resamples": 10000
+  },
+  {
+    "sources": 800,
+    "family": "wrong_currency",
+    "truth_axis": "full_fact_correct",
+    "truth_class": "False",
+    "baseline": "direct_retained",
+    "eligible_seed_ids": [
+      1001,
+      1002,
+      1003,
+      1004,
+      1005,
+      1006,
+      1007,
+      1008,
+      1009,
+      1010
+    ],
+    "eligible_seed_count": 10,
+    "undefined_seed_ids": [],
+    "point_estimates": {
+      "current_rate": 0.382,
+      "baseline_rate": 0.38,
+      "paired_difference": 0.0020000000000000018
+    },
+    "intervals": {
+      "current_rate": [
+        0.377,
+        0.388
+      ],
+      "baseline_rate": [
+        0.376,
+        0.384
+      ],
+      "paired_difference": [
+        0.0,
+        0.0050000000000000044
+      ]
+    },
+    "interval_kind": "descriptive 95% paired seed-cluster percentile; seed macro mean",
+    "bootstrap_seed": 740031,
+    "resamples": 10000
+  },
+  {
+    "sources": 800,
+    "family": "wrong_currency",
+    "truth_axis": "numeric_support",
+    "truth_class": "True",
+    "baseline": "direct_full_inventory",
+    "eligible_seed_ids": [
+      1001,
+      1002,
+      1003,
+      1004,
+      1005,
+      1006,
+      1007,
+      1008,
+      1009,
+      1010
+    ],
+    "eligible_seed_count": 10,
+    "undefined_seed_ids": [],
+    "point_estimates": {
+      "current_rate": 0.382,
+      "baseline_rate": 1.0,
+      "paired_difference": -0.618
+    },
+    "intervals": {
+      "current_rate": [
+        0.377,
+        0.388
+      ],
+      "baseline_rate": [
+        1.0,
+        1.0
+      ],
+      "paired_difference": [
+        -0.623,
+        -0.612
+      ]
+    },
+    "interval_kind": "descriptive 95% paired seed-cluster percentile; seed macro mean",
+    "bootstrap_seed": 740031,
+    "resamples": 10000
+  },
+  {
+    "sources": 800,
+    "family": "wrong_currency",
+    "truth_axis": "numeric_support",
+    "truth_class": "True",
+    "baseline": "direct_retained",
+    "eligible_seed_ids": [
+      1001,
+      1002,
+      1003,
+      1004,
+      1005,
+      1006,
+      1007,
+      1008,
+      1009,
+      1010
+    ],
+    "eligible_seed_count": 10,
+    "undefined_seed_ids": [],
+    "point_estimates": {
+      "current_rate": 0.382,
+      "baseline_rate": 0.38,
+      "paired_difference": 0.0020000000000000018
+    },
+    "intervals": {
+      "current_rate": [
+        0.377,
+        0.388
+      ],
+      "baseline_rate": [
+        0.376,
+        0.384
+      ],
+      "paired_difference": [
+        0.0,
+        0.0050000000000000044
+      ]
+    },
+    "interval_kind": "descriptive 95% paired seed-cluster percentile; seed macro mean",
+    "bootstrap_seed": 740031,
+    "resamples": 10000
+  },
+  {
+    "sources": 800,
+    "family": "wrong_date",
+    "truth_axis": "full_fact_correct",
+    "truth_class": "False",
+    "baseline": "direct_full_inventory",
+    "eligible_seed_ids": [
+      1001,
+      1002,
+      1003,
+      1004,
+      1005,
+      1006,
+      1007,
+      1008,
+      1009,
+      1010
+    ],
+    "eligible_seed_count": 10,
+    "undefined_seed_ids": [],
+    "point_estimates": {
+      "current_rate": 0.382,
+      "baseline_rate": 1.0,
+      "paired_difference": -0.618
+    },
+    "intervals": {
+      "current_rate": [
+        0.377,
+        0.388
+      ],
+      "baseline_rate": [
+        1.0,
+        1.0
+      ],
+      "paired_difference": [
+        -0.623,
+        -0.612
+      ]
+    },
+    "interval_kind": "descriptive 95% paired seed-cluster percentile; seed macro mean",
+    "bootstrap_seed": 740031,
+    "resamples": 10000
+  },
+  {
+    "sources": 800,
+    "family": "wrong_date",
+    "truth_axis": "full_fact_correct",
+    "truth_class": "False",
+    "baseline": "direct_retained",
+    "eligible_seed_ids": [
+      1001,
+      1002,
+      1003,
+      1004,
+      1005,
+      1006,
+      1007,
+      1008,
+      1009,
+      1010
+    ],
+    "eligible_seed_count": 10,
+    "undefined_seed_ids": [],
+    "point_estimates": {
+      "current_rate": 0.382,
+      "baseline_rate": 0.38,
+      "paired_difference": 0.0020000000000000018
+    },
+    "intervals": {
+      "current_rate": [
+        0.377,
+        0.388
+      ],
+      "baseline_rate": [
+        0.376,
+        0.384
+      ],
+      "paired_difference": [
+        0.0,
+        0.0050000000000000044
+      ]
+    },
+    "interval_kind": "descriptive 95% paired seed-cluster percentile; seed macro mean",
+    "bootstrap_seed": 740031,
+    "resamples": 10000
+  },
+  {
+    "sources": 800,
+    "family": "wrong_date",
+    "truth_axis": "numeric_support",
+    "truth_class": "True",
+    "baseline": "direct_full_inventory",
+    "eligible_seed_ids": [
+      1001,
+      1002,
+      1003,
+      1004,
+      1005,
+      1006,
+      1007,
+      1008,
+      1009,
+      1010
+    ],
+    "eligible_seed_count": 10,
+    "undefined_seed_ids": [],
+    "point_estimates": {
+      "current_rate": 0.382,
+      "baseline_rate": 1.0,
+      "paired_difference": -0.618
+    },
+    "intervals": {
+      "current_rate": [
+        0.377,
+        0.388
+      ],
+      "baseline_rate": [
+        1.0,
+        1.0
+      ],
+      "paired_difference": [
+        -0.623,
+        -0.612
+      ]
+    },
+    "interval_kind": "descriptive 95% paired seed-cluster percentile; seed macro mean",
+    "bootstrap_seed": 740031,
+    "resamples": 10000
+  },
+  {
+    "sources": 800,
+    "family": "wrong_date",
+    "truth_axis": "numeric_support",
+    "truth_class": "True",
+    "baseline": "direct_retained",
+    "eligible_seed_ids": [
+      1001,
+      1002,
+      1003,
+      1004,
+      1005,
+      1006,
+      1007,
+      1008,
+      1009,
+      1010
+    ],
+    "eligible_seed_count": 10,
+    "undefined_seed_ids": [],
+    "point_estimates": {
+      "current_rate": 0.382,
+      "baseline_rate": 0.38,
+      "paired_difference": 0.0020000000000000018
+    },
+    "intervals": {
+      "current_rate": [
+        0.377,
+        0.388
+      ],
+      "baseline_rate": [
+        0.376,
+        0.384
+      ],
+      "paired_difference": [
+        0.0,
+        0.0050000000000000044
+      ]
+    },
+    "interval_kind": "descriptive 95% paired seed-cluster percentile; seed macro mean",
+    "bootstrap_seed": 740031,
+    "resamples": 10000
+  },
+  {
+    "sources": 800,
+    "family": "wrong_entity",
+    "truth_axis": "full_fact_correct",
+    "truth_class": "False",
+    "baseline": "direct_full_inventory",
+    "eligible_seed_ids": [
+      1001,
+      1002,
+      1003,
+      1004,
+      1005,
+      1006,
+      1007,
+      1008,
+      1009,
+      1010
+    ],
+    "eligible_seed_count": 10,
+    "undefined_seed_ids": [],
+    "point_estimates": {
+      "current_rate": 0.382,
+      "baseline_rate": 1.0,
+      "paired_difference": -0.618
+    },
+    "intervals": {
+      "current_rate": [
+        0.377,
+        0.388
+      ],
+      "baseline_rate": [
+        1.0,
+        1.0
+      ],
+      "paired_difference": [
+        -0.623,
+        -0.612
+      ]
+    },
+    "interval_kind": "descriptive 95% paired seed-cluster percentile; seed macro mean",
+    "bootstrap_seed": 740031,
+    "resamples": 10000
+  },
+  {
+    "sources": 800,
+    "family": "wrong_entity",
+    "truth_axis": "full_fact_correct",
+    "truth_class": "False",
+    "baseline": "direct_retained",
+    "eligible_seed_ids": [
+      1001,
+      1002,
+      1003,
+      1004,
+      1005,
+      1006,
+      1007,
+      1008,
+      1009,
+      1010
+    ],
+    "eligible_seed_count": 10,
+    "undefined_seed_ids": [],
+    "point_estimates": {
+      "current_rate": 0.382,
+      "baseline_rate": 0.38,
+      "paired_difference": 0.0020000000000000018
+    },
+    "intervals": {
+      "current_rate": [
+        0.377,
+        0.388
+      ],
+      "baseline_rate": [
+        0.376,
+        0.384
+      ],
+      "paired_difference": [
+        0.0,
+        0.0050000000000000044
+      ]
+    },
+    "interval_kind": "descriptive 95% paired seed-cluster percentile; seed macro mean",
+    "bootstrap_seed": 740031,
+    "resamples": 10000
+  },
+  {
+    "sources": 800,
+    "family": "wrong_entity",
+    "truth_axis": "numeric_support",
+    "truth_class": "True",
+    "baseline": "direct_full_inventory",
+    "eligible_seed_ids": [
+      1001,
+      1002,
+      1003,
+      1004,
+      1005,
+      1006,
+      1007,
+      1008,
+      1009,
+      1010
+    ],
+    "eligible_seed_count": 10,
+    "undefined_seed_ids": [],
+    "point_estimates": {
+      "current_rate": 0.382,
+      "baseline_rate": 1.0,
+      "paired_difference": -0.618
+    },
+    "intervals": {
+      "current_rate": [
+        0.377,
+        0.388
+      ],
+      "baseline_rate": [
+        1.0,
+        1.0
+      ],
+      "paired_difference": [
+        -0.623,
+        -0.612
+      ]
+    },
+    "interval_kind": "descriptive 95% paired seed-cluster percentile; seed macro mean",
+    "bootstrap_seed": 740031,
+    "resamples": 10000
+  },
+  {
+    "sources": 800,
+    "family": "wrong_entity",
+    "truth_axis": "numeric_support",
+    "truth_class": "True",
+    "baseline": "direct_retained",
+    "eligible_seed_ids": [
+      1001,
+      1002,
+      1003,
+      1004,
+      1005,
+      1006,
+      1007,
+      1008,
+      1009,
+      1010
+    ],
+    "eligible_seed_count": 10,
+    "undefined_seed_ids": [],
+    "point_estimates": {
+      "current_rate": 0.382,
+      "baseline_rate": 0.38,
+      "paired_difference": 0.0020000000000000018
+    },
+    "intervals": {
+      "current_rate": [
+        0.377,
+        0.388
+      ],
+      "baseline_rate": [
+        0.376,
+        0.384
+      ],
+      "paired_difference": [
+        0.0,
+        0.0050000000000000044
+      ]
+    },
+    "interval_kind": "descriptive 95% paired seed-cluster percentile; seed macro mean",
+    "bootstrap_seed": 740031,
+    "resamples": 10000
+  },
+  {
+    "sources": 800,
+    "family": "wrong_sign",
+    "truth_axis": "full_fact_correct",
+    "truth_class": "False",
+    "baseline": "direct_full_inventory",
+    "eligible_seed_ids": [
+      1001,
+      1002,
+      1003,
+      1004,
+      1005,
+      1006,
+      1007,
+      1008,
+      1009,
+      1010
+    ],
+    "eligible_seed_count": 10,
+    "undefined_seed_ids": [],
+    "point_estimates": {
+      "current_rate": 0.382,
+      "baseline_rate": 0.0,
+      "paired_difference": 0.382
+    },
+    "intervals": {
+      "current_rate": [
+        0.377,
+        0.388
+      ],
+      "baseline_rate": [
+        0.0,
+        0.0
+      ],
+      "paired_difference": [
+        0.377,
+        0.388
+      ]
+    },
+    "interval_kind": "descriptive 95% paired seed-cluster percentile; seed macro mean",
+    "bootstrap_seed": 740031,
+    "resamples": 10000
+  },
+  {
+    "sources": 800,
+    "family": "wrong_sign",
+    "truth_axis": "full_fact_correct",
+    "truth_class": "False",
+    "baseline": "direct_retained",
+    "eligible_seed_ids": [
+      1001,
+      1002,
+      1003,
+      1004,
+      1005,
+      1006,
+      1007,
+      1008,
+      1009,
+      1010
+    ],
+    "eligible_seed_count": 10,
+    "undefined_seed_ids": [],
+    "point_estimates": {
+      "current_rate": 0.382,
+      "baseline_rate": 0.0,
+      "paired_difference": 0.382
+    },
+    "intervals": {
+      "current_rate": [
+        0.377,
+        0.388
+      ],
+      "baseline_rate": [
+        0.0,
+        0.0
+      ],
+      "paired_difference": [
+        0.377,
+        0.388
+      ]
+    },
+    "interval_kind": "descriptive 95% paired seed-cluster percentile; seed macro mean",
+    "bootstrap_seed": 740031,
+    "resamples": 10000
+  },
+  {
+    "sources": 800,
+    "family": "wrong_sign",
+    "truth_axis": "numeric_support",
+    "truth_class": "False",
+    "baseline": "direct_full_inventory",
+    "eligible_seed_ids": [
+      1001,
+      1002,
+      1003,
+      1004,
+      1005,
+      1006,
+      1007,
+      1008,
+      1009,
+      1010
+    ],
+    "eligible_seed_count": 10,
+    "undefined_seed_ids": [],
+    "point_estimates": {
+      "current_rate": 0.3839248093176665,
+      "baseline_rate": 0.0,
+      "paired_difference": 0.3839248093176665
+    },
+    "intervals": {
+      "current_rate": [
+        0.3760887961245104,
+        0.3919057668521954
+      ],
+      "baseline_rate": [
+        0.0,
+        0.0
+      ],
+      "paired_difference": [
+        0.3760887961245104,
+        0.3919057668521954
+      ]
+    },
+    "interval_kind": "descriptive 95% paired seed-cluster percentile; seed macro mean",
+    "bootstrap_seed": 740031,
+    "resamples": 10000
+  },
+  {
+    "sources": 800,
+    "family": "wrong_sign",
+    "truth_axis": "numeric_support",
+    "truth_class": "False",
+    "baseline": "direct_retained",
+    "eligible_seed_ids": [
+      1001,
+      1002,
+      1003,
+      1004,
+      1005,
+      1006,
+      1007,
+      1008,
+      1009,
+      1010
+    ],
+    "eligible_seed_count": 10,
+    "undefined_seed_ids": [],
+    "point_estimates": {
+      "current_rate": 0.3839248093176665,
+      "baseline_rate": 0.0,
+      "paired_difference": 0.3839248093176665
+    },
+    "intervals": {
+      "current_rate": [
+        0.3760887961245104,
+        0.3919057668521954
+      ],
+      "baseline_rate": [
+        0.0,
+        0.0
+      ],
+      "paired_difference": [
+        0.3760887961245104,
+        0.3919057668521954
+      ]
+    },
+    "interval_kind": "descriptive 95% paired seed-cluster percentile; seed macro mean",
+    "bootstrap_seed": 740031,
+    "resamples": 10000
+  },
+  {
+    "sources": 800,
+    "family": "wrong_sign",
+    "truth_axis": "numeric_support",
+    "truth_class": "True",
+    "baseline": "direct_full_inventory",
+    "eligible_seed_ids": [
+      1001,
+      1002,
+      1003,
+      1004,
+      1005,
+      1007,
+      1008,
+      1009,
+      1010
+    ],
+    "eligible_seed_count": 9,
+    "undefined_seed_ids": [
+      1006
+    ],
+    "point_estimates": {
+      "current_rate": 0.19444444444444445,
+      "baseline_rate": 0.0,
+      "paired_difference": 0.19444444444444445
+    },
+    "intervals": null,
+    "interval_kind": "descriptive 95% paired seed-cluster percentile; seed macro mean",
+    "bootstrap_seed": 740031,
+    "resamples": 10000,
+    "interval_missing_reason": "needs all ten main seeds with nonzero complete-pair truth-class denominator; undefined rates not zero-filled"
+  },
+  {
+    "sources": 800,
+    "family": "wrong_sign",
+    "truth_axis": "numeric_support",
+    "truth_class": "True",
+    "baseline": "direct_retained",
+    "eligible_seed_ids": [
+      1001,
+      1002,
+      1003,
+      1004,
+      1005,
+      1007,
+      1008,
+      1009,
+      1010
+    ],
+    "eligible_seed_count": 9,
+    "undefined_seed_ids": [
+      1006
+    ],
+    "point_estimates": {
+      "current_rate": 0.19444444444444445,
+      "baseline_rate": 0.0,
+      "paired_difference": 0.19444444444444445
+    },
+    "intervals": null,
+    "interval_kind": "descriptive 95% paired seed-cluster percentile; seed macro mean",
+    "bootstrap_seed": 740031,
+    "resamples": 10000,
+    "interval_missing_reason": "needs all ten main seeds with nonzero complete-pair truth-class denominator; undefined rates not zero-filled"
+  }
+]

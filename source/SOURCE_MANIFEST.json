@@ -1,0 +1,25 @@
+{
+  "archive_sha256": "04630a37ffe19b8c5c20bc48df93c63c299cc59f7b2d8d8b4eb44c60dcc5170f",
+  "files": [
+    {
+      "path": "frozen/analyze_v2.py",
+      "archive_member": "lah-reproduction-candidate/frozen/analyze_v2.py",
+      "sha256": "1b269eb23bbd6537abb991ea0d2885aa0bee2a0985fd2ed4ac9ca26e705ecda2"
+    },
+    {
+      "path": "frozen/runner.py",
+      "archive_member": "lah-reproduction-candidate/frozen/runner.py",
+      "sha256": "ab09815eb9f1a3baec9b51e705790d81e98f36e0b05926297a87d0e09542a776"
+    },
+    {
+      "path": "original/main001/sut_provenance.py",
+      "archive_member": "lah-reproduction-candidate/original/main001/sut_provenance.py",
+      "sha256": "c90e00fde672964e208f6e18ae415c83a4296267c9d3c4e1cfaa52e7ea081a02"
+    },
+    {
+      "path": "reproduce.py",
+      "archive_member": "lah-reproduction-candidate/reproduce.py",
+      "sha256": "f1dd2d87bcd1cde3b0d7f1c75c94ffedf9534d9cc86459fbce199dc1d9b734bd"
+    }
+  ]
+}

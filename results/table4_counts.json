@@ -1,0 +1,78 @@
+{
+  "kind": "aggregate-only extraction, not synthetic and not a releasable raw reconstruction",
+  "source_artifact": "RAW_RECOMPUTATION_RECEIPT.json",
+  "source_sha256": "38143cfb50401fb0683647d56c075ac574208b1c0f9cadac46ad69dd5c02c689",
+  "source_pointer": "/recorded_groups",
+  "rows": [
+    {
+      "group": "development-01",
+      "source_occurrences": 1010,
+      "prefixes": 2,
+      "ingested_exposures": 1010,
+      "exempt": 775,
+      "supported": 235
+    },
+    {
+      "group": "development-02",
+      "source_occurrences": 929,
+      "prefixes": 2,
+      "ingested_exposures": 1010,
+      "exempt": 615,
+      "supported": 395
+    },
+    {
+      "group": "development-03",
+      "source_occurrences": 361,
+      "prefixes": 2,
+      "ingested_exposures": 717,
+      "exempt": 715,
+      "supported": 2
+    },
+    {
+      "group": "development-04",
+      "source_occurrences": 3811,
+      "prefixes": 4,
+      "ingested_exposures": 8713,
+      "exempt": 6966,
+      "supported": 1747
+    },
+    {
+      "group": "development-05",
+      "source_occurrences": 1728,
+      "prefixes": 3,
+      "ingested_exposures": 2608,
+      "exempt": 1791,
+      "supported": 817
+    },
+    {
+      "group": "development-06",
+      "source_occurrences": 22,
+      "prefixes": 1,
+      "ingested_exposures": 22,
+      "exempt": 20,
+      "supported": 2
+    },
+    {
+      "group": "development-07",
+      "source_occurrences": 326,
+      "prefixes": 3,
+      "ingested_exposures": 595,
+      "exempt": 513,
+      "supported": 82
+    }
+  ],
+  "total": {
+    "source_occurrences": 8187,
+    "prefixes": 17,
+    "ingested_exposures": 14675,
+    "exempt": 11395,
+    "supported": 3280
+  },
+  "limits": [
+    "Seven pseudonymous development groups nested in one workspace; not seven independent workspaces.",
+    "Current code reconstructed returns; not original historical model-visible egress.",
+    "Supported counts are nonexempt magnitudes; exemptions are bypasses.",
+    "Raw recordings, workspace identifiers, HTTP payloads, arguments and per-source values are intentionally absent.",
+    "This aggregate cannot reproduce raw reconstruction; it checks only the Table 4 accounting."
+  ]
+}

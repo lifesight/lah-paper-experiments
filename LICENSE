@@ -1,0 +1,12 @@
+# License map
+
+The manuscript, original included figures, and study code and synthetic data owned by Anil Kumar Singh or Lifesight are licensed under Creative Commons Attribution 4.0 International (CC BY 4.0). The author explicitly authorized extension of CC BY 4.0 to these owned study materials on 7 November 2026.
+
+This grant covers the owned NumberLedger component snapshot, synthetic runner/analyzer, reproduction adapter, original synthetic inputs/reference labels, observations/retained state, original aggregate result extracts and plotting source distributed in this repository and the identified reproduction archive, to the extent owned by the author or Lifesight.
+
+License: https://creativecommons.org/licenses/by/4.0/
+Legal code: https://creativecommons.org/licenses/by/4.0/legalcode
+
+Historical materials under archive/2026-11-05_unconfirmed/ retain their original license; its exact text and all historical hashes are preserved. Third-party materials, including bundled fonts, retain their own licenses and are not relicensed by this grant. The private production harness and raw workspace/customer data are excluded and receive no license here.
+
+The immutable reproduction ZIP preserves creation-time license-status wording. The later grant above supplies the current permission for owned materials without rewriting scientific evidence. See NOTICE.md for exact archive identity and the published Zenodo release.

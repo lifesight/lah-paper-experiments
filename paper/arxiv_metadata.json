@@ -1,0 +1,15 @@
+{
+  "title": "LAH: An Evidence-Aware Agent Harness for Marketing Measurement",
+  "authors": "Anil Kumar Singh (Lifesight)",
+  "primary_category": "cs.AI",
+  "abstract": "AI agents for marketing measurement must connect heterogeneous analytical evidence to consequential decisions without losing what the evidence means or who is authorized to act. A revenue figure, attribution estimate, saturation curve, and experimental effect carry different assumptions; reproducing their numbers does not establish a correct interpretation or permission to change a budget. We present the Lifesight Agent Harness (LAH), an architecture that treats evidence availability, numeric support, semantic correctness, causal validity, and action authority as distinct obligations. LAH combines workspace-scoped execution records, invocation-scoped deterministic workflows, explicit action policies, human approval handling, and separate representations for coded findings and model judgments. We develop a conditional indistinguishability observation: a checker that maps correct and incorrectly bound claims to the same representation cannot distinguish their validity from that representation alone. To characterize one implemented mechanism, we evaluate NumberLedger, LAH's numeric-support component, using 36,000 synthetic claim instances and an exploratory reconstruction of development tool returns. The findings expose a gap between numeric acceptance and factual binding: incorrect entity, period, currency, or sign variants can pass, while retained evidence and quotable evidence need not coincide. The contribution is a systems design and reproducible component characterization that make these boundaries explicit for marketing-measurement agents. The empirical evidence concerns the numeric component; it does not establish end-to-end reliability or improved marketing outcomes.",
+  "abstract_characters": 1701,
+  "comments": "26 pages, 4 figures, 8 tables. Reproducibility materials: https://doi.org/10.5281/zenodo.24036084.",
+  "license": "CC BY 4.0",
+  "license_uri": "http://creativecommons.org/licenses/by/4.0/",
+  "journal_ref": "",
+  "doi": "",
+  "report_no": "",
+  "related_materials_doi": "10.5281/zenodo.24036084",
+  "related_materials_url": "https://doi.org/10.5281/zenodo.24036084"
+}

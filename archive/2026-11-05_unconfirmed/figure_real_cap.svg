@@ -1,0 +1,81 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 300" width="720" height="300" role="img" aria-label="Honest sums accepted and fabricated amounts accepted against the base cap, three recorded turns">
+<style>text{font-family:"IBM Plex Sans","Helvetica Neue",Arial,sans-serif;font-size:11px;fill:#52514e}.t{font-size:12px;fill:#0b0b0b}.g{stroke:#e5e5e0;stroke-width:1}.ax{stroke:#c3c2b7;stroke-width:1}</style>
+<rect x="0" y="0" width="720" height="300" fill="#fcfcfb"/>
+<line class="g" x1="64.0" y1="248.0" x2="258.7" y2="248.0"/>
+<text x="56.0" y="252.0" text-anchor="end">0%</text>
+<line class="g" x1="64.0" y1="196.0" x2="258.7" y2="196.0"/>
+<text x="56.0" y="200.0" text-anchor="end">25%</text>
+<line class="g" x1="64.0" y1="144.0" x2="258.7" y2="144.0"/>
+<text x="56.0" y="148.0" text-anchor="end">50%</text>
+<line class="g" x1="64.0" y1="92.0" x2="258.7" y2="92.0"/>
+<text x="56.0" y="96.0" text-anchor="end">75%</text>
+<line class="g" x1="64.0" y1="40.0" x2="258.7" y2="40.0"/>
+<text x="56.0" y="44.0" text-anchor="end">100%</text>
+<line class="ax" x1="64.0" y1="248.0" x2="258.7" y2="248.0"/>
+<text x="64.0" y="264" text-anchor="middle">300</text>
+<text x="128.9" y="264" text-anchor="middle">1,000</text>
+<text x="193.8" y="264" text-anchor="middle">2,500</text>
+<text x="258.7" y="264" text-anchor="middle">5,000</text>
+<text class="t" x="161.3" y="26" text-anchor="middle">causal (plan, report)</text>
+<path d="M64.0,190.0 L128.9,68.3 L193.8,40.0 L258.7,40.0" fill="none" stroke="#2a78d6" stroke-width="2" stroke-linejoin="round"/>
+<circle cx="64.0" cy="190.0" r="3.5" fill="#2a78d6" stroke="#fcfcfb" stroke-width="2"/>
+<circle cx="128.9" cy="68.3" r="3.5" fill="#2a78d6" stroke="#fcfcfb" stroke-width="2"/>
+<circle cx="193.8" cy="40.0" r="3.5" fill="#2a78d6" stroke="#fcfcfb" stroke-width="2"/>
+<circle cx="258.7" cy="40.0" r="3.5" fill="#2a78d6" stroke="#fcfcfb" stroke-width="2"/>
+<text x="254.7" y="33.0" text-anchor="end" fill="#2a78d6">100%</text>
+<path d="M64.0,240.2 L128.9,208.5 L193.8,140.1 L258.7,139.3" fill="none" stroke="#eb6834" stroke-width="2" stroke-linejoin="round"/>
+<circle cx="64.0" cy="240.2" r="3.5" fill="#eb6834" stroke="#fcfcfb" stroke-width="2"/>
+<circle cx="128.9" cy="208.5" r="3.5" fill="#eb6834" stroke="#fcfcfb" stroke-width="2"/>
+<circle cx="193.8" cy="140.1" r="3.5" fill="#eb6834" stroke="#fcfcfb" stroke-width="2"/>
+<circle cx="258.7" cy="139.3" r="3.5" fill="#eb6834" stroke="#fcfcfb" stroke-width="2"/>
+<text x="254.7" y="132.3" text-anchor="end" fill="#eb6834">52%</text>
+<line class="g" x1="282.66666666666663" y1="248.0" x2="477.3" y2="248.0"/>
+<line class="g" x1="282.66666666666663" y1="196.0" x2="477.3" y2="196.0"/>
+<line class="g" x1="282.66666666666663" y1="144.0" x2="477.3" y2="144.0"/>
+<line class="g" x1="282.66666666666663" y1="92.0" x2="477.3" y2="92.0"/>
+<line class="g" x1="282.66666666666663" y1="40.0" x2="477.3" y2="40.0"/>
+<line class="ax" x1="282.66666666666663" y1="248.0" x2="477.3" y2="248.0"/>
+<text x="282.7" y="264" text-anchor="middle">300</text>
+<text x="347.6" y="264" text-anchor="middle">1,000</text>
+<text x="412.4" y="264" text-anchor="middle">2,500</text>
+<text x="477.3" y="264" text-anchor="middle">5,000</text>
+<text class="t" x="380.0" y="26" text-anchor="middle">cmo (model report, plan)</text>
+<path d="M282.7,208.7 L347.6,96.2 L412.4,40.0 L477.3,40.0" fill="none" stroke="#2a78d6" stroke-width="2" stroke-linejoin="round"/>
+<circle cx="282.7" cy="208.7" r="3.5" fill="#2a78d6" stroke="#fcfcfb" stroke-width="2"/>
+<circle cx="347.6" cy="96.2" r="3.5" fill="#2a78d6" stroke="#fcfcfb" stroke-width="2"/>
+<circle cx="412.4" cy="40.0" r="3.5" fill="#2a78d6" stroke="#fcfcfb" stroke-width="2"/>
+<circle cx="477.3" cy="40.0" r="3.5" fill="#2a78d6" stroke="#fcfcfb" stroke-width="2"/>
+<text x="473.3" y="33.0" text-anchor="end" fill="#2a78d6">100%</text>
+<path d="M282.7,235.0 L347.6,184.3 L412.4,169.0 L477.3,172.1" fill="none" stroke="#eb6834" stroke-width="2" stroke-linejoin="round"/>
+<circle cx="282.7" cy="235.0" r="3.5" fill="#eb6834" stroke="#fcfcfb" stroke-width="2"/>
+<circle cx="347.6" cy="184.3" r="3.5" fill="#eb6834" stroke="#fcfcfb" stroke-width="2"/>
+<circle cx="412.4" cy="169.0" r="3.5" fill="#eb6834" stroke="#fcfcfb" stroke-width="2"/>
+<circle cx="477.3" cy="172.1" r="3.5" fill="#eb6834" stroke="#fcfcfb" stroke-width="2"/>
+<text x="473.3" y="165.1" text-anchor="end" fill="#eb6834">36%</text>
+<line class="g" x1="501.3333333333333" y1="248.0" x2="696.0" y2="248.0"/>
+<line class="g" x1="501.3333333333333" y1="196.0" x2="696.0" y2="196.0"/>
+<line class="g" x1="501.3333333333333" y1="144.0" x2="696.0" y2="144.0"/>
+<line class="g" x1="501.3333333333333" y1="92.0" x2="696.0" y2="92.0"/>
+<line class="g" x1="501.3333333333333" y1="40.0" x2="696.0" y2="40.0"/>
+<line class="ax" x1="501.3333333333333" y1="248.0" x2="696.0" y2="248.0"/>
+<text x="501.3" y="264" text-anchor="middle">300</text>
+<text x="566.2" y="264" text-anchor="middle">1,000</text>
+<text x="631.1" y="264" text-anchor="middle">2,500</text>
+<text x="696.0" y="264" text-anchor="middle">5,000</text>
+<text class="t" x="598.7" y="26" text-anchor="middle">promoted-plan (plan, report, plan)</text>
+<path d="M501.3,209.0 L566.2,96.2 L631.1,40.0 L696.0,40.0" fill="none" stroke="#2a78d6" stroke-width="2" stroke-linejoin="round"/>
+<circle cx="501.3" cy="209.0" r="3.5" fill="#2a78d6" stroke="#fcfcfb" stroke-width="2"/>
+<circle cx="566.2" cy="96.2" r="3.5" fill="#2a78d6" stroke="#fcfcfb" stroke-width="2"/>
+<circle cx="631.1" cy="40.0" r="3.5" fill="#2a78d6" stroke="#fcfcfb" stroke-width="2"/>
+<circle cx="696.0" cy="40.0" r="3.5" fill="#2a78d6" stroke="#fcfcfb" stroke-width="2"/>
+<text x="692.0" y="33.0" text-anchor="end" fill="#2a78d6">100%</text>
+<path d="M501.3,234.0 L566.2,174.7 L631.1,169.0 L696.0,139.6" fill="none" stroke="#eb6834" stroke-width="2" stroke-linejoin="round"/>
+<circle cx="501.3" cy="234.0" r="3.5" fill="#eb6834" stroke="#fcfcfb" stroke-width="2"/>
+<circle cx="566.2" cy="174.7" r="3.5" fill="#eb6834" stroke="#fcfcfb" stroke-width="2"/>
+<circle cx="631.1" cy="169.0" r="3.5" fill="#eb6834" stroke="#fcfcfb" stroke-width="2"/>
+<circle cx="696.0" cy="139.6" r="3.5" fill="#eb6834" stroke="#fcfcfb" stroke-width="2"/>
+<text x="692.0" y="132.6" text-anchor="end" fill="#eb6834">52%</text>
+<text x="360" y="292" text-anchor="middle">base cap (production: 300)</text>
+<rect x="64" y="8" width="10" height="10" fill="#2a78d6"/><text x="80" y="17">honest sums over the last read accepted</text>
+<rect x="330" y="8" width="10" height="10" fill="#eb6834"/><text x="346" y="17">fabricated six-figure amounts accepted</text>
+</svg>

@@ -1,0 +1,876 @@
+{
+ "config": {
+  "caps": [
+   300,
+   1000,
+   2500,
+   5000
+  ],
+  "seeds": [
+   1,
+   2
+  ],
+  "claims_per_cell": 400,
+  "fixtures": "<harness repository>/tests/fixtures/dashgraph/asks",
+  "ledger_cap": 5000
+ },
+ "threads": {
+  "causal": {
+   "reads": 4,
+   "shape": [
+    {
+     "read": "orientation",
+     "values": 72,
+     "operands": 1
+    },
+    {
+     "read": "membership",
+     "values": 1,
+     "operands": 0
+    },
+    {
+     "read": "attribution_models",
+     "values": 1664,
+     "operands": 1321
+    },
+    {
+     "read": "attribution_report",
+     "values": 3730,
+     "operands": 2081
+    }
+   ],
+   "cells": [
+    {
+     "bases_kept": 300,
+     "values_kept": 3730,
+     "results_values_evicted": 3,
+     "quote_first": 100.0,
+     "quote_last": 100.0,
+     "honest_first": null,
+     "honest_last": 27.88,
+     "honest_any": 16.59,
+     "fab_6fig": 3.75,
+     "explain_ms": 0.31,
+     "fab_3fig": 26.62,
+     "fab_2fig": 49.88,
+     "cap": 300
+    },
+    {
+     "bases_kept": 1000,
+     "values_kept": 3730,
+     "results_values_evicted": 3,
+     "quote_first": 100.0,
+     "quote_last": 100.0,
+     "honest_first": null,
+     "honest_last": 86.38,
+     "honest_any": 49.27,
+     "fab_6fig": 19.0,
+     "explain_ms": 0.61,
+     "fab_3fig": 22.62,
+     "fab_2fig": 50.38,
+     "cap": 1000
+    },
+    {
+     "bases_kept": 2458,
+     "values_kept": 3730,
+     "results_values_evicted": 3,
+     "quote_first": 100.0,
+     "quote_last": 100.0,
+     "honest_first": null,
+     "honest_last": 100.0,
+     "honest_any": 100.0,
+     "fab_6fig": 51.88,
+     "explain_ms": 0.86,
+     "fab_3fig": 22.75,
+     "fab_2fig": 50.25,
+     "cap": 2500
+    },
+    {
+     "bases_kept": 2458,
+     "values_kept": 3730,
+     "results_values_evicted": 3,
+     "quote_first": 100.0,
+     "quote_last": 100.0,
+     "honest_first": null,
+     "honest_last": 100.0,
+     "honest_any": 100.0,
+     "fab_6fig": 52.25,
+     "explain_ms": 0.87,
+     "fab_3fig": 24.88,
+     "fab_2fig": 46.75,
+     "cap": 5000
+    }
+   ]
+  },
+  "cmo": {
+   "reads": 4,
+   "shape": [
+    {
+     "read": "orientation",
+     "values": 72,
+     "operands": 1
+    },
+    {
+     "read": "membership",
+     "values": 1,
+     "operands": 0
+    },
+    {
+     "read": "model_report",
+     "values": 484,
+     "operands": 272
+    },
+    {
+     "read": "plans_get",
+     "values": 1661,
+     "operands": 1321
+    }
+   ],
+   "cells": [
+    {
+     "bases_kept": 300,
+     "values_kept": 2138,
+     "results_values_evicted": 0,
+     "quote_first": 100.0,
+     "quote_last": 100.0,
+     "honest_first": null,
+     "honest_last": 18.88,
+     "honest_any": 16.23,
+     "fab_6fig": 6.25,
+     "explain_ms": 0.2,
+     "fab_3fig": 26.25,
+     "fab_2fig": 62.5,
+     "cap": 300
+    },
+    {
+     "bases_kept": 1000,
+     "values_kept": 2138,
+     "results_values_evicted": 0,
+     "quote_first": 100.0,
+     "quote_last": 100.0,
+     "honest_first": null,
+     "honest_last": 73.0,
+     "honest_any": 56.58,
+     "fab_6fig": 30.62,
+     "explain_ms": 0.46,
+     "fab_3fig": 24.88,
+     "fab_2fig": 64.75,
+     "cap": 1000
+    },
+    {
+     "bases_kept": 1592,
+     "values_kept": 2138,
+     "results_values_evicted": 0,
+     "quote_first": 100.0,
+     "quote_last": 100.0,
+     "honest_first": null,
+     "honest_last": 100.0,
+     "honest_any": 99.74,
+     "fab_6fig": 38.0,
+     "explain_ms": 0.68,
+     "fab_3fig": 24.12,
+     "fab_2fig": 66.25,
+     "cap": 2500
+    },
+    {
+     "bases_kept": 1592,
+     "values_kept": 2138,
+     "results_values_evicted": 0,
+     "quote_first": 100.0,
+     "quote_last": 100.0,
+     "honest_first": null,
+     "honest_last": 100.0,
+     "honest_any": 100.0,
+     "fab_6fig": 36.5,
+     "explain_ms": 0.67,
+     "fab_3fig": 26.62,
+     "fab_2fig": 63.75,
+     "cap": 5000
+    }
+   ]
+  },
+  "geo-experiment": {
+   "reads": 4,
+   "shape": [
+    {
+     "read": "orientation",
+     "values": 72,
+     "operands": 1
+    },
+    {
+     "read": "membership",
+     "values": 1,
+     "operands": 0
+    },
+    {
+     "read": "experiment_report",
+     "values": 254,
+     "operands": 5
+    },
+    {
+     "read": "list_experiments",
+     "values": 7,
+     "operands": 0
+    }
+   ],
+   "cells": [
+    {
+     "bases_kept": 6,
+     "values_kept": 309,
+     "results_values_evicted": 0,
+     "quote_first": 100.0,
+     "quote_last": null,
+     "honest_first": null,
+     "honest_last": null,
+     "honest_any": 100.0,
+     "fab_6fig": 0.0,
+     "explain_ms": 0.04,
+     "fab_3fig": 1.38,
+     "fab_2fig": 9.0,
+     "cap": 300
+    },
+    {
+     "bases_kept": 6,
+     "values_kept": 309,
+     "results_values_evicted": 0,
+     "quote_first": 100.0,
+     "quote_last": null,
+     "honest_first": null,
+     "honest_last": null,
+     "honest_any": 100.0,
+     "fab_6fig": 0.0,
+     "explain_ms": 0.04,
+     "fab_3fig": 1.75,
+     "fab_2fig": 10.25,
+     "cap": 1000
+    },
+    {
+     "bases_kept": 6,
+     "values_kept": 309,
+     "results_values_evicted": 0,
+     "quote_first": 100.0,
+     "quote_last": null,
+     "honest_first": null,
+     "honest_last": null,
+     "honest_any": 100.0,
+     "fab_6fig": 0.0,
+     "explain_ms": 0.04,
+     "fab_3fig": 1.88,
+     "fab_2fig": 11.38,
+     "cap": 2500
+    },
+    {
+     "bases_kept": 6,
+     "values_kept": 309,
+     "results_values_evicted": 0,
+     "quote_first": 100.0,
+     "quote_last": null,
+     "honest_first": null,
+     "honest_last": null,
+     "honest_any": 100.0,
+     "fab_6fig": 0.0,
+     "explain_ms": 0.04,
+     "fab_3fig": 2.5,
+     "fab_2fig": 13.12,
+     "cap": 5000
+    }
+   ]
+  },
+  "model": {
+   "reads": 7,
+   "shape": [
+    {
+     "read": "orientation",
+     "values": 71,
+     "operands": 1
+    },
+    {
+     "read": "membership",
+     "values": 1,
+     "operands": 0
+    },
+    {
+     "read": "channel_saturation",
+     "values": 1296,
+     "operands": 255
+    },
+    {
+     "read": "channel_saturation",
+     "values": 1296,
+     "operands": 255
+    },
+    {
+     "read": "model_diagnostics",
+     "values": 87,
+     "operands": 18
+    },
+    {
+     "read": "model_report",
+     "values": 1326,
+     "operands": 265
+    },
+    {
+     "read": "model_report",
+     "values": 77,
+     "operands": 9
+    }
+   ],
+   "cells": [
+    {
+     "bases_kept": 292,
+     "values_kept": 1346,
+     "results_values_evicted": 0,
+     "quote_first": 100.0,
+     "quote_last": 100.0,
+     "honest_first": null,
+     "honest_last": 100.0,
+     "honest_any": 100.0,
+     "fab_6fig": 3.75,
+     "explain_ms": 0.35,
+     "fab_3fig": 13.5,
+     "fab_2fig": 43.38,
+     "cap": 300
+    },
+    {
+     "bases_kept": 803,
+     "values_kept": 1346,
+     "results_values_evicted": 0,
+     "quote_first": 100.0,
+     "quote_last": 100.0,
+     "honest_first": null,
+     "honest_last": 100.0,
+     "honest_any": 99.65,
+     "fab_6fig": 4.25,
+     "explain_ms": 0.6,
+     "fab_3fig": 12.12,
+     "fab_2fig": 43.88,
+     "cap": 1000
+    },
+    {
+     "bases_kept": 803,
+     "values_kept": 1346,
+     "results_values_evicted": 0,
+     "quote_first": 100.0,
+     "quote_last": 100.0,
+     "honest_first": null,
+     "honest_last": 100.0,
+     "honest_any": 99.82,
+     "fab_6fig": 3.88,
+     "explain_ms": 0.6,
+     "fab_3fig": 12.0,
+     "fab_2fig": 46.12,
+     "cap": 2500
+    },
+    {
+     "bases_kept": 803,
+     "values_kept": 1346,
+     "results_values_evicted": 0,
+     "quote_first": 100.0,
+     "quote_last": 100.0,
+     "honest_first": null,
+     "honest_last": 100.0,
+     "honest_any": 100.0,
+     "fab_6fig": 4.5,
+     "explain_ms": 0.59,
+     "fab_3fig": 13.0,
+     "fab_2fig": 45.38,
+     "cap": 5000
+    }
+   ]
+  },
+  "promoted-plan": {
+   "reads": 5,
+   "shape": [
+    {
+     "read": "orientation",
+     "values": 70,
+     "operands": 1
+    },
+    {
+     "read": "membership",
+     "values": 1,
+     "operands": 0
+    },
+    {
+     "read": "attribution_models",
+     "values": 1664,
+     "operands": 1321
+    },
+    {
+     "read": "attribution_report",
+     "values": 3734,
+     "operands": 2166
+    },
+    {
+     "read": "plans_get",
+     "values": 1661,
+     "operands": 1321
+    }
+   ],
+   "cells": [
+    {
+     "bases_kept": 300,
+     "values_kept": 1661,
+     "results_values_evicted": 4,
+     "quote_first": 0.0,
+     "quote_last": 100.0,
+     "honest_first": null,
+     "honest_last": 18.75,
+     "honest_any": 20.33,
+     "fab_6fig": 6.75,
+     "explain_ms": 0.16,
+     "fab_3fig": 19.38,
+     "fab_2fig": 45.25,
+     "cap": 300
+    },
+    {
+     "bases_kept": 1000,
+     "values_kept": 1661,
+     "results_values_evicted": 4,
+     "quote_first": 0.0,
+     "quote_last": 100.0,
+     "honest_first": null,
+     "honest_last": 73.0,
+     "honest_any": 71.38,
+     "fab_6fig": 35.25,
+     "explain_ms": 0.4,
+     "fab_3fig": 18.88,
+     "fab_2fig": 44.88,
+     "cap": 1000
+    },
+    {
+     "bases_kept": 1319,
+     "values_kept": 1661,
+     "results_values_evicted": 4,
+     "quote_first": 0.0,
+     "quote_last": 100.0,
+     "honest_first": null,
+     "honest_last": 100.0,
+     "honest_any": 87.15,
+     "fab_6fig": 38.0,
+     "explain_ms": 0.51,
+     "fab_3fig": 19.75,
+     "fab_2fig": 45.62,
+     "cap": 2500
+    },
+    {
+     "bases_kept": 3839,
+     "values_kept": 1661,
+     "results_values_evicted": 4,
+     "quote_first": 0.0,
+     "quote_last": 100.0,
+     "honest_first": null,
+     "honest_last": 100.0,
+     "honest_any": 100.0,
+     "fab_6fig": 52.12,
+     "explain_ms": 1.15,
+     "fab_3fig": 20.25,
+     "fab_2fig": 42.38,
+     "cap": 5000
+    }
+   ]
+  },
+  "q4-leads": {
+   "reads": 3,
+   "shape": [
+    {
+     "read": "orientation",
+     "values": 71,
+     "operands": 1
+    },
+    {
+     "read": "membership",
+     "values": 1,
+     "operands": 0
+    },
+    {
+     "read": "model_report",
+     "values": 64,
+     "operands": 2
+    }
+   ],
+   "cells": [
+    {
+     "bases_kept": 3,
+     "values_kept": 106,
+     "results_values_evicted": 0,
+     "quote_first": 100.0,
+     "quote_last": 100.0,
+     "honest_first": null,
+     "honest_last": 100.0,
+     "honest_any": 100.0,
+     "fab_6fig": 0.0,
+     "explain_ms": 0.03,
+     "fab_3fig": 0.5,
+     "fab_2fig": 4.38,
+     "cap": 300
+    },
+    {
+     "bases_kept": 3,
+     "values_kept": 106,
+     "results_values_evicted": 0,
+     "quote_first": 100.0,
+     "quote_last": 100.0,
+     "honest_first": null,
+     "honest_last": 100.0,
+     "honest_any": 100.0,
+     "fab_6fig": 0.0,
+     "explain_ms": 0.03,
+     "fab_3fig": 0.0,
+     "fab_2fig": 5.38,
+     "cap": 1000
+    },
+    {
+     "bases_kept": 3,
+     "values_kept": 106,
+     "results_values_evicted": 0,
+     "quote_first": 100.0,
+     "quote_last": 100.0,
+     "honest_first": null,
+     "honest_last": 100.0,
+     "honest_any": 100.0,
+     "fab_6fig": 0.0,
+     "explain_ms": 0.03,
+     "fab_3fig": 0.62,
+     "fab_2fig": 3.0,
+     "cap": 2500
+    },
+    {
+     "bases_kept": 3,
+     "values_kept": 106,
+     "results_values_evicted": 0,
+     "quote_first": 100.0,
+     "quote_last": 100.0,
+     "honest_first": null,
+     "honest_last": 100.0,
+     "honest_any": 100.0,
+     "fab_6fig": 0.0,
+     "explain_ms": 0.03,
+     "fab_3fig": 1.0,
+     "fab_2fig": 4.75,
+     "cap": 5000
+    }
+   ]
+  },
+  "q4-performance": {
+   "reads": 5,
+   "shape": [
+    {
+     "read": "orientation",
+     "values": 71,
+     "operands": 1
+    },
+    {
+     "read": "membership",
+     "values": 1,
+     "operands": 0
+    },
+    {
+     "read": "attribution_report",
+     "values": 365,
+     "operands": 118
+    },
+    {
+     "read": "model_report",
+     "values": 103,
+     "operands": 17
+    },
+    {
+     "read": "model_report",
+     "values": 126,
+     "operands": 11
+    }
+   ],
+   "cells": [
+    {
+     "bases_kept": 147,
+     "values_kept": 503,
+     "results_values_evicted": 0,
+     "quote_first": 100.0,
+     "quote_last": 100.0,
+     "honest_first": null,
+     "honest_last": 100.0,
+     "honest_any": 99.55,
+     "fab_6fig": 0.38,
+     "explain_ms": 0.2,
+     "fab_3fig": 9.12,
+     "fab_2fig": 30.75,
+     "cap": 300
+    },
+    {
+     "bases_kept": 147,
+     "values_kept": 503,
+     "results_values_evicted": 0,
+     "quote_first": 100.0,
+     "quote_last": 100.0,
+     "honest_first": null,
+     "honest_last": 100.0,
+     "honest_any": 100.0,
+     "fab_6fig": 0.62,
+     "explain_ms": 0.2,
+     "fab_3fig": 7.0,
+     "fab_2fig": 27.75,
+     "cap": 1000
+    },
+    {
+     "bases_kept": 147,
+     "values_kept": 503,
+     "results_values_evicted": 0,
+     "quote_first": 100.0,
+     "quote_last": 100.0,
+     "honest_first": null,
+     "honest_last": 100.0,
+     "honest_any": 100.0,
+     "fab_6fig": 0.38,
+     "explain_ms": 0.2,
+     "fab_3fig": 7.62,
+     "fab_2fig": 31.88,
+     "cap": 2500
+    },
+    {
+     "bases_kept": 147,
+     "values_kept": 503,
+     "results_values_evicted": 0,
+     "quote_first": 100.0,
+     "quote_last": 100.0,
+     "honest_first": null,
+     "honest_last": 100.0,
+     "honest_any": 100.0,
+     "fab_6fig": 1.0,
+     "explain_ms": 0.2,
+     "fab_3fig": 8.75,
+     "fab_2fig": 29.88,
+     "cap": 5000
+    }
+   ]
+  },
+  "LONG (all asks in sequence)": {
+   "reads": 32,
+   "shape": [
+    {
+     "read": "orientation",
+     "values": 72,
+     "operands": 1
+    },
+    {
+     "read": "membership",
+     "values": 1,
+     "operands": 0
+    },
+    {
+     "read": "attribution_models",
+     "values": 1664,
+     "operands": 1321
+    },
+    {
+     "read": "attribution_report",
+     "values": 3730,
+     "operands": 2081
+    },
+    {
+     "read": "orientation",
+     "values": 72,
+     "operands": 1
+    },
+    {
+     "read": "membership",
+     "values": 1,
+     "operands": 0
+    },
+    {
+     "read": "model_report",
+     "values": 484,
+     "operands": 272
+    },
+    {
+     "read": "plans_get",
+     "values": 1661,
+     "operands": 1321
+    },
+    {
+     "read": "orientation",
+     "values": 72,
+     "operands": 1
+    },
+    {
+     "read": "membership",
+     "values": 1,
+     "operands": 0
+    },
+    {
+     "read": "experiment_report",
+     "values": 254,
+     "operands": 5
+    },
+    {
+     "read": "list_experiments",
+     "values": 7,
+     "operands": 0
+    },
+    {
+     "read": "orientation",
+     "values": 71,
+     "operands": 1
+    },
+    {
+     "read": "membership",
+     "values": 1,
+     "operands": 0
+    },
+    {
+     "read": "channel_saturation",
+     "values": 1296,
+     "operands": 255
+    },
+    {
+     "read": "channel_saturation",
+     "values": 1296,
+     "operands": 255
+    },
+    {
+     "read": "model_diagnostics",
+     "values": 87,
+     "operands": 18
+    },
+    {
+     "read": "model_report",
+     "values": 1326,
+     "operands": 265
+    },
+    {
+     "read": "model_report",
+     "values": 77,
+     "operands": 9
+    },
+    {
+     "read": "orientation",
+     "values": 70,
+     "operands": 1
+    },
+    {
+     "read": "membership",
+     "values": 1,
+     "operands": 0
+    },
+    {
+     "read": "attribution_models",
+     "values": 1664,
+     "operands": 1321
+    },
+    {
+     "read": "attribution_report",
+     "values": 3734,
+     "operands": 2166
+    },
+    {
+     "read": "plans_get",
+     "values": 1661,
+     "operands": 1321
+    },
+    {
+     "read": "orientation",
+     "values": 71,
+     "operands": 1
+    },
+    {
+     "read": "membership",
+     "values": 1,
+     "operands": 0
+    },
+    {
+     "read": "model_report",
+     "values": 64,
+     "operands": 2
+    },
+    {
+     "read": "orientation",
+     "values": 71,
+     "operands": 1
+    },
+    {
+     "read": "membership",
+     "values": 1,
+     "operands": 0
+    },
+    {
+     "read": "attribution_report",
+     "values": 365,
+     "operands": 118
+    },
+    {
+     "read": "model_report",
+     "values": 103,
+     "operands": 17
+    },
+    {
+     "read": "model_report",
+     "values": 126,
+     "operands": 11
+    }
+   ],
+   "cells": [
+    {
+     "bases_kept": 150,
+     "values_kept": 2182,
+     "results_values_evicted": 23,
+     "quote_first": 100.0,
+     "quote_last": 100.0,
+     "honest_first": null,
+     "honest_last": 100.0,
+     "honest_any": 27.21,
+     "fab_6fig": 0.12,
+     "explain_ms": 0.26,
+     "fab_3fig": 22.12,
+     "fab_2fig": 59.0,
+     "cap": 300
+    },
+    {
+     "bases_kept": 150,
+     "values_kept": 2182,
+     "results_values_evicted": 23,
+     "quote_first": 100.0,
+     "quote_last": 100.0,
+     "honest_first": null,
+     "honest_last": 100.0,
+     "honest_any": 30.0,
+     "fab_6fig": 0.38,
+     "explain_ms": 0.26,
+     "fab_3fig": 24.38,
+     "fab_2fig": 59.25,
+     "cap": 1000
+    },
+    {
+     "bases_kept": 1469,
+     "values_kept": 2182,
+     "results_values_evicted": 23,
+     "quote_first": 100.0,
+     "quote_last": 100.0,
+     "honest_first": null,
+     "honest_last": 100.0,
+     "honest_any": 71.95,
+     "fab_6fig": 41.12,
+     "explain_ms": 0.62,
+     "fab_3fig": 24.88,
+     "fab_2fig": 58.0,
+     "cap": 2500
+    },
+    {
+     "bases_kept": 4798,
+     "values_kept": 2182,
+     "results_values_evicted": 23,
+     "quote_first": 100.0,
+     "quote_last": 100.0,
+     "honest_first": null,
+     "honest_last": 100.0,
+     "honest_any": 98.65,
+     "fab_6fig": 55.38,
+     "explain_ms": 1.59,
+     "fab_3fig": 21.12,
+     "fab_2fig": 57.25,
+     "cap": 5000
+    }
+   ]
+  }
+ },
+ "seconds": 49.2
+}

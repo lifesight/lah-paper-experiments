@@ -1,0 +1,149 @@
+{
+ "config": {
+  "seeds": [
+   1,
+   2,
+   3
+  ],
+  "claims_per_cell": 2000,
+  "sizes_results": [
+   50,
+   100,
+   178
+  ],
+  "production_cap": 300,
+  "lifted_cap": 1000000000
+ },
+ "rows": [
+  {
+   "results": 50,
+   "bases_capped": {
+    "mean": 280,
+    "ci95": 0.0,
+    "n_seeds": 3
+   },
+   "bases_lifted": {
+    "mean": 1400,
+    "ci95": 0.0,
+    "n_seeds": 3
+   },
+   "e1_capped": {
+    "mean": 0.38,
+    "ci95": 0.2,
+    "n_seeds": 3
+   },
+   "e1_lifted": {
+    "mean": 1.37,
+    "ci95": 0.21,
+    "n_seeds": 3
+   },
+   "e4p2_capped": {
+    "mean": 91.88,
+    "ci95": 0.09,
+    "n_seeds": 3
+   },
+   "e4p2_lifted": {
+    "mean": 91.88,
+    "ci95": 0.09,
+    "n_seeds": 3
+   },
+   "e2_capped": {
+    "mean": 19.9,
+    "ci95": 0.52,
+    "n_seeds": 3
+   },
+   "e2_lifted": {
+    "mean": 99.9,
+    "ci95": 0.1,
+    "n_seeds": 3
+   }
+  },
+  {
+   "results": 100,
+   "bases_capped": {
+    "mean": 280,
+    "ci95": 0.0,
+    "n_seeds": 3
+   },
+   "bases_lifted": {
+    "mean": 2799,
+    "ci95": 1.96,
+    "n_seeds": 3
+   },
+   "e1_capped": {
+    "mean": 0.58,
+    "ci95": 0.31,
+    "n_seeds": 3
+   },
+   "e1_lifted": {
+    "mean": 2.78,
+    "ci95": 0.56,
+    "n_seeds": 3
+   },
+   "e4p2_capped": {
+    "mean": 98.88,
+    "ci95": 0.53,
+    "n_seeds": 3
+   },
+   "e4p2_lifted": {
+    "mean": 98.88,
+    "ci95": 0.53,
+    "n_seeds": 3
+   },
+   "e2_capped": {
+    "mean": 10.1,
+    "ci95": 0.93,
+    "n_seeds": 3
+   },
+   "e2_lifted": {
+    "mean": 99.77,
+    "ci95": 0.09,
+    "n_seeds": 3
+   }
+  },
+  {
+   "results": 178,
+   "bases_capped": {
+    "mean": 280,
+    "ci95": 0.0,
+    "n_seeds": 3
+   },
+   "bases_lifted": {
+    "mean": 4984,
+    "ci95": 0.0,
+    "n_seeds": 3
+   },
+   "e1_capped": {
+    "mean": 0.78,
+    "ci95": 0.17,
+    "n_seeds": 3
+   },
+   "e1_lifted": {
+    "mean": 5.57,
+    "ci95": 0.51,
+    "n_seeds": 3
+   },
+   "e4p2_capped": {
+    "mean": 100.0,
+    "ci95": 0.0,
+    "n_seeds": 3
+   },
+   "e4p2_lifted": {
+    "mean": 100.0,
+    "ci95": 0.0,
+    "n_seeds": 3
+   },
+   "e2_capped": {
+    "mean": 6.6,
+    "ci95": 1.0,
+    "n_seeds": 3
+   },
+   "e2_lifted": {
+    "mean": 99.82,
+    "ci95": 0.03,
+    "n_seeds": 3
+   }
+  }
+ ],
+ "seconds": 56.9
+}

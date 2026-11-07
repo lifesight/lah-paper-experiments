@@ -1,0 +1,1007 @@
+diff --git a/CLAUDE.md b/CLAUDE.md
+index 0c59c6fa..29c0f687 100644
+--- a/CLAUDE.md
++++ b/CLAUDE.md
+@@ -601,7 +601,14 @@ registry (`tools/registry.py`, computed from the pack catalogue since Track A) f
+    array that share one value of a categorical key in those same rows (one channel's rows of a pacing table,
+    one week's rows across channels) is grounded and its derivation names the group. Bounded: groups come from
+    the data's own keys, a key with more than 24 values is an id, a group needs two rows, a group total never
+-   joins the pairwise base pool and grounds a claim only when it is written in full. Extending what counts as
++   joins the pairwise base pool and grounds a claim only when it is written in full. Since 2026-11-05 (owner, L1)
++   the sum, difference or per-count average of two figures of ONE tool result is grounded only when the answer names
++   both operands in the same sentence (`A + B = C`, `C (computed as A - B)`, `C per day (A / 30)`); the blind
++   pairwise search over a result's bases is closed for prose, as the blind ratio search was on 2026-09-20. Measured
++   on recorded staging reads (a read carries about 2,100 base-eligible figures, so the 300-base pool is one read's)
++   the search accepted 3.75% to 6.75% of in-band six-figure fabrications while deriving 19% to 28% of honest sums,
++   and widening the pool traded them one for one. The pool stays for a caller weighing its own figure against one
++   read (`pair_search=True`, the finding explainer). Extending what counts as
+    derived is a `harness_core.provenance` change, never
+    a prompt change.
+ 5. **Eval-gate every phase.** Add `parity_<flow>.test.json` from real 1.0 transcripts; a phase
+diff --git a/evals/run.py b/evals/run.py
+index 4daecf2d..cd7d70a8 100644
+--- a/evals/run.py
++++ b/evals/run.py
+@@ -291,9 +291,9 @@ def score_case(case: Case, events: list[EventBase]) -> CaseScore:
+         ledger = NumberLedger()
+         for e in events:
+             if isinstance(e, UserMessage):
+-                ledger.add_from(e.text)
++                ledger.add_from(e.text, kind="user-text")
+             elif isinstance(e, ToolResult):
+-                ledger.add_from(e.result)
++                ledger.add_from(e.result, kind=f"result:{e.tool_name}")
+         ungrounded = ledger.find_ungrounded(final_text)
+     if "ungrounded_numbers" in case.forbidden and ungrounded:
+         failures.append(f"ungrounded figures in answer: {ungrounded[:5]}")
+diff --git a/harness-core/harness_core/provenance.py b/harness-core/harness_core/provenance.py
+index ee371fd9..fe16a694 100644
+--- a/harness-core/harness_core/provenance.py
++++ b/harness-core/harness_core/provenance.py
+@@ -34,7 +34,7 @@ import re
+ from bisect import bisect_left, insort
+ from collections.abc import Iterable, Iterator
+ from dataclasses import dataclass
+-from math import isfinite, ulp
++from math import isclose, isfinite, ulp
+ from typing import Any
+ 
+ # Values at or below this are treated as bookkeeping (counts, weeks, percentages ≤ 200%),
+@@ -280,6 +280,23 @@ def _g(value: float) -> str:
+ #: far enough for the parenthetical the models actually write, short enough that the next sentence's figures are not
+ #: read as this claim's operands.
+ _RATIO_WINDOW = 120
++#: The shapes an answer writes a sum, a difference or a per-count average in: ``A + B = C``, ``C (computed as A - B)``,
++#: ``C per day (A / 30)``. The operator between the two operands names the arithmetic; when the operands precede the
++#: claim, the connector between the second operand and the claim marks them as its own.
++#: What may sit between an operand and its operator or connector: markdown emphasis, a currency code or word the
++#: figure regex does not fold into the figure (``INR``, ``Rs.``, ``US`` of ``US$``), a unit word after a divisor.
++_GAP = r"[\s*`]*"
++_CUR = r"(?:(?:[A-Z]{2,3}\.?|Rs\.?|[\u00a5\u20a9\u0e3f])\s*)?"
++_SUM_OPERATOR_RE = re.compile(_GAP + _CUR + _GAP + r"(?P<op>\+|plus|-|\u2212|\u2013|minus|less|/|\u00f7|divided by)"
++                              + _GAP + _CUR + _GAP, re.IGNORECASE)
++_SUM_EQUALS_RE = re.compile(_GAP + r"(?:\s*(?:days?|weeks?|months?|quarters?|years?|units?))?" + _GAP
++                            + r"(?:=|equals|is|gives|makes|comes to|totals?|totalling|totaling|for a total of|in full"
++                            r"|exactly|:|,?\s*(?:i\.e\.|that is),?)" + _GAP + _CUR + _GAP + r"[-\u2212\u2013]?" + _GAP,
++                            re.IGNORECASE)
++#: A clause ends at a sentence end or a line break; ``Rs.``, ``i.e.`` and ``e.g.`` are not sentence ends.
++_CLAUSE_END_RE = re.compile(r"(?<!Rs)(?<!i\.e)(?<!e\.g)\. |\n")
++_SUM_OPS = {"+": "+", "plus": "+", "-": "-", "\u2212": "-", "\u2013": "-", "minus": "-", "less": "-",
++            "/": "/", "\u00f7": "/", "divided by": "/"}
+ #: The shapes an answer writes a ratio in. Both operands are captured; the divider carries the claim.
+ _RATIO_DIVIDER_RE = re.compile(r"\s*(?:/|÷|\bdivided by\b|\bover\b)\s*", re.IGNORECASE)
+ 
+@@ -310,6 +327,66 @@ def _named_ratio_operands(masked: str, fig: Figure) -> tuple[float, float] | Non
+     return first.value, second.value
+ 
+ 
++def _clause_after(masked: str, fig: Figure) -> str:
++    """The rest of the claim's clause: up to ``_RATIO_WINDOW`` characters, cut at the sentence end."""
++    window = masked[fig.start + len(fig.raw): fig.start + len(fig.raw) + _RATIO_WINDOW]
++    m = _CLAUSE_END_RE.search(window)
++    return window[:m.start()] if m else window
++
++
++def _clause_before(masked: str, fig: Figure) -> str:
++    """The claim's clause before it: up to ``_RATIO_WINDOW`` characters back, from the previous sentence end."""
++    window = masked[max(0, fig.start - _RATIO_WINDOW): fig.start]
++    ends = list(_CLAUSE_END_RE.finditer(window))
++    return window[ends[-1].end():] if ends else window
++
++
++def _operand_pairs(clause: str, take_last: bool) -> list[tuple[Figure, Figure, str, int]]:
++    """The adjacent amounts of ``clause`` joined by one sum operator (every such pair in order, or the last pair
++    only), each with the operator as ``+``, ``-`` or ``/`` and where its second operand ends."""
++    figures = [f for f in extract_figures(clause) if f.kind == "amount"]
++    pairs = [(figures[-2], figures[-1])] if take_last and len(figures) >= 2 else list(zip(figures, figures[1:]))
++    out = []
++    for a, b in pairs:
++        m = _SUM_OPERATOR_RE.fullmatch(clause[a.start + len(a.raw): b.start])
++        if m is not None:
++            out.append((a, b, _SUM_OPS[m.group("op").lower()], b.start + len(b.raw)))
++    return out
++
++
++def _written_digits(fig: Figure) -> int:
++    """How many digits the figure was written with, trailing zeros included and uncapped: the precision at which a
++    claim or an operand is held to what it names."""
++    m = _NUM_RE.search(fig.raw)
++    digits = re.sub(r"\D", "", m.group("num")) if m else ""
++    return max(1, len(digits.lstrip("0")) or len(digits))
++
++
++def _operand_of(src: _Source, fig: Figure) -> float | None:
++    """The base-eligible figure of ``src`` that ``fig`` is written as: one that rounds to the written form at every
++    digit written (``456.79`` for 456.7891, ``45,000`` for 45000.0, ``1,845,225.66`` to the cent), or, for a
++    compact form (``1.2M``, ``12 lakh``), one it equals. A compact form is a rounding by construction, and a rounded
++    operand would match some figure of a large read by coincidence as often as a rounded claim does."""
++    v = abs(fig.value)
++    m = _NUM_RE.search(fig.raw)
++    if m is not None and m.group("suffix"):
++        return next((x for x in src.operands if isclose(x, v, rel_tol=1e-12)), None)
++    digits = _written_digits(fig)
++    return next((x for x in src.operands if _round_sig(x, digits) == _round_sig(v, digits)), None)
++
++
++def _named_sum_operands(masked: str, fig: Figure) -> list[tuple[Figure, Figure, str]]:
++    """The pairs of amounts ``masked`` may present as the operands of the amount at ``fig``, with the operator
++    between them, nearest first; empty when the claim does not explain itself. The operands follow the claim in
++    its clause (``C (computed as A - B)``) or precede it with a connector (``A + B = C``). Read from the
++    identifier-masked text, so the offsets match ``extract_figures``."""
++    out = [(a, b, op) for a, b, op, _ in _operand_pairs(_clause_after(masked, fig), take_last=False)]
++    clause = _clause_before(masked, fig)
++    out += [(a, b, op) for a, b, op, end in _operand_pairs(clause, take_last=True)
++            if _SUM_EQUALS_RE.fullmatch(clause[end:]) is not None]
++    return out
++
++
+ def extract_numbers(text: str) -> list[float]:
+     """All amounts and multipliers claimed in ``text``, suffix-expanded ($1.2M → 1200000.0).
+ 
+@@ -663,7 +740,7 @@ class _Source:
+     that coincidence was near-certain."""
+ 
+     __slots__ = ("bases", "sorted_bases", "bases_at", "base_currencies", "counts", "named", "named_currency", "kind",
+-                 "group_families", "values", "operands")
++                 "group_families", "values", "operands", "value_currencies")
+ 
+     def __init__(self, kind: str = "") -> None:
+         #: Group totals of this result by family (array, grouping field, column): the totals a COMPARISON may draw
+@@ -680,6 +757,10 @@ class _Source:
+         #: Every number this result contributed to the ledger, in order. Kept so the oldest result's values can be
+         #: handed back when the session's bound is reached (2026-09-20) - without it the NEWEST result was dropped.
+         self.values: list[float] = []
++        #: Each value's magnitude -> the currencies it was seen in (None: named none), for the operands an answer
++        #: names (``_check_named_sums``): two amounts in different currencies combine to no figure. Cleared with
++        #: ``values`` on eviction.
++        self.value_currencies: dict[float, set[str | None]] = {}
+         self.bases: list[float] = []  # distinct business magnitudes, insertion order
+         #: Every figure eligible as a base (a business magnitude, never a series point), before the session-wide
+         #: pairwise cap: what the member's own operation may start from (option A, 2026-09-30). Cleared with
+@@ -799,12 +880,12 @@ class NumberLedger:
+         # Points of a numeric array (a time series) ground themselves only.
+         for label, total, currency in _derived_totals(data):
+             self._totals.append((label, total))
+-            self._add_value(total)
++            self._add_value(total, currency)
+             self._add_base(total, currency)
+         for _, v, point, currency in sorted(_numbers_with_currency(data), key=lambda item: item[0]):
+             if len(self._exact) >= _LEDGER_CAP and not self._evict_oldest_values():
+                 break  # everything in the ledger is already this result's own
+-            self._add_value(v)
++            self._add_value(v, currency)
+             if not point:
+                 self._add_base(v, currency)
+         # A group's total (one channel's rows, one week's rows) is recorded LAST and apart (review 2026-09-18): the
+@@ -825,10 +906,11 @@ class NumberLedger:
+         # columns or two different groupings are not like for like.
+         self._source.group_families = {f: t for f, t in family_of_source.items() if len(t) >= 2}
+ 
+-    def _add_value(self, v: float) -> None:
++    def _add_value(self, v: float, currency: str | None = None) -> None:
+         if not isfinite(v):
+             return
+         self._source.values.append(v)
++        self._source.value_currencies.setdefault(abs(v), set()).add(currency)
+         self._held += 1
+         self._record_value(v)
+ 
+@@ -860,6 +942,7 @@ class NumberLedger:
+             freed = True
+             self._held -= len(src.values)
+             src.values.clear()
++            src.value_currencies.clear()
+             src.operands.clear()
+             self._platform_sorted = None
+             # Free a whole slab at once. One eviction costs a rebuild, so freeing a single result's worth would
+@@ -944,7 +1027,7 @@ class NumberLedger:
+     # -- provenance ------------------------------------------------------------------ #
+ 
+     def explain(self, value: float, kind: str = "amount", precision: int | None = None,
+-                loose: int | None = None, *, ratio_search: bool = False) -> str | None:
++                loose: int | None = None, *, ratio_search: bool = False, pair_search: bool = False) -> str | None:
+         """Why ``value`` is grounded: ``"exempt"``, ``"ledger"``, a named total, or the
+         pairwise derivation that produces it. ``None`` when nothing does.
+ 
+@@ -957,7 +1040,14 @@ class NumberLedger:
+         model's prose: with a few hundred bases every value in the 1-20x band is reachable, so it accepted up to 100%
+         of fabricated ROAS values (audit, 2026-09-20). It stays available to a caller weighing a figure it produced
+         itself against one read - `mia.agents.finding_explainer._in_read`, where a row survives only when one read
+-        carries every figure in it, so the search is a question about that read rather than a proof of a claim."""
++        carries every figure in it, so the search is a question about that read rather than a proof of a claim.
++
++        ``pair_search`` is the same switch for an amount: whether SOME pair of one result's bases adds or subtracts
++        to ``value``, or a base divided by a count the result carries gives it. Off for prose since the L1 measurement
++        of 2026-11-05 on recorded staging reads: a read carries about 2,100 base-eligible figures, so the 300-base
++        pool is one read's, and the search accepted 3.75% to 6.75% of random six-figure amounts in the read's own
++        band while deriving 19% to 28% of honest sums over it. In prose an amount is derived when the answer names
++        its operands (``_check_named_sums``); the pool stays for the same caller the ratio search serves."""
+         p = max(_PRECISION_FLOOR, min(_PRECISION_CAP, precision or precision_of(value)))
+         lp = max(_PRECISION_FLOOR, min(p, loose or precision_of(value)))
+         if kind == "percent":
+@@ -996,17 +1086,17 @@ class NumberLedger:
+             group = self._groups.get(_round_sig(value, _PRECISION_CAP))
+             if group is not None:
+                 return group
+-        return self._explain_amount(value, p)
++        return self._explain_amount(value, p, pair_search)
+ 
+     # Every pairwise derivation searches ONE source at a time: both operands come from
+     # the same tool result (review 2026-09-05, H1).
+ 
+-    def _explain_amount(self, value: float, p: int) -> str | None:
++    def _explain_amount(self, value: float, p: int, pair_search: bool = False) -> str | None:
+         if p < _DERIVED_MIN_PRECISION["amount"]:
+             return None
+         v = abs(value)
+         tol = _half_unit(v, p)
+-        for src in self._sources:
++        for src in self._sources if pair_search else ():
+             for a in src.bases:
+                 cur = src.base_currencies.get(a)
+                 if v > a and src.has(v - a, p, tol, cur):
+@@ -1136,6 +1226,61 @@ class NumberLedger:
+                       and self.explain(denominator) is not None)
+             out[i] = (fig, f"{numerator:g} / {denominator:g}" if proven else None)
+ 
++    def _check_named_sums(self, masked: str, out: list[tuple[Figure, str | None]]) -> None:
++        """An amount the text computes is produced by the operands it names (owner, 2026-11-05, L1).
++
++        The pairwise search this replaces for prose asked "does SOME pair of this result add to the claim". On the
++        recorded staging reads a read carries about 2,100 base-eligible figures and the 300-base pool is that read's
++        first 300, so the search accepted 3.75% to 6.75% of random six-figure amounts in the read's own band and
++        derived only 19% to 28% of honest sums over it; a wider pool bought recall with fabrications one for one.
++
++        So an amount is derived by arithmetic when the answer names its two operands in the same sentence, each is
++        a figure ONE tool result carries (the same result for both: two figures the platform returned together are
++        what an answer combines, review 2026-09-05), and the arithmetic holds at the precision the claim is written
++        with, the operands' own rounding allowed for. A divisor may be a count the result carries (days, weeks). Only
++        ever fills a gap: a figure the result itself carries stays grounded however the answer explains it.
++        """
++        for i, (fig, why) in enumerate(out):
++            if fig.kind != "amount" or why is not None or fig.start < 0:
++                continue
++            v = abs(fig.value)
++            for a, b, op in _named_sum_operands(masked, fig):
++                if _is_exempt(abs(a.value)) or (op != "/" and _is_exempt(abs(b.value))) or b.value == 0:
++                    continue
++                found = self._source_carrying(a, b, count_divisor=op == "/")
++                if found is None:
++                    continue
++                x, y = found  # the platform's own figures: the arithmetic is checked on them, not on the prose
++                computed = x + y if op == "+" else abs(x - y) if op == "-" else x / y
++                if abs(computed - v) <= _half_unit(v, _written_digits(fig)):
++                    out[i] = (fig, f"{_g(x)} {op} {_g(y)}")
++                    break
++
++    def _source_carrying(self, a: Figure, b: Figure, count_divisor: bool) -> tuple[float, float] | None:
++        """The figures of the first tool-result source whose base-eligible figures (``operands``: business
++        magnitudes, never an id or a series point) carry both operands, in one currency or with one naming none;
++        the divisor may instead be a count the source carries (never a year). ``None`` when no result does.
++
++        An operand counts as the platform wrote it when a figure rounds to it at every digit written (the figure
++        style's two decimals, or the whole figure), never through a compact form ("1.2M"): a rounded operand would
++        match some figure of a large read by coincidence as often as a rounded claim does, and two of them would
++        make almost any sum (``_operand_of``).
++        """
++        for src in self._sources:
++            if not src.kind.startswith("result:") or not src.operands:
++                continue
++            x = _operand_of(src, a)
++            if x is None:
++                continue
++            y = _operand_of(src, b)
++            if y is not None and _combines(src.value_currencies.get(x, {None}), src.value_currencies.get(y, {None})):
++                return x, y
++            n = abs(b.value)
++            if count_divisor and float(n).is_integer() and int(n) in src.counts and not (
++                    _YEAR_RANGE[0] <= n <= _YEAR_RANGE[1]):
++                return x, float(int(n))
++        return None
++
+     def is_grounded(self, value: float, precision: int | None = None) -> bool:
+         """True when ``value`` has provenance, direct or derived."""
+         return self.explain(value, precision=precision) is not None
+@@ -1216,7 +1361,9 @@ class NumberLedger:
+         of it and inherits its provenance."""
+         figs = extract_figures(text)
+         out = [(fig, self.explain(fig.value, fig.kind, fig.precision, fig.loose)) for fig in figs]
+-        self._check_named_ratios(_without_identifiers(text), out)
++        masked = _without_identifiers(text)
++        self._check_named_ratios(masked, out)
++        self._check_named_sums(masked, out)
+         grounded = [fig for fig, why in out if why is not None]
+         for i, (fig, why) in enumerate(out):
+             if why is not None:
+diff --git a/src/mia/agents/finding_explainer.py b/src/mia/agents/finding_explainer.py
+index 17f11703..2baed314 100644
+--- a/src/mia/agents/finding_explainer.py
++++ b/src/mia/agents/finding_explainer.py
+@@ -172,9 +172,9 @@ def _in_read(ledger: NumberLedger, fig: Any) -> bool:
+     read (bookkeeping numbers in the chat), which would drop every share, percent and ratio a read truly carries (the
+     live check on ls_august18dem dropped 39.15 and 46.58). Such a figure is checked the way the ledger checks a
+     multiplier: a figure of the read as written, or the ratio of two figures of that one read, never exempt."""
+-    why = ledger.explain(fig.value, fig.kind, fig.precision, fig.loose, ratio_search=True)
++    why = ledger.explain(fig.value, fig.kind, fig.precision, fig.loose, ratio_search=True, pair_search=True)
+     if why == "exempt":
+-        why = ledger.explain(fig.value, "multiplier", fig.precision, fig.loose, ratio_search=True)
++        why = ledger.explain(fig.value, "multiplier", fig.precision, fig.loose, ratio_search=True, pair_search=True)
+     return why is not None and why != "exempt"
+ 
+ 
+diff --git a/src/mia/agents/prose.py b/src/mia/agents/prose.py
+index 548fc827..4e2a3e7a 100644
+--- a/src/mia/agents/prose.py
++++ b/src/mia/agents/prose.py
+@@ -64,10 +64,11 @@ splits — MUST come from a tool's `status:"success"` result, verbatim or by sim
+ on such figures. Simple arithmetic on figures the platform returned is allowed, and checked: a total or
+ average across rows of one result, the difference between two platform figures, a share or
+ percentage change between two platform figures, a multiplier of one over another, and the
+-same arithmetic against such a total. State the two inputs next to
+-any such figure so the reader can see where it comes from, and write the computed figure in
+-full to the paisa or cent, never rounded to thousands or millions (a rounded form may follow
+-the full one).
++same arithmetic against such a total. Write the two inputs in the SAME sentence as the
++computed figure, as `A + B = C`, `C (computed as A - B)` or `C per day (A / 30)`: a sum, a
++difference or an average you do not show this way is hidden as `[unverified]`. Write the
++computed figure in full to the paisa or cent, never rounded to thousands or millions (a rounded
++form may follow the full one).
+ Two of these are read strictly, because a ratio or a large percentage is otherwise impossible to
+ tell from an invented one (a few hundred platform figures divide to almost any value in the 1-20x
+ band). When you state a ROAS or any other multiplier the platform did not itself return, put its
+diff --git a/src/mia/mcp/prompts.py b/src/mia/mcp/prompts.py
+index 90a03e47..12ec285b 100644
+--- a/src/mia/mcp/prompts.py
++++ b/src/mia/mcp/prompts.py
+@@ -25,6 +25,8 @@ COMMON_RULES = (
+     "the tool results give them, with their unit and currency, and quote the server's own totals, shares and "
+     "deltas rather than computing your own; a needs_input warning is a question to put to the member, never a "
+     "value to guess; a no_data warning is a fact to state, never a reason to call again with the same arguments; "
++    "a figure you add up, subtract or average from two figures of one result is written with them in the same "
++    "sentence (`A + B = C`, `C (computed as A - B)`), or check_figures marks it unverified; "
+     "before you show figures you did not read verbatim, run check_figures on your draft and show its "
+     "redacted_draft if any figure is unverified."
+ )
+diff --git a/tests/golden/agent_surface.json b/tests/golden/agent_surface.json
+index 6d50466b..47e3f567 100644
+--- a/tests/golden/agent_surface.json
++++ b/tests/golden/agent_surface.json
+@@ -1,7 +1,7 @@
+ {
+   "context": {
+     "data_agent_toolset": "forced absent during capture (ADC-dependent)",
+-    "google_adk": "2.7.1",
++    "google_adk": "2.13.0",
+     "models": {
+       "knowledge_worker": "gemini-2.5-flash",
+       "measurement_worker": "gemini-2.5-flash",
+@@ -16,7 +16,7 @@
+         "description_sha256": "ca4cdf743cb0e3a72437e974dc48da42a21929458137186be9c6981fb07335f2",
+         "disallow_transfer_to_parent": true,
+         "disallow_transfer_to_peers": true,
+-        "instruction_sha256": "98df4441b2d6956b7078078bb8535970b604c2c0fd9105cdd796a269836a7161",
++        "instruction_sha256": "b0ceb03f36689c067b400fce1b7a91aa988caa0fc64694463c19318290b7388a",
+         "mode": "single_turn",
+         "other_tools": [],
+         "skill_toolsets": 1,
+@@ -37,7 +37,7 @@
+         "description_sha256": "6a16ff27c07860b21d21545888dd8b4c1c9e000add95e2be39f335d4c6365858",
+         "disallow_transfer_to_parent": true,
+         "disallow_transfer_to_peers": true,
+-        "instruction_sha256": "36b453a72918d650a0be29301864a7bf00b2f6eb25c07bb2dc681eab386fb155",
++        "instruction_sha256": "218d14607e4aa3ecf9a7e71884add9cbcbe9d00e40cac5c11c3922c9f046b82a",
+         "mode": "single_turn",
+         "other_tools": [],
+         "skill_toolsets": 1,
+@@ -74,7 +74,7 @@
+         "description_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+         "disallow_transfer_to_parent": false,
+         "disallow_transfer_to_peers": false,
+-        "instruction_sha256": "9622d71990081069e459f1392afdfeba66b7c615dce737e20fa10328c8817004",
++        "instruction_sha256": "c1c48731e8871f2bc266252dfaf50a2a27349847a6923a2e1ad9af90e3bbc321",
+         "mode": null,
+         "other_tools": [
+           "_SingleTurnAgentTool",
+@@ -182,7 +182,7 @@
+         "description_sha256": "3ec9d4eb7292e58582f744aceecab87e5f09639d9b822ca74e45811b32729377",
+         "disallow_transfer_to_parent": true,
+         "disallow_transfer_to_peers": true,
+-        "instruction_sha256": "a5da613265fde5228396d37446e01c0c27e958284dee666856b6cd950ea39397",
++        "instruction_sha256": "e5e82b0f8eaeec826fe56ae559c792789a54dad530e12e90b874479e2746ad84",
+         "mode": "single_turn",
+         "other_tools": [],
+         "skill_toolsets": 1,
+diff --git a/tests/test_base_pool_starvation.py b/tests/test_base_pool_starvation.py
+index 82f3a425..e192a6bf 100644
+--- a/tests/test_base_pool_starvation.py
++++ b/tests/test_base_pool_starvation.py
+@@ -16,6 +16,9 @@ result needs a slot and the pool is full, the OLDEST result's bases are dropped
+ 300, so the fabrication surface is unchanged (measured: 0.45% of 6-figure fabrications, the same as today), and the
+ result being read now can always derive from its own figures.
+ 
++Since L1 (2026-11-05) prose reaches an amount's arithmetic by naming the operands, and the pool serves a caller
++weighing its own figure against one read: these tests ask the pool directly with ``pair_search=True``.
++
+ What an eviction costs: a pairwise derivation that combines two figures of a result from much earlier in the session
+ stops being available. Quoting those figures is untouched - the ledger's value set is capped separately and far
+ higher (`_LEDGER_CAP`), so an old figure restated is still grounded. Only old ARITHMETIC ages out, and the newest
+@@ -42,7 +45,7 @@ def test_a_later_result_can_still_derive_when_the_pool_was_already_full() -> Non
+     led = NumberLedger()
+     led.add_from(_filler(400), kind="result:earlier")
+     led.add_from(LATE_RESULT, kind="result:model_report")
+-    assert led.explain(DIFFERENCE, "amount", 6, 6) is not None
++    assert led.explain(DIFFERENCE, "amount", 6, 6, pair_search=True) is not None
+ 
+ 
+ def test_the_newest_result_always_has_its_own_figures_in_the_pool() -> None:
+@@ -53,7 +56,7 @@ def test_the_newest_result_always_has_its_own_figures_in_the_pool() -> None:
+     newest = led._sources[-1]
+     assert 2291772.91 in newest.bases and 2777037.01 in newest.bases, \
+         "both of the newest result's figures are derivable operands"
+-    assert led.explain(DIFFERENCE, "amount", 6, 6) is not None
++    assert led.explain(DIFFERENCE, "amount", 6, 6, pair_search=True) is not None
+ 
+ 
+ def test_the_pool_never_grows_past_its_cap() -> None:
+diff --git a/tests/test_dashgraph_views.py b/tests/test_dashgraph_views.py
+index bae8220f..74ee5adb 100644
+--- a/tests/test_dashgraph_views.py
++++ b/tests/test_dashgraph_views.py
+@@ -789,7 +789,7 @@ async def test_a_curve_missing_a_weekly_spend_has_no_weekly_headroom_never_zero(
+ async def test_a_quoted_weekly_headroom_grounds_as_the_difference_of_the_curves_two_weekly_spends():
+     """Quoted from the model's response curves, LinkedIn All's weekly headroom is a figure the result carries, and
+     without that field it is still the difference of two figures of one result (its two weekly spends), written in
+-    full."""
++    full, to a caller that searches the result's pairs (``pair_search``; prose names the operands since L1)."""
+     import copy
+ 
+     from harness_core.provenance import NumberLedger
+@@ -803,9 +803,9 @@ async def test_a_quoted_weekly_headroom_grounds_as_the_difference_of_the_curves_
+         c.pop("headroom_weekly_spend")
+     ledger = NumberLedger()
+     ledger.add_from(bare, kind="result:model_report")
+-    why = ledger.explain(4589.67, kind="amount", precision=6)
++    why = ledger.explain(4589.67, kind="amount", precision=6, pair_search=True)
+     assert why not in (None, "ledger", "exempt"), why
+-    assert ledger.explain(4581.67, kind="amount", precision=6) is None
++    assert ledger.explain(4581.67, kind="amount", precision=6, pair_search=True) is None
+ 
+ 
+ async def test_a_compact_figure_a_tile_draws_grounds_against_the_result_it_restates():
+diff --git a/tests/test_guardrails.py b/tests/test_guardrails.py
+index 7bd27e44..b6070a4c 100644
+--- a/tests/test_guardrails.py
++++ b/tests/test_guardrails.py
+@@ -350,7 +350,7 @@ def _channels_ledger() -> NumberLedger:
+     ledger = NumberLedger()
+     ledger.add_from({"channels": [{"name": "Meta", "spend": 1807909.56},
+                                   {"name": "Google", "spend": 3028891.42}],
+-                     "total_revenue": 155437.08})
++                     "total_revenue": 155437.08}, kind="result:model_report")
+     return ledger
+ 
+ 
+@@ -358,8 +358,11 @@ def test_totals_deltas_shares_and_changes_of_platform_figures_are_grounded_by_de
+     ledger = _channels_ledger()
+     assert ledger.find_ungrounded("Total spend ₹4,836,800.98 (about ₹4.8M).") == []
+     assert ledger.derivations("Total spend ₹4,836,800.98")[0][1] == "sum(channels[].spend)"
+-    assert ledger.find_ungrounded("Google spends ₹1,220,981.86 more than Meta.") == []
+-    assert ledger.derivations("₹1,220,981.86 more")[0][1].startswith("3.02889e+06 - ")
++    named = "Google spends ₹1,220,981.86 more than Meta (₹3,028,891.42 - ₹1,807,909.56)."
++    assert ledger.find_ungrounded(named) == []
++    assert ledger.derivations(named)[0][1] == "3028891.42 - 1807909.56"
++    assert ledger.find_ungrounded("Google spends ₹1,220,981.86 more than Meta.") == [1220981.86], \
++        "since L1 (2026-11-05) a difference the answer does not show its operands for is unverified"
+     # A percentage above the exemption is checked; a share of two platform figures passes, and so does a share of
+     # the derived total (total / Meta = 267.536%); an invented one fails. Since 2026-09-20 such a share derives at
+     # SIX figures, the bar an amount has had since H1: at four, a percent change between two of a few hundred bases
+@@ -440,11 +443,12 @@ def test_summary_statistics_of_platform_columns_are_grounded_by_derivation():
+         {"name": "Meta", "spend": 2777037.01, "revenue": 23549274.0},
+         {"name": "Google", "spend": 2291772.91, "revenue": 19411317.0},
+         {"name": "DV360", "spend": 1229785.47, "revenue": 10465475.0},
+-        {"name": "TikTok", "spend": 1129283.70, "revenue": 9531154.0}]})
++        {"name": "TikTok", "spend": 1129283.70, "revenue": 9531154.0}]}, kind="result:model_report")
+     assert ledger.find_ungrounded("average spend per channel ₹1,856,969.77") == []
+     assert ledger.derivations("average spend ₹1,856,969.77")[0][1] == "mean(channels[].spend)"
+     assert ledger.find_ungrounded("total revenue ₹62,957,220") == []
+-    assert ledger.find_ungrounded("Meta spends ₹4,650,842.08 less than the rest combined") == []
++    assert ledger.find_ungrounded("The rest combined spend ₹4,650,842.08 (₹7,427,879.09 - ₹2,777,037.01), "
++                                  "more than Meta") == []
+     # revenue/spend totals: 62,957,220 / 7,427,879.09 = 847.580032%. Since 2026-09-20 a percentage derives at six
+     # figures (audit: at four, a percent change between two of a few hundred bases explained 97.7% of fabrications).
+     assert ledger.find_ungrounded("blended return of 847.580% on total spend") == []
+@@ -481,8 +485,8 @@ def test_series_heavy_results_do_not_crowd_totals_out_of_the_derivation_bases():
+     ledger = NumberLedger()
+     ledger.add_from({"platform_spend": {"time_series": {"series": series},
+                                         "spend_variables": channels}})
+-    assert ledger.find_ungrounded("Meta is ₹920,067.24 above the average of ₹1,856,969.77") == []
+-    assert ledger.derivations("₹920,067.24 above")[0][1].startswith("2.77704e+06 - ")
++    # the pool, asked directly (prose names its operands since L1, 2026-11-05)
++    assert (ledger.explain(920067.24, "amount", precision=6, pair_search=True) or "").startswith("2.77704e+06 - ")
+     assert ledger.find_ungrounded("a projected ₹9,000,000 next quarter") == [9000000.0]
+ 
+ 
+@@ -493,22 +497,24 @@ def test_claims_are_checked_at_their_written_precision():
+     ledger = _channels_ledger()  # Meta 1,807,909.56; Google 3,028,891.42; total 4,836,800.98
+     assert ledger.find_ungrounded("Meta spent ₹1,807,909.56 (about ₹1.8M, ₹18.1 lakh)") == []
+     assert ledger.find_ungrounded("Meta spent ₹1,807,000") == [1807000.0]  # not what it returned
+-    assert ledger.find_ungrounded("Google ₹1,220,981.86 more than Meta (≈ ₹1.22M)") == []
++    assert ledger.find_ungrounded("Google ₹1,220,981.86 more than Meta (₹3,028,891.42 - ₹1,807,909.56), ≈ ₹1.22M") == []
+     assert ledger.find_ungrounded("Google spent about ₹1.22M more than Meta") == [1220000.0]
+     assert ledger.find_ungrounded("Google spent ₹1,220,000 more than Meta") == [1220000.0]
+     round_budgets = NumberLedger()
+-    round_budgets.add_from({"channels": [{"name": "a", "budget": 500000}, {"name": "b", "budget": 300000}]})
+-    assert round_budgets.find_ungrounded("a gets ₹200,000 more than b") == []  # written in full
++    round_budgets.add_from({"channels": [{"name": "a", "budget": 500000}, {"name": "b", "budget": 300000}]},
++                           kind="result:plans_get")
++    assert round_budgets.find_ungrounded("a gets ₹200,000 more than b (₹500,000 - ₹300,000)") == []  # in full
+     assert round_budgets.find_ungrounded("a gets ₹0.2M more than b") == [200000.0]
+-    assert round_budgets.derivations("₹200,000 more")[0][1] == "500000 - 300000"
++    assert round_budgets.derivations("₹200,000 more (₹500,000 - ₹300,000)")[0][1] == "500000 - 300000"
+ 
+ 
+ def test_audit_counts_each_kind_of_provenance():
+     """One audit line per checked response says how every figure was grounded."""
+     ledger = _channels_ledger()  # Meta 1,807,909.56; Google 3,028,891.42; total 4,836,800.98
+     text = ("Meta ₹1,807,909.56 and Google ₹3,028,891.42 total ₹4,836,800.98; Google spends "
+-            "₹1,220,981.86 more (≈ ₹1.22M), 4 channels, and a projected ₹9,000,000")
+-    assert ledger.audit(text) == {"ledger": 2, "total": 1, "restated": 1, "derived": 1,
++            "₹1,220,981.86 more (₹3,028,891.42 - ₹1,807,909.56; ≈ ₹1.22M), 4 channels, and a projected ₹9,000,000")
++    # the named operands are figures of the text too, so the direct count carries them twice
++    assert ledger.audit(text) == {"ledger": 4, "total": 1, "restated": 1, "derived": 1,
+                                   "exempt": 1, "ungrounded": 1}
+ 
+ 
+@@ -647,8 +653,10 @@ def test_a_per_period_average_is_grounded_as_amount_over_a_count():
+     """Review 2026-09-04 F4: a platform amount divided by a count the data carries (a
+     per-day average = baseline revenue / baseline days) is a legitimate derivation."""
+     ledger = NumberLedger()
+-    ledger.add_from({"baseline_total_revenue": 46_265_108.36, "baseline_days": 53})
++    ledger.add_from({"baseline_total_revenue": 46_265_108.36, "baseline_days": 53}, kind="result:model_report")
+     # 46,265,108.36 / 53 = 872,926.57
+-    assert ledger.find_ungrounded("That is ₹872,926.57 per day.") == []
++    assert ledger.find_ungrounded("That is ₹872,926.57 per day (₹46,265,108.36 / 53).") == []
++    assert ledger.find_ungrounded("That is ₹872,926.57 per day.") == [872926.57], \
++        "since L1 (2026-11-05) an average that does not show its operands is unverified"
+     # dividing by a count that is NOT in the data does not ground it
+     assert ledger.find_ungrounded("A made-up ₹610,000.10 per something.") != []
+diff --git a/tests/test_input_provenance.py b/tests/test_input_provenance.py
+index 57e50ea6..3a2012b1 100644
+--- a/tests/test_input_provenance.py
++++ b/tests/test_input_provenance.py
+@@ -242,9 +242,9 @@ def test_a_member_message_never_evicts_a_results_pairwise_pool():
+     base pool, and every figure derived from that report turned to [unverified]."""
+     ledger = NumberLedger()
+     ledger.add_from({"rows": [{"a": 1e5 + 7 * i} for i in range(320)]}, kind="result:model_report")
+-    assert ledger.explain(200_007.0) == "100000 + 100007"
++    assert ledger.explain(200_007.0, pair_search=True) == "100000 + 100007"
+     ledger.add_from("give it 150,000 more", kind="user-text")
+-    assert ledger.explain(200_007.0) == "100000 + 100007"
++    assert ledger.explain(200_007.0, pair_search=True) == "100000 + 100007"
+ 
+ 
+ # ------------------------------------------------------------------ the guardrail, any tool
+diff --git a/tests/test_ledger_cap_starvation.py b/tests/test_ledger_cap_starvation.py
+index cb2d73c2..d0560919 100644
+--- a/tests/test_ledger_cap_starvation.py
++++ b/tests/test_ledger_cap_starvation.py
+@@ -54,7 +54,7 @@ def test_the_newest_result_can_still_derive_from_its_own_figures() -> None:
+     led = NumberLedger()
+     _fill_the_ledger(led)
+     led.add_from(LATE_RESULT, kind="result:model_report")
+-    assert led.explain(round(2777037.01 - 2291772.91, 2), "amount", 6, 6) is not None
++    assert led.explain(round(2777037.01 - 2291772.91, 2), "amount", 6, 6, pair_search=True) is not None
+ 
+ 
+ def test_the_ledger_never_grows_past_its_bound() -> None:
+@@ -81,5 +81,5 @@ def test_a_count_divisor_survives_the_rebuild() -> None:
+     _fill_the_ledger(led)
+     led.add_from({"period": {"baseline_total_revenue": 3650000.0, "baseline_days": 365}},
+                  kind="result:model_report")
+-    assert led.explain(10000.0) == "exempt" or led.explain(10000.00, "amount", 6, 6) is not None
++    assert led.explain(10000.0) == "exempt" or led.explain(10000.00, "amount", 6, 6, pair_search=True) is not None
+     assert led.explain(3650000.0) == "ledger"
+diff --git a/tests/test_mcp_prompts_figures.py b/tests/test_mcp_prompts_figures.py
+index bcad6db4..e2ce4e93 100644
+--- a/tests/test_mcp_prompts_figures.py
++++ b/tests/test_mcp_prompts_figures.py
+@@ -105,10 +105,13 @@ def _synthetic_report(i: int, rows: int) -> dict:
+                                            "revenue": round(rng.uniform(1e4, 1e7), 2)} for _ in range(rows)]}
+ 
+ 
+-def _verdict(draft: str, ledger) -> str:
++def _verdict(draft: str, ledger, raw: str | None = None) -> str:
++    """The verdict of the figure written as ``raw`` (the draft's only figure when not given)."""
+     figures = check_figures(draft, ledger)["figures"]
+-    assert len(figures) == 1, figures
+-    return figures[0]["verdict"]
++    if raw is None:
++        assert len(figures) == 1, figures
++        return figures[0]["verdict"]
++    return next(f["verdict"] for f in figures if f["as_written"] == raw)
+ 
+ 
+ def test_the_newest_result_of_a_long_window_still_derives_and_quotes() -> None:
+@@ -120,8 +123,11 @@ def test_the_newest_result_of_a_long_window_still_derives_and_quotes() -> None:
+     results = [("model_report", _synthetic_report(i, rows=12)) for i in range(20)]
+     ledger = ledger_from_results(results)
+     newest, oldest = results[-1][1]["rows"], results[0][1]["rows"]
+-    total = round(newest[0]["spend"] + newest[1]["spend"], 2)
+-    assert _verdict(f"Together the two spent {total:,.2f}.", ledger) == "derived"
++    a, b = newest[0]["spend"], newest[1]["spend"]
++    total = round(a + b, 2)
++    assert _verdict(f"Together the two spent {a:,.2f} + {b:,.2f} = {total:,.2f}.", ledger, f"{total:,.2f}") == "derived"
++    # the pool itself, as a caller weighing its own figure against one read sees it (L1 closed it for prose)
++    assert ledger.explain(total, "amount", precision=6, pair_search=True) is not None
+     assert _verdict(f"The first read showed {oldest[0]['spend']:,.2f}.", ledger) == "grounded", \
+         "eviction ages out the oldest result's arithmetic, never its figures"
+     # 20 results of 300 values: the ledger's own bound (5,000) overflows; the newest result's figure must still ground
+diff --git a/tests/test_named_sums.py b/tests/test_named_sums.py
+new file mode 100644
+index 00000000..c5b3f261
+--- /dev/null
++++ b/tests/test_named_sums.py
+@@ -0,0 +1,193 @@
++"""An amount the answer computes must be produced by the operands the answer names (owner, 2026-11-05, L1).
++
++Until now a sum, a difference or a per-count average was grounded by a blind search: "does SOME pair of this
++result's bases add to the claim". Measured on the recorded staging turns (`cap_study_real.py` in the harness
++paper's experiments), a real read carries about 2,100 base-eligible figures, so the 300-base pool is one read's
++and the search accepted 3.75% to 6.75% of random six-figure amounts in the read's own band while deriving only
++19% to 28% of honest sums over it (the pool holds the read's first 300 figures). Widening the pool bought recall
++with fabrications one for one.
++
++The rule this file pins, the one the ratio rule set on 2026-09-20: an amount is grounded by arithmetic when the
++answer NAMES its two operands in the same sentence (`A + B = C`, `C (computed as A - B)`, `C per day (A / 30)`),
++each operand is a figure ONE tool result carries (the same result for both), and the arithmetic holds at the
++precision the claim is written with. The blind pairwise search is closed for prose; it stays available to a caller
++weighing its own figure against one read (`pair_search=True`, as `ratio_search` does for the finding explainer).
++
++What this costs, knowingly: a sum the model does not show reads `[unverified]`, exactly as an unshown ratio has
++since 2026-09-20. Column totals and means, group totals and the named cross-result class are unchanged.
++"""
++
++from __future__ import annotations
++
++from harness_core.provenance import NumberLedger
++
++RESULT = {
++    "performance": [
++        {"parentId": "google", "campaign": "brand", "spend": 2000000.00, "pRevenue": 15000000.00},
++        {"parentId": "google", "campaign": "nonbrand", "spend": 1845225.66, "pRevenue": 14468433.10},
++        {"parentId": "youtube", "campaign": "awareness", "spend": 900000.00, "pRevenue": 1500000.00},
++        {"parentId": "youtube", "campaign": "consideration", "spend": 788062.85, "pRevenue": 1234504.73},
++    ],
++    "window": {"days": 30},
++}
++OTHER_RESULT = {"plan": {"total_spend": 500000.00, "channels": [{"name": "google", "spend": 320000.00}]}}
++
++
++def _ledger() -> NumberLedger:
++    led = NumberLedger()
++    led.add_from(RESULT, kind="result:attribution_report")
++    led.add_from(OTHER_RESULT, kind="result:plans_get")
++    return led
++
++
++def _why(text: str, raw: str) -> str | None:
++    return {f.raw: w for f, w in _ledger().explained(text)}[raw]
++
++
++def test_a_sum_the_text_does_not_explain_is_unverified() -> None:
++    """The blind search is closed: 2,000,000.00 + 900,000.00 is a pair of this result, and that no longer counts."""
++    assert _ledger().find_ungrounded("Together the two campaigns spent 2,900,000.00.") == [2900000.0]
++
++
++def test_a_sum_written_with_its_operands_is_derived() -> None:
++    text = "Brand and awareness together: 2,000,000.00 + 900,000.00 = 2,900,000.00."
++    assert _ledger().find_ungrounded(text) == []
++    assert _why(text, "2,900,000.00") == "2000000 + 900000"
++
++
++def test_the_operands_may_follow_the_claim_in_a_parenthesis() -> None:
++    text = "Brand outspent awareness by 1,100,000.00 (computed as 2,000,000.00 - 900,000.00)."
++    assert _ledger().find_ungrounded(text) == []
++    assert _why(text, "1,100,000.00") == "2000000 - 900000"
++
++
++def test_a_per_count_average_names_the_count_the_result_carries() -> None:
++    text = "Brand spent 66,666.67 per day (2,000,000.00 / 30)."
++    assert _ledger().find_ungrounded(text) == []
++    assert _why(text, "66,666.67") == "2000000 / 30"
++
++
++def test_operands_are_written_as_the_platform_wrote_them() -> None:
++    """A rounded operand would match some figure of a large read by coincidence as often as a rounded claim does
++    (two-figure claims coincide 31% to 62% of the time on the recorded reads), and two of them would make almost any
++    sum. So the operands are written in full; the total may be rounded, and a rounded restatement may follow."""
++    # 1,845,225.66 and 788,062.85 rounded: neither is a figure the result carries (2.0M would be: it IS 2,000,000.00)
++    assert _ledger().find_ungrounded("Together about $2.6M ($1.8M + $0.79M).") == [2600000.0]
++    assert _ledger().find_ungrounded("Together about $2.6M (1,845,225.66 + 788,062.85).") == []
++    led = NumberLedger()
++    led.add_from({"channels": [{"name": "a", "spend": 45000}, {"name": "b", "spend": 250.50}]}, kind="result:a")
++    assert led.find_ungrounded("a and b together: 45,000 + 250.50 = 45,250.50.") == [], \
++        "a short figure written to the last digit is the platform's figure"
++    two_dec = NumberLedger()
++    two_dec.add_from({"rows": [{"spend": 456.7891}, {"spend": 1234.5678}]}, kind="result:a")
++    assert two_dec.find_ungrounded("Together 1,234.57 + 456.79 = 1,691.36.") == [], \
++        "a figure written to two decimals, as the figure style asks, is the platform's figure"
++    # 457 is 456.7891 at three digits; the sum is checked on the platform's figures (1,691.36), not on the prose
++    assert two_dec.find_ungrounded("Together 1,234.57 + 457 = 1,691.36.") == []
++    assert two_dec.find_ungrounded("Together 1,234.57 + 457 = 1,691.57.") == [1691.57]
++    # 460 restates 456.7891 loosely at two figures (the direct class), yet as an operand it is not that figure
++    assert two_dec.find_ungrounded("Together 1,234.57 + 460 = 1,694.57.") == [1694.57]
++    # (45,250 would restate the column total 45,250.50 loosely, so the wrong operand here is 350, not 250)
++    assert led.find_ungrounded("a and b together: 45,000 + 350 = 45,350.") == [350.0, 45350.0], \
++        "350 is not a figure of the result, so neither it nor the sum it names is grounded"
++
++
++def test_operands_from_two_results_do_not_combine() -> None:
++    """Two figures the platform returned together are what an answer legitimately combines (review 2026-09-05);
++    a plan's figure and a report's figure stay apart, as the cross-result class (E13) requires a named field."""
++    text = "Report plus plan: 2,000,000.00 + 500,000.00 = 2,500,000.00."
++    assert _ledger().find_ungrounded(text) == [2500000.0]
++
++
++def test_an_operand_no_result_carries_grounds_nothing() -> None:
++    text = "Brand and search together: 2,000,000.00 + 1,000,000.00 = 3,000,000.00."
++    assert _ledger().find_ungrounded(text) == [1000000.0, 3000000.0]
++
++
++def test_arithmetic_that_does_not_hold_is_hidden() -> None:
++    text = "Brand and awareness together: 2,000,000.00 + 900,000.00 = 2,950,000.00."
++    assert _ledger().find_ungrounded(text) == [2950000.0]
++
++
++def test_an_amount_the_result_carries_stays_grounded_however_it_is_explained() -> None:
++    """Only ever fills a gap, never narrows: a platform figure beside a wrong explanation is still the platform's."""
++    text = "Brand spent 2,000,000.00 (1,000,000.00 + 1,000,000.00)."
++    assert _ledger().find_ungrounded(text) == [1000000.0]
++
++
++def test_the_blind_search_stays_available_to_a_caller_weighing_its_own_figure() -> None:
++    """The finding explainer asks whether ONE read carries a figure it produced itself; that question keeps the
++    pair search, as it keeps the ratio search."""
++    led = _ledger()
++    assert led.explain(2900000.0, "amount", precision=6) is None
++    assert led.explain(2900000.0, "amount", precision=6, pair_search=True) == "2e+06 + 900000"
++
++
++def test_named_operands_in_two_currencies_combine_to_nothing() -> None:
++    """The rule of tests/test_provenance_currency.py holds for named operands: the causal read's spend is in each
++    ad account's currency, and an answer must not add a MYR figure to a USD one, nor an untagged echo of one."""
++    led = NumberLedger()
++    led.add_from({"rows": [{"source": "facebook", "currency": "MYR", "spend": 1337.24},
++                           {"source": "linkedin", "currency": "USD", "spend": 21417.87}],
++                  "echo": {"first": 1337.24, "second": 21417.87}}, kind="result:attribution_report")
++    assert led.find_ungrounded("Together 1,337.24 + 21,417.87 = 22,755.11.") == [22755.11]
++    one = NumberLedger()
++    one.add_from({"rows": [{"currency": "USD", "spend": 1337.24}, {"currency": "USD", "spend": 21417.87}]},
++                 kind="result:attribution_report")
++    assert one.find_ungrounded("Together 1,337.24 + 21,417.87 = 22,755.11.") == []
++
++
++def test_an_id_or_a_series_point_is_never_a_named_operand() -> None:
++    """Operands are a result's base-eligible figures: a platform id grounds an echo of itself and a series point
++    grounds itself, neither is a term of an answer's arithmetic."""
++    led = NumberLedger()
++    led.add_from({"rows": [{"adAccountId": "4812345678", "spend": 1000.25}],
++                  "weekly": {"values": [250000.5, 410000.25, 100000.0]}}, kind="result:platform_report")
++    assert led.find_ungrounded("Net 4,812,344,677.75 (4,812,345,678 - 1,000.25).") == [4812344677.75]
++    # two of the three points: not the column's total, which would ground as one
++    assert led.find_ungrounded("Two weeks: 250,000.50 + 410,000.25 = 660,000.75.") == [660000.75]
++    assert led.find_ungrounded("All three weeks: 760,000.75.") == []
++
++
++def test_the_arithmetic_is_checked_on_the_platforms_figures_to_the_claims_last_digit() -> None:
++    """Review of 2026-11-05: a rounded claim could be one step off when its operands were compact or short, and a
++    cent-level claim ten units off past six digits. The sum is now computed from the figures the operands name and
++    held to the last digit the claim is written with."""
++    led = _ledger()
++    assert led.find_ungrounded("Together $2.0M + $0.9M = $3.0M.") == [3000000.0]
++    assert led.find_ungrounded("Together $2.0M + $0.9M = $2.9M.") == []
++    assert led.find_ungrounded("1,845,225.66 + 788,062.85 = 2,633,299.01.") == [2633299.01]
++    assert led.find_ungrounded("1,845,225.66 + 788,062.85 = 2,633,288.51.") == []
++    # an operand ten units off is not the platform's figure, however the direct class restates it
++    assert led.find_ungrounded("1,845,229.99 + 788,062.85 = 2,633,292.84.") == [2633292.84]
++
++
++def test_currency_codes_emphasis_and_abbreviations_do_not_hide_the_operands() -> None:
++    led = _ledger()
++    assert led.find_ungrounded("Together INR 2,000,000.00 + INR 900,000.00 = INR 2,900,000.00.") == []
++    assert led.find_ungrounded("Together Rs. 2,000,000.00 + Rs. 900,000.00 = Rs. 2,900,000.00.") == []
++    assert led.find_ungrounded("Together **2,000,000.00** + **900,000.00** = **2,900,000.00**.") == []
++    assert led.find_ungrounded("Together 2,000,000.00 + 900,000.00, i.e. 2,900,000.00 in all.") == []
++    assert led.find_ungrounded("Shortfall 900,000.00 - 2,000,000.00 = -1,100,000.00.") == []
++    assert led.find_ungrounded("Brand: 2,000,000.00 / 30 days = 66,666.67 per day.") == []
++
++
++def test_the_claims_own_pair_is_found_past_another_pair_or_a_date() -> None:
++    led = _ledger()
++    text = ("Brand and awareness: 2,000,000.00 + 900,000.00 = 2,900,000.00 against plan "
++            "500,000.00 - 320,000.00 = 180,000.00.")
++    assert led.find_ungrounded(text) == []
++    assert led.find_ungrounded("Total 2,900,000.00 on 11/05/2026 (2,000,000.00 + 900,000.00).") == []
++    assert led.find_ungrounded("66,666.67 per day over 30 days (2,000,000.00 / 30).") == []
++
++
++def test_a_compact_operand_equal_to_the_figure_survives_float_noise() -> None:
++    led = NumberLedger()
++    led.add_from({"brand": {"spend": 2010000.0}, "aware": {"spend": 900000.0}}, kind="result:a")
++    assert led.find_ungrounded("Together $2.01M + $0.9M = 2,910,000.00.") == []
++
++
++def test_a_year_is_never_a_divisor() -> None:
++    led = NumberLedger()
++    led.add_from({"year": 2026, "rows": [{"spend": 2000000.00}]}, kind="result:a")
++    assert led.find_ungrounded("Per year 987.17 (2,000,000.00 / 2026).") == [987.17]
+diff --git a/tests/test_provenance_currency.py b/tests/test_provenance_currency.py
+index 19eeeaea..be91ed86 100644
+--- a/tests/test_provenance_currency.py
++++ b/tests/test_provenance_currency.py
+@@ -5,6 +5,10 @@ USD in one response). ``attribution_report`` withholds every money total across
+ own, each row naming its ``currency``. Before this rule the ledger summed those per-source rows back into the withheld
+ figure (``sum(incrementality.by_source[].total_spend)``), so an answer that printed it passed as grounded. A column
+ total, a column mean and a group total now ground only when every row they add names one currency, or none names any.
++
++Since L1 (2026-11-05) prose reaches an amount's arithmetic by naming the operands, and the pairwise pool serves a
++caller weighing its own figure against one read: the pool's own rules here are asked with ``pair_search=True``, and
++the named rule carries the same currency constraint (``tests/test_named_sums.py``).
+ """
+ 
+ from __future__ import annotations
+@@ -64,7 +68,7 @@ async def test_the_replayed_report_never_grounds_its_withheld_total():
+     mixed = round(sum(s["total_spend"] for s in by), 2)
+     ledger = _ledger(result)  # the whole report: its rows carry numeric ad ids too
+     assert not ledger.is_grounded(mixed, precision=7)
+-    assert not ledger.is_grounded(round(by[1]["total_spend"] - by[0]["total_spend"], 2), precision=7)
++    assert ledger.explain(round(by[1]["total_spend"] - by[0]["total_spend"], 2), precision=7, pair_search=True) is None
+     # each source's own total still grounds
+     assert all(ledger.is_grounded(s["total_spend"], precision=7) for s in by)
+ 
+@@ -73,9 +77,9 @@ def test_two_amounts_in_one_currency_still_combine_and_two_in_different_ones_do_
+     rows = [{"source": "facebook", "currency": "MYR", "spend": 1337.24, "budget": 5000.11},
+             {"source": "linkedin", "currency": "USD", "spend": 21417.87, "budget": 30000.55}]
+     ledger = _ledger({"status": "success", "rows": rows})
+-    assert ledger.explain(5000.11 - 1337.24, precision=6) is not None  # both MYR
+-    assert ledger.explain(30000.55 - 21417.87, precision=6) is not None  # both USD
+-    assert ledger.explain(21417.87 - 1337.24, precision=7) is None  # USD less MYR
++    assert ledger.explain(5000.11 - 1337.24, precision=6, pair_search=True) is not None  # both MYR
++    assert ledger.explain(30000.55 - 21417.87, precision=6, pair_search=True) is not None  # both USD
++    assert ledger.explain(21417.87 - 1337.24, precision=7, pair_search=True) is None  # USD less MYR
+ 
+ 
+ def test_two_rows_of_unknown_currency_do_not_combine_with_each_other():
+@@ -83,7 +87,7 @@ def test_two_rows_of_unknown_currency_do_not_combine_with_each_other():
+     rows = [{"source": "facebook", "currency": "MYR", "spend": 1337.24},
+             {"source": "snapchat", "spend": 2050.45}, {"source": "reddit", "spend": 3100.27}]
+     ledger = _ledger({"status": "success", "rows": rows})
+-    assert ledger.explain(2050.45 + 3100.27, precision=6) is None
++    assert ledger.explain(2050.45 + 3100.27, precision=6, pair_search=True) is None
+     assert ledger.is_grounded(2050.45, precision=6)
+ 
+ 
+@@ -94,7 +98,7 @@ def test_an_id_is_a_figure_of_its_own_and_never_an_operand():
+     rows = [{"id": "120254086136130322", "spend": 250.5}, {"id": "120254086136130999", "spend": 410.25}]
+     ledger = _ledger({"status": "success", "rows": rows})
+     for arbitrary in (12345.67, 98765.43, 777777.77):
+-        assert not ledger.is_grounded(arbitrary, precision=7), arbitrary
++        assert ledger.explain(arbitrary, precision=7, pair_search=True) is None, arbitrary
+     assert ledger.is_grounded(120254086136130322, precision=18)
+     assert ledger.is_grounded(250.5 + 410.25, precision=5)
+ 
+@@ -104,21 +108,21 @@ def test_a_figure_seen_in_a_currency_keeps_it_when_an_untagged_copy_appears():
+     result = {"status": "success", "rows": [{"currency": "MYR", "spend": 1337.24}, {"currency": "USD", "spend": 21417.87}],
+               "echo": {"first": 1337.24, "second": 21417.87}}
+     ledger = _ledger(result)
+-    assert not ledger.is_grounded(1337.24 + 21417.87, precision=7)
++    assert ledger.explain(1337.24 + 21417.87, precision=7, pair_search=True) is None
+     # a list that names no currency still sums as a column: the ledger cannot know its values' currencies, so a read
+     # that copies rows names each row's currency (``budget_allocation``'s rows do)
+ 
+ 
+ def test_a_negative_repeat_in_a_second_currency_is_recorded():
+     ledger = _ledger({"a": {"currency": "MYR", "x": 1234.567}, "b": {"currency": "USD", "x": -1234.567, "y": 4321.765}})
+-    assert ledger.is_grounded(1234.567 + 4321.765, precision=7)
++    assert ledger.explain(1234.567 + 4321.765, precision=7, pair_search=True) is not None
+ 
+ 
+ def test_a_literal_unknown_currency_is_shared_with_nothing():
+     rows = [{"source": "rtb_house", "currency": "UNKNOWN", "spend": 2050.45},
+             {"source": "adroll", "currency": "UNKNOWN", "spend": 3100.27}]
+     ledger = _ledger({"status": "success", "rows": rows})
+-    assert not ledger.is_grounded(2050.45 + 3100.27, precision=6)
++    assert ledger.explain(2050.45 + 3100.27, precision=6, pair_search=True) is None
+ 
+ 
+ def test_a_figure_named_alike_in_two_results_is_added_only_in_one_currency():
+@@ -139,7 +143,7 @@ def test_a_parent_currency_code_is_inherited_by_rows_naming_none():
+               "other": {"currency_code": "MYR", "spend": 500.33}}
+     ledger = _ledger(result)
+     assert ledger.is_grounded(1000.11 + 2000.22, precision=6)
+-    assert not ledger.is_grounded(1000.11 + 500.33, precision=6)
++    assert ledger.explain(1000.11 + 500.33, precision=6, pair_search=True) is None
+ 
+ 
+ def test_an_id_inside_a_longer_string_or_a_huge_number_is_never_an_operand():
+@@ -151,16 +155,16 @@ def test_an_id_inside_a_longer_string_or_a_huge_number_is_never_an_operand():
+                     {"dates": [{"start": 1778697000000, "end": 1778783400000}]}):
+         ledger = _ledger({"status": "success", **carrier, "rows": [{"spend": 250.5}, {"spend": 410.25}]})
+         for arbitrary in (12345.67, 45000.12, 98765.43):
+-            assert not ledger.is_grounded(arbitrary, precision=7), (carrier, arbitrary)
++            assert ledger.explain(arbitrary, precision=7, pair_search=True) is None, (carrier, arbitrary)
+         assert ledger.is_grounded(250.5 + 410.25, precision=5)
+ 
+ 
+ def test_a_difference_of_two_large_figures_still_grounds_when_written_in_full():
+     """Operands far larger than the claim still derive it exactly: the claim's own half unit is the tolerance."""
+     ledger = _ledger({"status": "success", "current": 1000000.0, "planned": 990000.0})
+-    assert ledger.is_grounded(10000.0, precision=6)
++    assert ledger.explain(10000.0, precision=6, pair_search=True) is not None
+     rounded = _ledger({"status": "success", "current": 5670000.0, "planned": 4438900.0})
+-    assert rounded.is_grounded(1231100.0, precision=7)
++    assert rounded.explain(1231100.0, precision=7, pair_search=True) is not None
+ 
+ 
+ def test_a_number_too_large_for_its_float_grounds_nothing_else():
+@@ -168,11 +172,11 @@ def test_a_number_too_large_for_its_float_grounds_nothing_else():
+     grounded every amount in the session."""
+     ledger = _ledger({"status": "success", "items": [{"name": "Experiment 5251e091", "spend": 250.5}]})
+     for arbitrary in (12345.67, 45000.12, 98765.43, 1234567.89):
+-        assert not ledger.is_grounded(arbitrary, precision=7), arbitrary
++        assert ledger.explain(arbitrary, precision=7, pair_search=True) is None, arbitrary
+ 
+ 
+ def test_an_id_of_an_amounts_size_is_not_an_operand():
+     """A ten-digit account id sits where an IDR or KRW amount does: it grounds an echo of itself, never a derivation."""
+     ledger = _ledger({"status": "success", "rows": [{"adAccountId": "4812345678", "spend": 1000.25}]})
+-    assert not ledger.is_grounded(4812345678 - 1000.25, precision=12)
++    assert ledger.explain(4812345678 - 1000.25, precision=12, pair_search=True) is None
+     assert ledger.is_grounded(4812345678, precision=10)
+diff --git a/tests/test_review_batch_b.py b/tests/test_review_batch_b.py
+index 85cdb747..01460331 100644
+--- a/tests/test_review_batch_b.py
++++ b/tests/test_review_batch_b.py
+@@ -27,27 +27,31 @@ from mia.harness.turn_context import CURRENT_AUTH_TOKEN, CURRENT_USER_TURN
+ 
+ def test_pairwise_derivation_needs_both_operands_from_one_tool_result():
+     """Over a session-global pool, ``a ± b`` explained almost any fabricated amount
+-    (~69% at 300 bases, ~100% at 800). Operands now come from ONE result."""
++    (~69% at 300 bases, ~100% at 800). Operands now come from ONE result. Since L1 (2026-11-05) prose names
++    them (`C (A - B)`), and the one-result rule holds for the named pair too."""
++    text = "an uplift of ₹1,807,909.56 (₹4,836,800.98 - ₹3,028,891.42)"
+     across = NumberLedger()
+-    across.add_from({"summary": {"optimised_revenue": 4_836_800.98}})
+-    across.add_from({"summary": {"baseline_revenue": 3_028_891.42}})
++    across.add_from({"summary": {"optimised_revenue": 4_836_800.98}}, kind="result:a")
++    across.add_from({"summary": {"baseline_revenue": 3_028_891.42}}, kind="result:b")
+     # 4,836,800.98 - 3,028,891.42: two platform figures, but from two different calls.
+-    assert across.find_ungrounded("an uplift of ₹1,807,909.56") == [1_807_909.56]
++    assert across.find_ungrounded(text) == [1_807_909.56]
+ 
+     within = NumberLedger()
+     within.add_from({"summary": {"optimised_revenue": 4_836_800.98,
+-                                 "baseline_revenue": 3_028_891.42}})
+-    assert within.find_ungrounded("an uplift of ₹1,807,909.56") == []
+-    assert " - " in within.derivations("₹1,807,909.56")[0][1]
++                                 "baseline_revenue": 3_028_891.42}}, kind="result:a")
++    assert within.find_ungrounded(text) == []
++    assert " - " in within.derivations(text)[0][1]
+ 
+ 
+ def test_an_amount_must_be_written_to_six_figures_to_derive():
+     """The gate was 5, looser than the 6-figure claims it checked: 99.8% of random
+-    6-figure fabrications derived at the old cap."""
++    6-figure fabrications derived at the old cap. The pool is reached with ``pair_search`` since L1 (2026-11-05);
++    a claim that names its operands is checked at the precision it is written with instead."""
+     ledger = NumberLedger()
+-    ledger.add_from({"channels": [{"name": "a", "spend": 45_000}, {"name": "b", "spend": 25_000}]})
+-    assert ledger.find_ungrounded("a gets ₹20,000.0 more than b") == []  # 6 figures, derives
+-    assert ledger.find_ungrounded("a gets ₹20,000 more than b") == [20_000.0]  # 5: not enough
++    ledger.add_from({"channels": [{"name": "a", "spend": 45_000}, {"name": "b", "spend": 25_000}]}, kind="result:a")
++    assert ledger.explain(20_000.0, "amount", precision=6, pair_search=True) is not None  # 6 figures, derives
++    assert ledger.explain(20_000.0, "amount", precision=5, pair_search=True) is None  # 5: not enough
++    assert ledger.find_ungrounded("a gets ₹20,000 more than b (₹45,000 - ₹25,000)") == []
+ 
+ 
+ def test_the_base_pool_is_capped_across_the_session():
