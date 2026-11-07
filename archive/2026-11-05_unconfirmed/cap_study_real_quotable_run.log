@@ -1,0 +1,8 @@
+value bound 5000, eviction slab 2000, base cap 300
+causal           values held  3730 | orientation 1/1 quotable | membership: no figures | attribution_models 19/300 quotable | attribution_report 300/300 quotable
+cmo              values held  2138 | orientation 1/1 quotable | membership: no figures | model_report 275/275 quotable | plans_get 300/300 quotable
+geo-experiment   values held   309 | orientation 1/1 quotable | membership: no figures | experiment_report 5/5 quotable | list_experiments: no figures
+model            values held  1346 | orientation 1/1 quotable | membership: no figures | channel_saturation 255/255 quotable | channel_saturation 255/255 quotable | model_diagnostics 18/18 quotable | model_report 266/266 quotable | model_report 9/9 quotable
+promoted-plan    values held  1661 | orientation 0/1 quotable | membership: no figures | attribution_models 300/300 quotable | attribution_report 31/300 quotable | plans_get 300/300 quotable
+q4-leads         values held   106 | orientation 1/1 quotable | membership: no figures | model_report 2/2 quotable
+q4-performance   values held   503 | orientation 1/1 quotable | membership: no figures | attribution_report 211/211 quotable | model_report 17/17 quotable | model_report 29/29 quotable

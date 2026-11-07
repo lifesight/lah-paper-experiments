@@ -4,6 +4,8 @@ __pycache__/
 .lah-verification/
 *.aux
 *.log
+# Historical archive logs are release materials pinned by ARCHIVE_MANIFEST.json.
+!/archive/2026-11-05_unconfirmed/*.log
 *.out
 *.xdv
 *.toc

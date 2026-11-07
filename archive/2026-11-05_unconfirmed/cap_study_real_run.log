@@ -1,0 +1,41 @@
+== causal: 4 reads, operands per read [1, 0, 1321, 2081]
+   cap   300: bases 300 values 3730 evicted 3 | quote first/last 100.0/100.0 | honest first/last/any None/27.88/16.59 | fab 6/3/2 3.75/26.62/49.88 | 0.31 ms
+   cap  1000: bases 1000 values 3730 evicted 3 | quote first/last 100.0/100.0 | honest first/last/any None/86.38/49.27 | fab 6/3/2 19.0/22.62/50.38 | 0.61 ms
+   cap  2500: bases 2458 values 3730 evicted 3 | quote first/last 100.0/100.0 | honest first/last/any None/100.0/100.0 | fab 6/3/2 51.88/22.75/50.25 | 0.86 ms
+   cap  5000: bases 2458 values 3730 evicted 3 | quote first/last 100.0/100.0 | honest first/last/any None/100.0/100.0 | fab 6/3/2 52.25/24.88/46.75 | 0.87 ms
+== cmo: 4 reads, operands per read [1, 0, 272, 1321]
+   cap   300: bases 300 values 2138 evicted 0 | quote first/last 100.0/100.0 | honest first/last/any None/18.88/16.23 | fab 6/3/2 6.25/26.25/62.5 | 0.20 ms
+   cap  1000: bases 1000 values 2138 evicted 0 | quote first/last 100.0/100.0 | honest first/last/any None/73.0/56.58 | fab 6/3/2 30.62/24.88/64.75 | 0.46 ms
+   cap  2500: bases 1592 values 2138 evicted 0 | quote first/last 100.0/100.0 | honest first/last/any None/100.0/99.74 | fab 6/3/2 38.0/24.12/66.25 | 0.68 ms
+   cap  5000: bases 1592 values 2138 evicted 0 | quote first/last 100.0/100.0 | honest first/last/any None/100.0/100.0 | fab 6/3/2 36.5/26.62/63.75 | 0.67 ms
+== geo-experiment: 4 reads, operands per read [1, 0, 5, 0]
+   cap   300: bases 6 values 309 evicted 0 | quote first/last 100.0/None | honest first/last/any None/None/100.0 | fab 6/3/2 0.0/1.38/9.0 | 0.04 ms
+   cap  1000: bases 6 values 309 evicted 0 | quote first/last 100.0/None | honest first/last/any None/None/100.0 | fab 6/3/2 0.0/1.75/10.25 | 0.04 ms
+   cap  2500: bases 6 values 309 evicted 0 | quote first/last 100.0/None | honest first/last/any None/None/100.0 | fab 6/3/2 0.0/1.88/11.38 | 0.04 ms
+   cap  5000: bases 6 values 309 evicted 0 | quote first/last 100.0/None | honest first/last/any None/None/100.0 | fab 6/3/2 0.0/2.5/13.12 | 0.04 ms
+== model: 7 reads, operands per read [1, 0, 255, 255, 18, 265, 9]
+   cap   300: bases 292 values 1346 evicted 0 | quote first/last 100.0/100.0 | honest first/last/any None/100.0/100.0 | fab 6/3/2 3.75/13.5/43.38 | 0.35 ms
+   cap  1000: bases 803 values 1346 evicted 0 | quote first/last 100.0/100.0 | honest first/last/any None/100.0/99.65 | fab 6/3/2 4.25/12.12/43.88 | 0.60 ms
+   cap  2500: bases 803 values 1346 evicted 0 | quote first/last 100.0/100.0 | honest first/last/any None/100.0/99.82 | fab 6/3/2 3.88/12.0/46.12 | 0.60 ms
+   cap  5000: bases 803 values 1346 evicted 0 | quote first/last 100.0/100.0 | honest first/last/any None/100.0/100.0 | fab 6/3/2 4.5/13.0/45.38 | 0.59 ms
+== promoted-plan: 5 reads, operands per read [1, 0, 1321, 2166, 1321]
+   cap   300: bases 300 values 1661 evicted 4 | quote first/last 0.0/100.0 | honest first/last/any None/18.75/20.33 | fab 6/3/2 6.75/19.38/45.25 | 0.16 ms
+   cap  1000: bases 1000 values 1661 evicted 4 | quote first/last 0.0/100.0 | honest first/last/any None/73.0/71.38 | fab 6/3/2 35.25/18.88/44.88 | 0.40 ms
+   cap  2500: bases 1319 values 1661 evicted 4 | quote first/last 0.0/100.0 | honest first/last/any None/100.0/87.15 | fab 6/3/2 38.0/19.75/45.62 | 0.51 ms
+   cap  5000: bases 3839 values 1661 evicted 4 | quote first/last 0.0/100.0 | honest first/last/any None/100.0/100.0 | fab 6/3/2 52.12/20.25/42.38 | 1.15 ms
+== q4-leads: 3 reads, operands per read [1, 0, 2]
+   cap   300: bases 3 values 106 evicted 0 | quote first/last 100.0/100.0 | honest first/last/any None/100.0/100.0 | fab 6/3/2 0.0/0.5/4.38 | 0.03 ms
+   cap  1000: bases 3 values 106 evicted 0 | quote first/last 100.0/100.0 | honest first/last/any None/100.0/100.0 | fab 6/3/2 0.0/0.0/5.38 | 0.03 ms
+   cap  2500: bases 3 values 106 evicted 0 | quote first/last 100.0/100.0 | honest first/last/any None/100.0/100.0 | fab 6/3/2 0.0/0.62/3.0 | 0.03 ms
+   cap  5000: bases 3 values 106 evicted 0 | quote first/last 100.0/100.0 | honest first/last/any None/100.0/100.0 | fab 6/3/2 0.0/1.0/4.75 | 0.03 ms
+== q4-performance: 5 reads, operands per read [1, 0, 118, 17, 11]
+   cap   300: bases 147 values 503 evicted 0 | quote first/last 100.0/100.0 | honest first/last/any None/100.0/99.55 | fab 6/3/2 0.38/9.12/30.75 | 0.20 ms
+   cap  1000: bases 147 values 503 evicted 0 | quote first/last 100.0/100.0 | honest first/last/any None/100.0/100.0 | fab 6/3/2 0.62/7.0/27.75 | 0.20 ms
+   cap  2500: bases 147 values 503 evicted 0 | quote first/last 100.0/100.0 | honest first/last/any None/100.0/100.0 | fab 6/3/2 0.38/7.62/31.88 | 0.20 ms
+   cap  5000: bases 147 values 503 evicted 0 | quote first/last 100.0/100.0 | honest first/last/any None/100.0/100.0 | fab 6/3/2 1.0/8.75/29.88 | 0.20 ms
+== LONG (all asks in sequence): 32 reads, operands per read [1, 0, 1321, 2081, 1, 0, 272, 1321, 1, 0, 5, 0, 1, 0, 255, 255, 18, 265, 9, 1, 0, 1321, 2166, 1321, 1, 0, 2, 1, 0, 118, 17, 11]
+   cap   300: bases 150 values 2182 evicted 23 | quote first/last 100.0/100.0 | honest first/last/any None/100.0/27.21 | fab 6/3/2 0.12/22.12/59.0 | 0.26 ms
+   cap  1000: bases 150 values 2182 evicted 23 | quote first/last 100.0/100.0 | honest first/last/any None/100.0/30.0 | fab 6/3/2 0.38/24.38/59.25 | 0.26 ms
+   cap  2500: bases 1469 values 2182 evicted 23 | quote first/last 100.0/100.0 | honest first/last/any None/100.0/71.95 | fab 6/3/2 41.12/24.88/58.0 | 0.62 ms
+   cap  5000: bases 4798 values 2182 evicted 23 | quote first/last 100.0/100.0 | honest first/last/any None/100.0/98.65 | fab 6/3/2 55.38/21.12/57.25 | 1.59 ms
+exit 0
